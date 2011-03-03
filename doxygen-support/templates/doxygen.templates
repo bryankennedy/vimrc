@@ -1,0 +1,100 @@
+# =============================================================
+# ========== USER MACROS ======================================
+# =============================================================
+#
+$AUTHOR$    = Bryan Kennedy
+$AUTHORREF$ = bck
+$EMAIL$     = bkennedy@smm.org
+$COMPANY$   = 
+#$COPYRIGHT$ = Copyright (c) $YEAR$, $AUTHOR$
+$COPYRIGHT$ = 
+$sortmenus$ = no
+
+$includefile$   = doxygen.cpp.templates
+
+#
+# =============================================================
+# ========== USER TEMPLATES  /  C-STYLE =======================
+# =============================================================
+== block,long ==
+/**
+ * <CURSOR>
+ */
+#--------------------------------------------------------------
+== block,short ==
+/** <CURSOR> */
+#--------------------------------------------------------------
+== brief,detailed ==
+/**
+ * @brief <CURSOR>
+ * 
+ * Detailed description starts here.
+ */
+#--------------------------------------------------------------
+== class ==
+/**
+ * @class $?CLASSNAME$
+ * @brief <CURSOR>
+ */
+#--------------------------------------------------------------
+== function ==
+/**
+ * @brief   <CURSOR>
+ * @param   
+ * @return  
+ */
+#--------------------------------------------------------------
+== FILE-header == start ==
+/**
+ *       @file  $FILE$
+ *      @brief  <CURSOR>
+ *
+ * Detailed description starts here.
+ *
+ *     @author  $AUTHOR$ ($AUTHORREF$), $EMAIL$
+ *
+ *   @internal
+ *     Created  $DATE$
+ *    Revision  $Id: doxygen.templates,v 1.3 2010/07/06 09:20:12 mehner Exp $
+ *    Compiler  gcc/g++
+ *     Company  $COMPANY$
+ *   Copyright  $COPYRIGHT$
+ *
+ * This source code is released for free distribution under the terms of the
+ * GNU General Public License as published by the Free Software Foundation.
+ * =====================================================================================
+ */
+
+#--------------------------------------------------------------
+== brief-after-member == append ==
+ /**< @brief <CURSOR> */
+#--------------------------------------------------------------
+== formula-in-text == insert == 
+ @f$ <CURSOR><SPLIT> @f$
+#--------------------------------------------------------------
+== formula-separate == below ==
+ *    @f[ <CURSOR> @f]
+#--------------------------------------------------------------
+== formula-equarray == below ==
+ * @f{equarray*}{<CURSOR>
+ * @f}
+#--------------------------------------------------------------
+== formula-environment == below ==
+ * @f{$?ENVIRONMENT$}{<CURSOR>
+ * @f}
+#--------------------------------------------------------------
+== note == below ==
+ * @note <CURSOR>
+#--------------------------------------------------------------
+== if-endif == below ==
+ * @if $?condition:u$<CURSOR><SPLIT>
+ * @endif
+#--------------------------------------------------------------
+== latexonly == below ==
+ * @latexonly<CURSOR><SPLIT>
+ * @endlatexonly
+#--------------------------------------------------------------
+== htmlonly == below ==
+ * @htmlonly<CURSOR><SPLIT>
+ * @endhtmlonly
+#--------------------------------------------------------------
