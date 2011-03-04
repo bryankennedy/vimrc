@@ -5,8 +5,15 @@
 " http://vimcasts.org
 " http://www.vi-improved.org/vimrc.php
 
+" Use pathogen to easily modify the runtime path to include all plugins under
+" the ~/.vim/bundle directory
+filetype off                    " force reloading *after* pathogen loaded
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on       " enable detection, plugins and indenting in one step
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => GUI options for MacVim if enabled
+" GUI options for MacVim if enabled
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
   set lines=120             " window height
@@ -32,7 +39,7 @@ if has('gui_running')
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+" General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=300
@@ -67,9 +74,9 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
-" Backup files
-set backup
-set backupdir=~/.dotfiles/vimrc/backup
+" Backups - Don't do em
+" I've never once used a vim backup
+set nobackup
 
 " Put swap files in a useful place
 set directory=~/.dotfiles/vimrc/tmp
