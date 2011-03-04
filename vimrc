@@ -62,12 +62,7 @@ set directory=~/.vim/.tmp,~/tmp,/tmp
                              " get turned on.
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc/vimrc
-
-function! VimHomeDir()
-  let vimhomedir = '~/.dotfiles/vimrc' 
-  return vimhomedir
-endfunction
+autocmd! bufwritepost vimrc source ~/.vimrc
 
 " Always show the statusline
 set laststatus=2
@@ -170,9 +165,9 @@ set incsearch       " do incremental searching
 set ignorecase      " ignore case when searching 
 set smartcase       " pay attention to case when searching if you
                     " use Upper Case letters in your search
+
 " Clear search highlighting
 map <silent> <leader><cr> :noh<cr>
-
 
 " Toggle ignorecase
 map <leader>c :set ic!<cr>
