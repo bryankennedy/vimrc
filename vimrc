@@ -38,10 +38,10 @@ endif
 set history=300
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/Dropbox/vimrc/.vim_runtime/vimrc
+autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc/vimrc
 
 function! VimHomeDir()
-  let vimhomedir = '~/Dropbox/vimrc' 
+  let vimhomedir = '~/.dotfiles/vimrc' 
   return vimhomedir
 endfunction
 
@@ -69,10 +69,10 @@ com! DiffSaved call s:DiffWithSaved()
 
 " Backup files
 set backup
-set backupdir=~/Dropbox/vimrc/.vim_runtime/backup
+set backupdir=~/.dotfiles/vimrc/backup
 
 " Put swap files in a useful place
-set directory=~/Dropbox/vimrc/.vim_runtime/tmp
+set directory=~/.dotfiles/vimrc/tmp
 
 " Make the OSX clipboard work with vim
 set clipboard=unnamed
