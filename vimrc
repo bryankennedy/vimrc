@@ -170,12 +170,12 @@ set incsearch       " do incremental searching
 set ignorecase      " ignore case when searching 
 set smartcase       " pay attention to case when searching if you
                     " use Upper Case letters in your search
+" Clear search highlighting
+map <silent> <leader><cr> :noh<cr>
+
 
 " Toggle ignorecase
 map <leader>c :set ic!<cr>
-
-" Clear search highlighting
-map <leader>cs ::let @/ = ""<cr>
 
 """""""""""""""""""""""""
 " Shortcuts / Aliases
@@ -189,11 +189,6 @@ nmap <leader>f :FufFileWithCurrentBufferDir<cr>
 
 " Fast editing of the .vimrc
 map <leader>e :e! ~/Dropbox/vimrc/.vim_runtime/vimrc<cr>
-
-" Map space to / (search) and c-space to ? (backgwards search)
-map <space> /
-map <c-space> ?
-map <silent> <leader><cr> :noh<cr>
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
