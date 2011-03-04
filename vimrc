@@ -10,12 +10,6 @@
 " https://github.com/nvie/vimrc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Bootstrap
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible             " Use Vim not Vi settings
-let mapleader="\"            " Make sure mapleader is \
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use pathogen to easily modify the runtime path to include all plugins under
@@ -54,8 +48,19 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Sets how many lines of history VIM has to remember
-set history=300
+set nocompatible             " Use Vim not Vi settings
+let mapleader="\"            " Make sure mapleader is \
+set history=1000             " Long memory
+set undolevels=1000          " Lots of undo too
+if v:version >= 730
+    set undofile             " Store the undo in a file
+    set undodir=~/.vim/.undo,~/tmp,/tmp
+endif
+set nobackup                 " I've never once used a Vim backup...
+set noswapfile               " or restored a file from swap.
+set directory=~/.vim/.tmp,~/tmp,/tmp
+                             " But, let's put em in tmp if swap does
+                             " get turned on.
 
 " When vimrc is edited, reload it
 " autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc/vimrc
@@ -86,13 +91,6 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
-
-" Backups - Don't do em
-" I've never once used a vim backup
-set nobackup
-
-" Put swap files in a useful place
-set directory=~/.dotfiles/vimrc/tmp
 
 " Make the OSX clipboard work with vim
 set clipboard=unnamed
