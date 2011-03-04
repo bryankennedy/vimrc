@@ -49,7 +49,6 @@ endif
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible             " Use Vim not Vi settings
-let mapleader="\"            " Make sure mapleader is \
 set history=1000             " Long memory
 set undolevels=1000          " Lots of undo too
 if v:version >= 730
@@ -63,7 +62,7 @@ set directory=~/.vim/.tmp,~/tmp,/tmp
                              " get turned on.
 
 " When vimrc is edited, reload it
-" autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc/vimrc
+autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc/vimrc
 
 function! VimHomeDir()
   let vimhomedir = '~/.dotfiles/vimrc' 
