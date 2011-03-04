@@ -1,10 +1,17 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Credits
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " bryan kennedy's vimrc file
 "
 " ideas taken from these sources
 " http://amix.dk/blog/post/19486#The-ultimate-vim-configuration-vimrc
 " http://vimcasts.org
 " http://www.vi-improved.org/vimrc.php
+" https://github.com/nvie/vimrc
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
 filetype off                    " force reloading *after* pathogen loaded
@@ -233,33 +240,6 @@ endif
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
-" Project Tree
-"autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
-"autocmd FocusGained * call s:UpdateNERDTree()
-"autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-
-"""""""""""""""""""""""""
-" buffExplorer plugin 
-""""""""""""""""""""""""""
-"let g:bufExplorerDefaultHelp=1
-"let g:bufExplorerShowRelativePath=1
-
-""""""""""""""""""""""""""""""
-" Minibuffer plugin
-""""""""""""""""""""""""""""""
-"let g:miniBufExplModSelTarget = 1
-"let g:miniBufExplorerMoreThanOne = 2
-"let g:miniBufExplModSelTarget = 0
-"let g:miniBufExplUseSingleClick = 1
-"let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplVSplit = 25
-"let g:miniBufExplSplitBelow=1
-"
-"let g:bufExplorerSortBy = "name"
-"
-"autocmd BufRead,BufNew :call UMiniBufExplorer
-"
-"map <leader>u :TMiniBufExplorer<cr>:TMiniBufExplorer<cr>
 
 """"""""""""""""""""""""""""""
 " Remove trailing whitespace
