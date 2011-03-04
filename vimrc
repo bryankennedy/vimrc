@@ -38,7 +38,7 @@ endif
 set history=300
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc/vimrc
+" autocmd! bufwritepost vimrc source ~/.dotfiles/vimrc/vimrc
 
 function! VimHomeDir()
   let vimhomedir = '~/.dotfiles/vimrc' 
