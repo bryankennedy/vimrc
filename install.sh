@@ -89,7 +89,7 @@ vimrc_files=( .vim .vimrc vimrc )
 for vimrc_file in ${vimrc_files[@]}
 do
   vimrc_file=~/${vimrc_file}
-  if [ -f $vimrc_file ] || [ -d $vimrc_file ]; then
+  if [ -e $vimrc_file ]; then
     mv $vimrc_file ${vimrc_file}_backup_${date_string}
   fi
 done
