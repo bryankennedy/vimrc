@@ -42,17 +42,15 @@ let paler_grey     = '#dee1e6'
 let pale_red       = '#FF6C60'
 let paler_red      = '#FFB6B0'
 
-" Function calls
+" Strings
 let pale_green     = '#A8FF60'
 let paler_green    = '#CEFFAB'
 
 let vivid_blue     = '#5D90CD'
-"TODO wrong
-let slate_blue     = '#f6f3e8' 
+let slate_blue     = '#d9ecff' 
 let pale_blue      = '#96CBFE'
 let paler_blue     = '#B5DCFE'
 
-" Strings
 let pale_yellow    = '#FFFFB6'
 let paler_yellow   = '#FFFFCB'
 
@@ -141,6 +139,8 @@ let ColorAssignment['DoxygenTable']    = {"GUIFG": paler_grey,    "CTERMFG": 'Gr
 let ColorAssignment['DoxygenTableLines']  = {"GUIFG": paler_grey, "CTERMFG": 'Grey'}
 
 " Strings and constants 
+let ColorAssignment['Keyword']         = {"GUIFG": slate_blue}
+let ColorAssignment['PreProc']         = {"GUIFG": vivid_blue}
 let ColorAssignment['Constant']        = {"GUIFG": pale_green,     "CTERMFG": 'red',    "TERM":  'Underline'}
 let ColorAssignment['String']          = {"GUIFG": pale_green}
 let ColorAssignment['Character']       = {"GUIFG": pale_green}
@@ -180,8 +180,8 @@ let ColorAssignment['Structure']       = {"GUIFG": paler_red} " struct, union, e
 
 " HTML 
 let ColorAssignment['htmlH1']          = {"GUIFG": slate_blue}
-let ColorAssignment['htmlH2']          = {"GUIFG": '#8888FF'}
-let ColorAssignment['htmlH3']          = {"GUIFG": '#9999DD'}
+let ColorAssignment['htmlH2']          = {"GUIFG": paler_blue}
+let ColorAssignment['htmlH3']          = {"GUIFG": pale_blue}
 let ColorAssignment['htmlH4']          = {"GUIFG": '#5555AA'}
 let ColorAssignment['htmlH5']          = {"GUIFG": '#8888AA'}
 let ColorAssignment['htmlH6']          = {"GUIFG": '#888888'}
@@ -195,8 +195,7 @@ let ColorAssignment['Delimiter']       = {"GUIFG": paler_magenta}
 
 " C
 " Preprocessor directives are bold shades of blue
-let ColorAssignment['PreProc']         = {"GUIFG": 'Blue',        "GUI":     'Bold',      "TERM":  'Underline'}
-let ColorAssignment['Include']         = {"GUIFG": 'Blue',        "GUI":     'Bold'} " preprocessor #include
+let ColorAssignment['Include']         = {"GUIFG": slate_blue}                       " preprocessor #include
 let ColorAssignment['Define']          = {"GUIFG": '#5555FF',     "GUI":     'Bold'} " preprocessor #define
 let ColorAssignment['Macro']           = {"GUIFG": '#5555FF',     "GUI":     'Bold'} " same as Define
 let ColorAssignment['PreCondit']       = {"GUIFG": '#8888FF',     "GUI":     'Bold'} " preprocessor #if, #else, #endif, etc.
