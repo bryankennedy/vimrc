@@ -2,3 +2,4 @@ vim/tmp
 vim/backup
 vim/.tmp/*
 vim/.undo/*
+vim/.netrwhist
