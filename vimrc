@@ -61,20 +61,11 @@ set directory=~/.vim/.tmp,~/tmp,/tmp
                              " But, let's put em in tmp if swap does
                              " get turned on.
 
+syntax on                    " color highlighting
+                             " has to be called before status line directives
+
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
-
-" Always show the statusline
-set laststatus=2
-
-" Format the statusline
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
-
-" Set the current directory for status line and fuzzy finder homing
-function! CurDir()
-  let curdir = substitute(getcwd(), '/Users/bkennedy/', "~/", "g")
-  return curdir
-endfunction
 
 " Diff an unsaved file against saved file
 function! s:DiffWithSaved()
@@ -91,10 +82,45 @@ set clipboard=unnamed
 
 " Allow backspace to work across lines, etc.
 set backspace=indent,eol,start
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Status line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Always show the statusline
+set laststatus=2
+" Status line coloring
+hi User1     ctermbg=grey      ctermfg=black     guibg=#111111   guifg=#5D90CD
+hi User2     ctermbg=white     ctermfg=black     guibg=#111111   guifg=#96CBFE
+hi User3     ctermbg=white     ctermfg=black     guibg=#111111   guifg=#FF6C60
+hi User4     ctermbg=white     ctermfg=black     guibg=#111111   guifg=#A8FF60
+
+function! SyntaxItem()
+  return synIDattr(synID(line("."),col("."),1),"name")
+endfunction
+set statusline+=%{SyntaxItem()}
+if has('statusline')
+  set statusline=%1*                                   " Set highlighting
+  set statusline+=\ \ \                                 " Spacing
+  set statusline+=%F\                                   " File name
+  set statusline+=%h%m%r%w\                             " Flags
+  set statusline+=\ \ \ \ \                             " Spacing
+  set statusline+=%2*                                   " Set highlighting
+  set statusline+=%{SyntaxItem()}                       " Syntax highlight group under cursor
+  set statusline+=%=                                    " Align right
+  set statusline+=\ \ \ \ \                             " Spacing
+  set statusline+=%3*                                   " Set highlighting
+  set statusline+=TYPE=%{strlen(&ft)?&ft:'none'}\       " File type
+  set statusline+=ENC=%{(&fenc==\"\"?&enc:&fenc)}\|     " Encoding
+  set statusline+=%{&fileformat}\                       " File format
+  set statusline+=LANG=%{&spelllang}\                   " Language of spelling checker
+  set statusline+=%4*                                   " Set highlighting
+  set statusline+=\ \ \ \ \                             " Spacing
+  set statusline+=%-7.(%l,%c%V%)\ %<%P                  " Cursor position/offset
+endif
+
 """"""""""""""""""""""""""
 " Interface
 """"""""""""""""""""""""""
-syntax on                " color highlighting
 
 set number               " enable line numbers
 set numberwidth=5        " make the line number area wider
