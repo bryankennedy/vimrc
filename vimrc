@@ -38,6 +38,7 @@ if has('gui_running')
 
   " Good monospace font
   "set noantialias
+  " TODO Add some conditionals here for systems without this font
   set guifont=Panic_Sans:h15
 
   " Color scheme
@@ -88,6 +89,7 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the statusline
 set laststatus=2
+
 " Status line coloring
 hi User1     ctermbg=grey      ctermfg=black     guibg=#111111   guifg=#5D90CD
 hi User2     ctermbg=white     ctermfg=black     guibg=#111111   guifg=#96CBFE
@@ -119,26 +121,27 @@ if has('statusline')
 endif
 
 """"""""""""""""""""""""""
-" Interface
+" Line numbers
 """"""""""""""""""""""""""
-
 set number               " enable line numbers
 set numberwidth=5        " make the line number area wider
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-
 set cpoptions+=n         " use the line number area for wrapped lines
-set ruler                " show the cursor position all the time
-set scrolloff=3          " keep 3 lines when scrolling
-set nostartofline        " don't jump to first character when paging
-set ttyfast              " smoother changes
-set title                " show title in console title bar
-set so=7                 " scroll 7 lines before the bottom
-set cmdheight=2          " commandbar height
-set showmatch            " show matching curly braces and such
-set iskeyword+=_,$,@,%,# " none of these are word dividers
-"set cursorcolumn        " highlight current cursor position
-set cursorline           " highlight current line
 
+""""""""""""""""""""""""""
+" Interface
+""""""""""""""""""""""""""
+set ruler                           " show the cursor position all the time
+set scrolloff=3                     " keep 3 lines when scrolling
+set nostartofline                   " don't jump to first character when paging
+set ttyfast                         " smoother changes
+set title                           " show title in console title bar
+set so=7                            " scroll 7 lines before the bottom
+set cmdheight=2                     " commandbar height
+set showmatch                       " show matching curly braces and such
+set iskeyword+=_,$,@,%,#            " none of these are word dividers
+"set cursorcolumn                   " highlight current cursor position
+set cursorline                      " highlight current line
 
 " Set some text defaults
 set encoding=utf8
@@ -149,17 +152,16 @@ endtry
 
 set ffs=unix,dos,mac "Default file types
 
-" Use the same symbols as TextMate for tabstops and EOLs
+" Use better tab and end of line chars.
 set listchars=tab:▸\ ,eol:¬
-
 
 """"""""""""""""""""""""""
 " Tools
 """"""""""""""""""""""""""
-set wildmode=longest:full  " Complete filenames like Bash
-set wildignore+=.git       " Ignore some file types in autocomplete
-set wildmenu               " easier naviation of the file system
-set hid                    " undo history remainis when switching buffers
+set wildmode=longest:full           " Complete filenames like Bash
+set wildignore+=.git                " Ignore some file types in autocomplete
+set wildmenu                        " easier naviation of the file system
+set hid                             " undo history remainis when switching buffers
 
 """"""""""""""""""""""""""
 " Tabs and indenting
@@ -167,7 +169,7 @@ set hid                    " undo history remainis when switching buffers
 set tabstop=2                       " Tabstops equal two collumns
 set shiftwidth=2                    " Indent operations are also two collumns
 set softtabstop=2                   " Makes tabs feel like tabs but act like spaces
-set expandtab                       " Insert spaces when you hit the tab key 
+set expandtab                       " Insert spaces when you hit the tab key
 set smarttab                        " Smart indent new lines
 set list listchars=tab:\ \ ,trail:· " Show some hidden char.
 set ai                              " auto indent
@@ -181,16 +183,17 @@ vmap <D-[> <gv
 vmap <D-]> >gv
 
 " load the plugin and indent settings for the detected filetype
+" TODO check if the plugin exists
 filetype plugin indent on
 
 """"""""""""""""""""""""""
 " Search
 """"""""""""""""""""""""""
-set hlsearch        " highlight searches
-set incsearch       " do incremental searching
-set ignorecase      " ignore case when searching 
-set smartcase       " pay attention to case when searching if you
-                    " use Upper Case letters in your search
+set hlsearch                        " highlight searches
+set incsearch                       " do incremental searching
+set ignorecase                      " ignore case when searching
+set smartcase                       " pay attention to case when searching if you
+                                    " use Upper Case letters in your search
 
 " Clear search highlighting
 map <silent> <leader><cr> :noh<cr>
@@ -199,14 +202,10 @@ map <silent> <leader><cr> :noh<cr>
 map <leader>c :set ic!<cr>
 
 """""""""""""""""""""""""
-" Shortcuts / Aliases
+" General aliases
 """"""""""""""""""""""""""
-" fast saving
+" Fast saving
 nmap <leader>w :w!<cr>
-
-" shortcut for fuzzy finder search current dir
-"nmap <leader>f :FufFile **/<cr>
-nmap <leader>f :FufFileWithCurrentBufferDir<cr>
 
 " Fast editing of the .vimrc
 map <leader>e :e! ~/Dropbox/vimrc/.vim_runtime/vimrc<cr>
@@ -217,11 +216,11 @@ map <leader>bd :Bclose<cr>
 " Close all the buffers
 map <leader>ba :1,300 bd!<cr>
 
-" Use the arrows to something usefull
-"map <right> :bn<cr>
-"map <left> :bp<cr>
+" Navigate betwen buffers with arrows
+map <right> :bn<cr>
+map <left> :bp<cr>
 
-" Show invisibles 
+" Show invisibles
 nmap <leader>l :set list!<CR>
 
 " Enter new lines without entering insert mode
@@ -233,9 +232,10 @@ nmap <leader>s :set spell!<CR>
 
 " Use the . to repeat a command for a visual selection
 vnoremap . :normal .<CR>
-"""""""""""""""""""""""""
-" File type specifications 
-""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" File type specifications
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   " Enable file type detection
   filetype on
@@ -245,24 +245,29 @@ if has("autocmd")
 
   " Treat Drupal files as PHP
   autocmd BufNewFile,BufReadPre *.php,*.inc,*.module,*.install setfiletype php
-  
-  " Strip EOL whitespace out of specific filetypes 
+
+  " Strip EOL whitespace out of specific filetypes
   " also turn tabs into two spaces
-  autocmd BufWritePre *.py,*.js,*.php,*.inc,*.module,*.install :retab | :call <SID>StripTrailingWhitespaces()
+  autocmd BufWritePre *.py,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
 
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FuzzyFinder
+" Search, starting with current buffer
+nmap <leader>f :FufFileWithCurrentBufferDir<cr>
+" Search, with a wildcard from current dir
+nmap <leader>fw :FufFile **/<cr>
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
-""""""""""""""""""""""""""""""
-" Remove trailing whitespace
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remove trailing whitespace on save
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
   let _s=@/
@@ -274,4 +279,3 @@ function! <SID>StripTrailingWhitespaces()
   let @/=_s
   call cursor(l, c)
 endfunction
-
