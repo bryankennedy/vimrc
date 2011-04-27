@@ -14,7 +14,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
-filetype off                 " force reloading *after* pathogen loaded
+" this is commented out b/c of some problems it was causing. not sure
+" what the impact or cause, really, of this might be just yet, but it fixes
+" my bugs
+" http://tooky.github.com/2010/04/08/there-was-a-problem-with-the-editor-vi-git-on-mac-os-x.html
+"filetype off                 " force reloading *after* pathogen loaded
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on    " enable detection, plugins and indenting in one step
