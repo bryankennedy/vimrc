@@ -180,6 +180,9 @@ set ai                              " auto indent
 set si                              " smart indet
 set wrap                            " wrap lines
 
+" Use 4 spaces for python
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+
 " Shortcuts for indenting without loosing visual selection
 nmap <D-[> <<
 nmap <D-]> >>
