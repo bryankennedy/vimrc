@@ -270,7 +270,7 @@ nmap <leader>fw :FufFile **/<cr>
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
