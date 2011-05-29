@@ -301,6 +301,13 @@ endfunction
 
 map <Leader>n :call NERDTreeFindToggle()<CR>
 
+" Taglist configuration
+set updatetime=1000
+let tlist_php_settings = 'php;c:class;d:constant;f:function'
+let Tlist_Use_Right_Window = 1
+let Tlist_WinWidth = 35
+map <Leader>t :TlistToggle<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
