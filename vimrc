@@ -223,7 +223,7 @@ function! EscapeString (string)
   " Escape regex characters
   let string = escape(string, '^$.*\/~[]')
   " Escape the line endings
-  "let string = substitute(string, '\n', '\\n', 'g')
+  let string = substitute(string, '\n', '\\n', 'g')
   return string
 endfunction
 
