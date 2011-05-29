@@ -281,6 +281,7 @@ nmap <leader>f :FufFileWithCurrentBufferDir<cr>
 nmap <leader>fw :FufFile **/<cr>
 
 " NERDTree configuration
+let g:NERDTreeWinSize = 30
 let NERDTreeIgnore=['\.rbc$', '\~$']
 
 " A NERDTree toggle combined with the NERDTreeFind command
