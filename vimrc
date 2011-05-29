@@ -89,6 +89,13 @@ set clipboard=unnamed
 set backspace=indent,eol,start
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Copy/Paste
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fix indents on paste
+:noremap <Esc>p p'[v']=
+:noremap <Esc>P P'[v']=
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the statusline
