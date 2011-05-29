@@ -222,7 +222,8 @@ map <leader>c :set ic!<cr>
 nmap <leader>w :w!<cr>
 
 " Fast editing of the .vimrc
-map <leader>e :e! ~/Dropbox/vimrc/.vim_runtime/vimrc<cr>
+" TODO - don't hard code this
+map <leader>e :e! ~/.dotfiles/vimrc/vimrc<cr>
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
