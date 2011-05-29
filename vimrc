@@ -267,6 +267,10 @@ if has("autocmd")
 
 endif
 
+" PHP testing
+set makeprg=php\ -l\ %
+set errorformat=%m\ in\ %f\ on\ line\ %l
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
