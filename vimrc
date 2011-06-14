@@ -89,6 +89,13 @@ set clipboard=unnamed
 set backspace=indent,eol,start
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Copy/Paste
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fix indents on paste
+:noremap <Esc>p p'[v']=
+:noremap <Esc>P P'[v']=
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the statusline
@@ -208,6 +215,45 @@ map <silent> <leader><cr> :noh<cr>
 " Toggle ignorecase
 map <leader>c :set ic!<cr>
 
+" Escape special characters in a string for exact matching.
+" This is useful to copying strings from the file to the search tool
+" Based on this - http://peterodding.com/code/vim/profile/autoload/xolox/escape.vim
+function! EscapeString (string)
+  let string=a:string
+  " Escape regex characters
+  let string = escape(string, '^$.*\/~[]')
+  " Escape the line endings
+  let string = substitute(string, '\n', '\\n', 'g')
+  return string
+endfunction
+
+" Get the current visual block for search and replaces
+" This function passed the visual block through a string escape function
+" Based on this - http://stackoverflow.com/questions/676600/vim-replace-selected-text/677918#677918
+function! GetVisual() range
+  " Save the current register and clipboard
+  let reg_save = getreg('"')
+  let regtype_save = getregtype('"')
+  let cb_save = &clipboard
+  set clipboard&
+
+  " Put the current visual selection in the " register
+  normal! ""gvy
+  let selection = getreg('"')
+
+  " Put the saved registers and clipboards back
+  call setreg('"', reg_save, regtype_save)
+  let &clipboard = cb_save
+
+  "Escape any special characters in the selection
+  let escaped_selection = EscapeString(selection)
+
+  return escaped_selection
+endfunction
+
+" Start the find and replace command across the entire file
+vmap <leader>z <Esc>:%s/<c-r>=GetVisual()<cr>/
+
 """""""""""""""""""""""""
 " General aliases
 """"""""""""""""""""""""""
@@ -215,7 +261,8 @@ map <leader>c :set ic!<cr>
 nmap <leader>w :w!<cr>
 
 " Fast editing of the .vimrc
-map <leader>e :e! ~/Dropbox/vimrc/.vim_runtime/vimrc<cr>
+" TODO - don't hard code this
+map <leader>e :e! ~/.dotfiles/vimrc/vimrc<cr>
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
@@ -259,6 +306,10 @@ if has("autocmd")
 
 endif
 
+" PHP testing
+set makeprg=php\ -l\ %
+set errorformat=%m\ in\ %f\ on\ line\ %l
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -269,8 +320,32 @@ nmap <leader>f :FufFileWithCurrentBufferDir<cr>
 nmap <leader>fw :FufFile **/<cr>
 
 " NERDTree configuration
+let g:NERDTreeWinSize = 30
 let NERDTreeIgnore=['\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+
+" A NERDTree toggle combined with the NERDTreeFind command
+" Credit to http://bit.ly/lPz9N4
+function! NERDTreeFindToggle()
+  if exists("t:NERDTreeBufName")
+    let s:ntree = bufwinnr(t:NERDTreeBufName)
+  else
+    let s:ntree = -1
+  endif
+  if (s:ntree != -1)
+    :NERDTreeClose
+  else
+    :NERDTreeFind
+  endif
+endfunction
+
+map <Leader>n :call NERDTreeFindToggle()<CR>
+
+" Taglist configuration
+set updatetime=1000
+let tlist_php_settings = 'php;c:class;d:constant;f:function'
+let Tlist_Use_Right_Window = 1
+let Tlist_WinWidth = 35
+map <Leader>t :TlistToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
