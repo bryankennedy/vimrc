@@ -340,12 +340,18 @@ endfunction
 
 map <Leader>n :call NERDTreeFindToggle()<CR>
 
-" Taglist configuration
-set updatetime=1000
-let tlist_php_settings = 'php;c:class;d:constant;f:function'
-let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth = 35
-map <Leader>t :TlistToggle<CR>
+" Taglist plugin configuration
+" Check for ctags on the system. If isn't there
+" avoid an annoying message by disabling the plugin
+if executable('exuberant-ctags')
+  set updatetime=1000
+  let tlist_php_settings = 'php;c:class;d:constant;f:function'
+  let Tlist_Use_Right_Window = 1
+  let Tlist_WinWidth = 35
+  map <Leader>t :TlistToggle<CR>
+else
+  let loaded_taglist = 'no'
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
