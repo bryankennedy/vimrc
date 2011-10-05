@@ -338,7 +338,19 @@ function! NERDTreeFindToggle()
   endif
 endfunction
 
-map <Leader>n :call NERDTreeFindToggle()<CR>
+" map <Leader>n :call NERDTreeFindToggle()<CR>
+
+function! NERDTreeSplitHack()
+  NERDTree " open NERDTree
+  wincmd J " move NERDTree to the very bottom
+  wincmd k " move the cursor to the above split (the source code buffer)
+  wincmd H " move the split to the very left
+  wincmd l " move the cursor back to the NERDTree split
+  resize 35 " resize the split height to 20
+  " resize the split width to the default setting
+  execute "vertical resize " . g:NERDTreeWinSize 
+endfunction
+map <Leader>n :call NERDTreeSplitHack()<CR>
 
 " Taglist plugin configuration
 " Check for ctags on the system. If isn't there
