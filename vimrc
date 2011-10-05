@@ -27,8 +27,8 @@ filetype plugin indent on    " enable detection, plugins and indenting in one st
 " GUI options for MacVim if enabled
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
-  set lines=120              " window height
-  set columns=180            " window width
+  set lines=60               " window height
+  set columns=140            " window width
   set go-=T                  " hide the MacVim toolbar
 
   " Helps keep the windows the right shape after splitting
