@@ -91,7 +91,7 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Copy/Paste
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Fix indents on paste
+" Fix indents on paste with an ESC before p or P
 :noremap <Esc>p p'[v']=
 :noremap <Esc>P P'[v']=
 
