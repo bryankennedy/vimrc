@@ -95,6 +95,19 @@ set backspace=indent,eol,start
 :noremap <Esc>p p'[v']=
 :noremap <Esc>P P'[v']=
 
+" YankRing settings
+" Show YankRing with leader and y
+nnoremap <silent> <leader>y :YRShow<CR>
+" Make YankRing vertical sidebar
+let yankring_window_use_horiz=0
+let g:yankring_window_width = 40
+" Don't add single chars to YankRing buffer
+let g:yankring_min_element_length = 2
+" Put the yankring history file in the vim directory
+" we setup in the install, and make it hidden.
+let g:yankring_history_dir = '~/.vim'
+let g:yankring_history_file = '.yankring_history'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
