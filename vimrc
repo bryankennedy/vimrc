@@ -300,6 +300,9 @@ if has("autocmd")
   " Treat Drupal files as PHP
   autocmd BufNewFile,BufReadPre *.php,*.inc,*.module,*.install setfiletype php
 
+  " Treat Drupal template files at HTML
+  autocmd BufNewFile,BufReadPre *.tpl.php setfiletype html
+
   " Strip EOL whitespace out of specific filetypes
   " also turn tabs into two spaces
   autocmd BufWritePre *.py,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
