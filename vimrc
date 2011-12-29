@@ -27,8 +27,8 @@ filetype plugin indent on    " enable detection, plugins and indenting in one st
 " GUI options for MacVim if enabled
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
-  set lines=120              " window height
-  set columns=180            " window width
+  set lines=60               " window height
+  set columns=140            " window width
   set go-=T                  " hide the MacVim toolbar
 
   " Helps keep the windows the right shape after splitting
@@ -305,7 +305,7 @@ if has("autocmd")
 
   " Strip EOL whitespace out of specific filetypes
   " also turn tabs into two spaces
-  autocmd BufWritePre *.py,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
+  autocmd BufWritePre *.py,*.css,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
 
 endif
 
@@ -355,12 +355,18 @@ function! NERDTreeSplitHack()
 endfunction
 map <Leader>n :call NERDTreeSplitHack()<CR>
 
-" Taglist configuration
-set updatetime=1000
-let tlist_php_settings = 'php;c:class;d:constant;f:function'
-let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth = 35
-map <Leader>t :TlistToggle<CR>
+" Taglist plugin configuration
+" Check for ctags on the system. If isn't there
+" avoid an annoying message by disabling the plugin
+if executable('exuberant-ctags')
+  set updatetime=1000
+  let tlist_php_settings = 'php;c:class;d:constant;f:function'
+  let Tlist_Use_Right_Window = 1
+  let Tlist_WinWidth = 35
+  map <Leader>t :TlistToggle<CR>
+else
+  let loaded_taglist = 'no'
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
