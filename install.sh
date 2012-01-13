@@ -24,7 +24,7 @@ if [ ! -e ${INSTALL_DIR}/README.md ]; then
   else
     # You've specified a custom location but it doesn't exist
     if [ ! -e $1/README.md ]; then
-      echo "There is a problem with your custom install location $1" 
+      echo "There is a problem with your custom install location $1"
       echo "Custom location example:"
       echo "./install.sh ~/.dotfiles/vimrc"
       echo "Do not use a trailing slash for locations"
@@ -73,8 +73,8 @@ echo "(.vim .vimrc vimrc)"
 echo "with symlinks to this vimrc system."
 echo "This script will make backups of your existing files in your home directory."
 
-# If NO, or error
 choice "Do you wish to continue [Y/n]: " "y"
+# If NO, or error
 if [ "$CHOICE" != "y" ]; then
   if [ "$CHOICE" = "n" ]; then
     echo "Quitting. Your files are unafected"
@@ -83,6 +83,9 @@ if [ "$CHOICE" != "y" ]; then
   echo "I didn't understand, $CHOICE. Quiting."
   exit
 fi
+
+# Get all of the vim plugin submodules
+git pull && git submodule init && git submodule update && git submodule status
 
 # Clean out home dir
 vimrc_files=( .vim .vimrc vimrc )
