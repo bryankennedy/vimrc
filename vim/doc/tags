@@ -322,7 +322,6 @@ bufexplorer-usage	bufexplorer.txt	/*bufexplorer-usage*
 bufexplorer-windowlayout	bufexplorer.txt	/*bufexplorer-windowlayout*
 bufexplorer.txt	bufexplorer.txt	/*bufexplorer.txt*
 buffer-explorer	bufexplorer.txt	/*buffer-explorer*
-cs	surround.txt	/*cs*
 dav	pi_netrw.txt	/*dav*
 davs	pi_netrw.txt	/*davs*
 delimitMate	delimitMate.txt	/*delimitMate*
@@ -375,7 +374,6 @@ doxygensupport-toc	doxygensupport.txt	/*doxygensupport-toc*
 doxygensupport-working-dir	doxygensupport.txt	/*doxygensupport-working-dir*
 doxygensupport.txt	doxygensupport.txt	/*doxygensupport.txt*
 doxygentemplates-date	doxygensupport.txt	/*doxygentemplates-date*
-ds	surround.txt	/*ds*
 fetch	pi_netrw.txt	/*fetch*
 ftp	pi_netrw.txt	/*ftp*
 fuf	fuf.txt	/*fuf*
@@ -649,8 +647,6 @@ g:netrw_xstrlen	pi_netrw.txt	/*g:netrw_xstrlen*
 global-example	yankring.txt	/*global-example*
 global_markfilelist	pi_netrw.txt	/*global_markfilelist*
 http	pi_netrw.txt	/*http*
-i_CTRL-G_S	surround.txt	/*i_CTRL-G_S*
-i_CTRL-G_s	surround.txt	/*i_CTRL-G_s*
 l9	l9.txt	/*l9*
 l9-about	l9.txt	/*l9-about*
 l9-author	l9.txt	/*l9-author*
@@ -841,14 +837,6 @@ rsync	pi_netrw.txt	/*rsync*
 s:netrw_passwd	pi_netrw.txt	/*s:netrw_passwd*
 scp	pi_netrw.txt	/*scp*
 sftp	pi_netrw.txt	/*sftp*
-surround	surround.txt	/*surround*
-surround-author	surround.txt	/*surround-author*
-surround-customizing	surround.txt	/*surround-customizing*
-surround-issues	surround.txt	/*surround-issues*
-surround-mappings	surround.txt	/*surround-mappings*
-surround-replacements	surround.txt	/*surround-replacements*
-surround-targets	surround.txt	/*surround-targets*
-surround.txt	surround.txt	/*surround.txt*
 taglist-commands	taglist.txt	/*taglist-commands*
 taglist-debug	taglist.txt	/*taglist-debug*
 taglist-extend	taglist.txt	/*taglist-extend*
@@ -873,7 +861,6 @@ unimpaired-lines	unimpaired.txt	/*unimpaired-lines*
 unimpaired-next	unimpaired.txt	/*unimpaired-next*
 unimpaired-todo	unimpaired.txt	/*unimpaired-todo*
 unimpaired.txt	unimpaired.txt	/*unimpaired.txt*
-vS	surround.txt	/*vS*
 v_[e	unimpaired.txt	/*v_[e*
 v_[u	unimpaired.txt	/*v_[u*
 v_[x	unimpaired.txt	/*v_[x*
@@ -882,10 +869,6 @@ v_]e	unimpaired.txt	/*v_]e*
 v_]u	unimpaired.txt	/*v_]u*
 v_]x	unimpaired.txt	/*v_]x*
 v_]y	unimpaired.txt	/*v_]y*
-vgS	surround.txt	/*vgS*
-vs	surround.txt	/*vs*
-yS	surround.txt	/*yS*
-ySS	surround.txt	/*ySS*
 yankring	yankring.txt	/*yankring*
 yankring-commands	yankring.txt	/*yankring-commands*
 yankring-configure	yankring.txt	/*yankring-configure*
@@ -901,5 +884,3 @@ yankring-visual-example	yankring.txt	/*yankring-visual-example*
 yankring-window	yankring.txt	/*yankring-window*
 yankring-window-example	yankring.txt	/*yankring-window-example*
 yankring.txt	yankring.txt	/*yankring.txt*
-ys	surround.txt	/*ys*
-yss	surround.txt	/*yss*
