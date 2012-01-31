@@ -185,6 +185,7 @@ set hid                             " undo history remainis when switching buffe
 """"""""""""""""""""""""""
 " Tabs and indenting
 """"""""""""""""""""""""""
+set nosmartindent                   " Disable the annoying smartindent
 set tabstop=2                       " Tabstops equal two collumns
 set shiftwidth=2                    " Indent operations are also two collumns
 set softtabstop=2                   " Makes tabs feel like tabs but act like spaces
@@ -192,7 +193,6 @@ set expandtab                       " Insert spaces when you hit the tab key
 set smarttab                        " Smart indent new lines
 set list listchars=tab:\ \ ,trail:· " Show some hidden char.
 set ai                              " auto indent
-set si                              " smart indet
 set wrap                            " wrap lines
 
 " Use 4 spaces for python
