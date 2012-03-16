@@ -16,6 +16,3 @@
 [submodule "vim/bundle/pythoncomplete"]
 	path = vim/bundle/pythoncomplete
 	url = https://github.com/vim-scripts/pythoncomplete.git
-[submodule "vim/bundle/autoit"]
-	path = vim/bundle/autoit
-	url = https://github.com/vim-scripts/autoit.vim--Breland.git
