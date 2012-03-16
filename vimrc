@@ -197,6 +197,9 @@ set wrap                            " wrap lines
 
 " Use 4 spaces for python
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
+"
+" Use 3 spaces for AutoIt scripts
+autocmd Filetype autoit setlocal ts=3 sts=3 sw=3
 
 " Shortcuts for indenting without loosing visual selection
 nmap <D-[> <<
@@ -369,15 +372,15 @@ map <Leader>n :call NERDTreeSplitHack()<CR>
 " Taglist plugin configuration
 " Check for ctags on the system. If isn't there
 " avoid an annoying message by disabling the plugin
-if executable('exuberant-ctags')
+"if executable('exuberant-ctags')
   set updatetime=1000
   let tlist_php_settings = 'php;c:class;d:constant;f:function'
   let Tlist_Use_Right_Window = 1
   let Tlist_WinWidth = 35
   map <Leader>t :TlistToggle<CR>
-else
-  let loaded_taglist = 'no'
-endif
+"else
+  "let loaded_taglist = 'no'
+"endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
