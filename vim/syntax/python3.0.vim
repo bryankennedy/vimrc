@@ -224,6 +224,11 @@ if exists("python_highlight_doctests") && python_highlight_doctests != 0
   syn region pythonDocTest2	start="^\s*>>>" end=+"""+he=s-1 end="^\s*$" contained
 endif
 
+" Docstrngs formatted as comments
+syn region pythonComment
+      \ start=+\(:\n[\t ]*\)\@<=\z('''\|"""\)+ end=+\z1+ keepend
+      \ contains=pythonEscape,pythonTodo,@Spell
+
 " Numbers (ints, longs, floats, complex)
 syn match   pythonHexError	"\<0[xX]\x*[g-zG-Z]\x*\>" display
 
