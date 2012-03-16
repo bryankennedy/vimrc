@@ -10,3 +10,12 @@
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "vim/bundle/git-vim"]
+	path = vim/bundle/git-vim
+	url = https://github.com/motemen/git-vim.git
+[submodule "vim/bundle/pythoncomplete"]
+	path = vim/bundle/pythoncomplete
+	url = https://github.com/vim-scripts/pythoncomplete.git
+[submodule "vim/bundle/autoit"]
+	path = vim/bundle/autoit
+	url = https://github.com/vim-scripts/autoit.vim--Breland.git
