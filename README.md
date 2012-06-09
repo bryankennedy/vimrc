@@ -10,3 +10,6 @@
 1. Run the install script, telling it where you have install the vimrc folder
 
         ./install.sh ~/.dotfiles/vimrc
+
+# Usage
+To add new plugins, download the package, and copy its folder to the vimrc/vim/bundle directory. Pathogen will handle the rest.
