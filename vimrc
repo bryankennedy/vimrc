@@ -63,6 +63,13 @@ if has('gui_running')
   set columns=140            " window width
   set go-=T                  " hide the MacVim toolbar
 
+  " Enable a ruler at 80 chracters to encourage short lines
+  if exists('+colorcolumn')
+    set colorcolumn=80
+    highlight colorcolumn guibg=#111111
+    column=80
+  endif
+
   " Helps keep the windows the right shape after splitting
   set noequalalways
 
