@@ -19,6 +19,43 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin indent on    " enable detection, plugins and indenting in one step
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on                    " Color highlighting
+                             " has to be called before status line directives
+set nocompatible             " Use Vim not Vi settings
+set history=1000             " Long memory
+set undolevels=1000          " Lots of undo too
+if v:version >= 730
+    set undofile             " Store the undo in a file
+    set undodir=~/.vim/.undo,~/tmp,/tmp
+endif
+set nobackup                 " I've never once used a Vim backup...
+set noswapfile               " or restored a file from swap.
+set directory=~/.vim/.tmp,~/tmp,/tmp
+                             " But, let's put em in tmp if swap does
+                             " get turned on.
+
+" When vimrc is edited, reload it
+autocmd! bufwritepost vimrc source ~/.vimrc
+
+" Diff an unsaved file against saved file
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
+
+" Make the OSX clipboard work with vim
+set clipboard=unnamed
+
+" Allow backspace to work across lines, etc.
+set backspace=indent,eol,start
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI options for MacVim if enabled
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
@@ -44,44 +81,6 @@ if has('gui_running')
   colors crispy
 
 endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible             " Use Vim not Vi settings
-set history=1000             " Long memory
-set undolevels=1000          " Lots of undo too
-if v:version >= 730
-    set undofile             " Store the undo in a file
-    set undodir=~/.vim/.undo,~/tmp,/tmp
-endif
-set nobackup                 " I've never once used a Vim backup...
-set noswapfile               " or restored a file from swap.
-set directory=~/.vim/.tmp,~/tmp,/tmp
-                             " But, let's put em in tmp if swap does
-                             " get turned on.
-
-syntax on                    " color highlighting
-                             " has to be called before status line directives
-
-" When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vimrc
-
-" Diff an unsaved file against saved file
-function! s:DiffWithSaved()
-  let filetype=&ft
-  diffthis
-  vnew | r # | normal! 1Gdd
-  diffthis
-  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
-endfunction
-com! DiffSaved call s:DiffWithSaved()
-
-" Make the OSX clipboard work with vim
-set clipboard=unnamed
-
-" Allow backspace to work across lines, etc.
-set backspace=indent,eol,start
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Copy/Paste
