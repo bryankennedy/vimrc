@@ -16,3 +16,6 @@
 [submodule "vim/bundle/pythoncomplete"]
 	path = vim/bundle/pythoncomplete
 	url = https://github.com/vim-scripts/pythoncomplete.git
+[submodule "vim/bundle/vim-html5"]
+	path = vim/bundle/vim-html5
+	url = https://github.com/othree/html5.vim.git
