@@ -16,3 +16,6 @@
 [submodule "vim/bundle/pythoncomplete"]
 	path = vim/bundle/pythoncomplete
 	url = https://github.com/vim-scripts/pythoncomplete.git
+[submodule "vim/bundle/vim-processing"]
+	path = vim/bundle/vim-processing
+	url = https://github.com/sophacles/vim-processing.git
