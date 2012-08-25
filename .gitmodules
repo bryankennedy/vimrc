@@ -33,6 +33,7 @@
 [submodule "vim/bundle/YankRing.vim"]
 	path = vim/bundle/YankRing.vim
 	url = https://github.com/vim-scripts/YankRing.vim.git
+  ignore = untracked
 [submodule "vim/bundle/vim-unimpaired"]
 	path = vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
@@ -42,6 +43,11 @@
 [submodule "vim/bundle/L9"]
 	path = vim/bundle/L9
 	url = https://github.com/vim-scripts/L9.git
+  ignore = untracked
 [submodule "vim/bundle/FuzzyFinder"]
 	path = vim/bundle/FuzzyFinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
+  ignore = untracked
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
