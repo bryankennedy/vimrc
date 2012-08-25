@@ -26,3 +26,6 @@
 	path = vim/bundle/vim-autocomplpop
 	url = https://github.com/clones/vim-autocomplpop.git
   ignore = untracked
+[submodule "vim/bundle/taglist.vim"]
+	path = vim/bundle/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git
