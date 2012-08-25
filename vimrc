@@ -19,35 +19,10 @@ call pathogen#runtime_append_all_bundles()
 filetype plugin indent on    " enable detection, plugins and indenting in one step
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" GUI options for MacVim if enabled
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has('gui_running')
-  set lines=60               " window height
-  set columns=140            " window width
-  set go-=T                  " hide the MacVim toolbar
-
-  " Helps keep the windows the right shape after splitting
-  set noequalalways
-
-  " Requires 'experimental renderer' in the MacVIm settings window
-  set transp=0
-
-  " Unique cursor for insert and edit mode
-  set guicursor=n-v-c:hor35-Cursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
-
-  " Good monospace font
-  "set noantialias
-  " TODO Add some conditionals here for systems without this font
-  set guifont=Panic_Sans:h15
-
-  " Color scheme
-  colors crispy
-
-endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on                    " Color highlighting
+                             " has to be called before status line directives
 set nocompatible             " Use Vim not Vi settings
 set history=1000             " Long memory
 set undolevels=1000          " Lots of undo too
@@ -60,9 +35,6 @@ set noswapfile               " or restored a file from swap.
 set directory=~/.vim/.tmp,~/tmp,/tmp
                              " But, let's put em in tmp if swap does
                              " get turned on.
-
-syntax on                    " color highlighting
-                             " has to be called before status line directives
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vimrc
@@ -82,6 +54,40 @@ set clipboard=unnamed
 
 " Allow backspace to work across lines, etc.
 set backspace=indent,eol,start
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" GUI options for MacVim if enabled
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has('gui_running')
+  set lines=60               " window height
+  set columns=140            " window width
+  set go-=T                  " hide the MacVim toolbar
+
+  " Enable a ruler at 80 chracters to encourage short lines
+  if exists('+colorcolumn')
+    set colorcolumn=80
+    highlight colorcolumn guibg=#111111
+    column=80
+  endif
+
+  " Helps keep the windows the right shape after splitting
+  set noequalalways
+
+  " Requires 'experimental renderer' in the MacVIm settings window
+  set transp=0
+
+  " Unique cursor for insert and edit mode
+  set guicursor=n-v-c:hor35-Cursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
+
+  " Good monospace font
+  "set noantialias
+  " TODO Add some conditionals here for systems without this font
+  set guifont=Panic_Sans:h15
+
+  " Color scheme
+  colors crispy
+
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Copy/Paste
