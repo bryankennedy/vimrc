@@ -59,15 +59,18 @@ set backspace=indent,eol,start
 " GUI options for MacVim if enabled
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
-  set lines=60               " window height
-  set columns=140            " window width
-  set go-=T                  " hide the MacVim toolbar
+  " Color scheme
+  colors crispy
+
+  " Window size, and disable the MacVim toolbar
+  set lines=60
+  set columns=140
+  set go-=T
 
   " Enable a ruler at 80 chracters to encourage short lines
   if exists('+colorcolumn')
     set colorcolumn=80
     highlight colorcolumn guibg=#111111
-    column=80
   endif
 
   " Helps keep the windows the right shape after splitting
@@ -83,9 +86,6 @@ if has('gui_running')
   "set noantialias
   " TODO Add some conditionals here for systems without this font
   set guifont=Panic_Sans:h15
-
-  " Color scheme
-  colors crispy
 
 endif
 
