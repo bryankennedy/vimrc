@@ -25,3 +25,4 @@
 [submodule "vim/bundle/vim-autocomplpop"]
 	path = vim/bundle/vim-autocomplpop
 	url = https://github.com/clones/vim-autocomplpop.git
+  ignore = untracked
