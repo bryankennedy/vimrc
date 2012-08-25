@@ -60,3 +60,6 @@
 [submodule "vim/bundle/bufexplorer"]
 	path = vim/bundle/bufexplorer
 	url = https://github.com/tednaleid/bufexplorer.git
+[submodule "vim/bundle/netrw.vim"]
+	path = vim/bundle/netrw.vim
+	url = https://github.com/vim-scripts/netrw.vim.git
