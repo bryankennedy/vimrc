@@ -116,7 +116,7 @@ let ColorAssignment['IncSearch'] = {"GUIFG": 'White', "GUIBG": pale_red}
 let ColorAssignment['Error'] = {"GUIFG": 'White', "GUIBG": pale_red, "TERM": 'Reverse'}
 
 " To Do tags
-let ColorAssignment['Todo'] = {"GUIFG": 'Blue', "GUIBG": 'Yellow', "TERM": 'Standout'}
+let ColorAssignment['Todo'] = {"GUIFG": dark_grey, "GUIBG": paler_yellow, "TERM": 'Standout'}
 
 " Special Stuff
 let ColorAssignment['Special'] = {"GUIFG": 'Red', "TERM": 'Bold'}
