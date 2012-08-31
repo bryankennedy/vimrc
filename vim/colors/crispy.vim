@@ -37,6 +37,8 @@ let almost_black     = '#191919'
 " Comments
 let pale_grey      = '#99a4b3'
 let paler_grey     = '#dee1e6'
+let dark_grey      = '#444444'
+let darkest_grey   = '#222222'
 
 " PHP tags, current buffer
 let pale_red       = '#FF6C60'
@@ -47,7 +49,7 @@ let pale_green     = '#A8FF60'
 let paler_green    = '#CEFFAB'
 
 let vivid_blue     = '#5D90CD'
-let slate_blue     = '#d9ecff' 
+let slate_blue     = '#d9ecff'
 let pale_blue      = '#96CBFE'
 let paler_blue     = '#B5DCFE'
 
@@ -87,7 +89,9 @@ let ColorAssignment['FoldColumn']      = {"GUIFG": pale_magenta,  "GUIBG":   alm
 let ColorAssignment['Folded']          = {"GUIFG": pale_magenta,  "GUIBG":   almost_black}
 
 " Popup Menu for things like Fuzzy Finder
-let ColorAssignment['Pmenu']           = {"GUIFG": '#442206',     "GUIBG": '#ffff77',     "CTERMFG": "Black",   "CTERMBG": "Yellow"}
+let ColorAssignment['Pmenu']          = {"GUIFG": 'White', "GUIBG": dark_grey}
+let ColorAssignment['PmenuSel']       = {"GUIFG": 'Black', "GUIBG": paler_green}
+
 " Line Numbering
 let ColorAssignment['LineNr']          = {"GUIFG": pale_blue,      "GUIBG": almost_midnight}
 
