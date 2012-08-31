@@ -5,7 +5,7 @@
 " License:      public domain
 "
 " Inspired by these themes
-" IR_Black text mate theme - http://blog.toddwerth.com/entries/show/2
+" IR_Black Text Mate theme - http://blog.toddwerth.com/entries/show/2
 " Clouds midnight - http://fredhq.com/projects/clouds
 " Blackboard - http://www.vim.org/scripts/script.php?script_id=2280
 "
@@ -20,7 +20,7 @@ set background=dark
 " Clear all highlighting styles
 hi clear
 
-" Name theme
+" Name the theme
 let g:colors_name = "crispy"
 
 " Reset syntax highlighting
@@ -28,7 +28,7 @@ if exists("syntax_on")
    syntax reset
 endif
 
-" Standard colors
+" Define the color variables
 
 " Line highlighting
 let almost_midnight  = '#111111'
@@ -76,7 +76,7 @@ let ColorAssignment['Normal']          = {"GUIFG": 'White',       "GUIBG":   'Bl
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Interface elements 
+" Interface elements
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Cursor
 let ColorAssignment['Cursor']          = {"GUIFG": 'Black',       "GUIBG": 'White'}
@@ -99,12 +99,12 @@ let ColorAssignment['StatusLineNC']    = {"GUIFG": almost_midnight,       "GUIBG
 let ColorAssignment['VertSplit']       = {"GUIFG": almost_midnight,       "GUIBG": almost_midnight}
 
 " Signs Column
-let ColorAssignment['SignColumn']      = {"GUIBG": '#222222'}
+let ColorAssignment['SignColumn']      = {"GUIBG": darkest_grey}
 
 let ColorAssignment['Title']           = {"GUIFG": slate_blue,        "GUI": "Bold"}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Things that need highlighting 
+" Things that need highlighting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search highlighting
 let ColorAssignment['Search']          = {"GUIFG": 'White',        "GUIBG":   'Red'}
@@ -114,7 +114,7 @@ let ColorAssignment['IncSearch']       = {"GUIFG": 'White',        "GUIBG":   pa
 let ColorAssignment['Error']           = {"GUIFG": 'White',       "GUIBG":   pale_red,      "TERM":  'Reverse'}
 let ColorAssignment['NonIndentTabError']={"GUISP": '#FFAA00',     "GUI":     'undercurl',   "CTERMBG": 'Red'}
 
-" To Do tags 
+" To Do tags
 let ColorAssignment['Todo']            = {"GUIFG": 'Blue',        "GUIBG":   'Yellow',  "TERM":  'Standout'}
 
 " Special Stuff
@@ -127,7 +127,7 @@ let ColorAssignment['MatchParen']      = {"GUI":   'Underline',   "GUIFG": "Yell
 let ColorAssignment['Visual']          = {"GUIFG": 'NONE',        "GUIBG": '#262D51'}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Generic code highlighting 
+" Generic code highlighting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Comments
 " TODO - Test these out further once you get Doxygen plugin working
@@ -138,7 +138,7 @@ let ColorAssignment['DoxygenLink']     = {"GUIFG": paler_grey,    "CTERMFG": 'Gr
 let ColorAssignment['DoxygenTable']    = {"GUIFG": paler_grey,    "CTERMFG": 'Green',   "TERM":  'Bold'}
 let ColorAssignment['DoxygenTableLines']  = {"GUIFG": paler_grey, "CTERMFG": 'Grey'}
 
-" Strings and constants 
+" Strings and constants
 let ColorAssignment['Keyword']         = {"GUIFG": slate_blue}
 let ColorAssignment['PreProc']         = {"GUIFG": vivid_blue}
 let ColorAssignment['Constant']        = {"GUIFG": pale_green,     "CTERMFG": 'red',    "TERM":  'Underline'}
@@ -178,7 +178,7 @@ let ColorAssignment['Type']            = {"GUIFG": pale_red,     "TERM":    'Und
 let ColorAssignment['StorageClass']    = {"GUIFG": paler_red} " static, register, volatile, etc.
 let ColorAssignment['Structure']       = {"GUIFG": paler_red} " struct, union, enum, etc.
 
-" HTML 
+" HTML
 let ColorAssignment['htmlH1']          = {"GUIFG": slate_blue}
 let ColorAssignment['htmlH2']          = {"GUIFG": paler_blue}
 let ColorAssignment['htmlH3']          = {"GUIFG": pale_blue}
