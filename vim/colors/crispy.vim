@@ -93,12 +93,12 @@ let ColorAssignment['PmenuSel'] = {"GUIFG": 'Black', "GUIBG": paler_green}
 " Line Numbering
 let ColorAssignment['LineNr'] = {"GUIFG": pale_blue, "GUIBG": almost_midnight}
 
-" Status Lines
+" Status Lines aka 'horizontal split'
 let ColorAssignment['StatusLine'] = {"GUIFG": almost_midnight, "GUIBG": 'White'}
 let ColorAssignment['StatusLineNC'] = {"GUIFG": almost_midnight, "GUIBG": almost_midnight}
 
 " Vertical Splits
-let ColorAssignment['VertSplit'] = {"GUIFG": almost_midnight, "GUIBG": almost_midnight}
+let ColorAssignment['VertSplit'] = {"GUIFG": darkest_grey, "GUIBG": almost_midnight}
 
 " Signs Column
 let ColorAssignment['SignColumn'] = {"GUIBG": darkest_grey}
