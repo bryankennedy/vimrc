@@ -114,7 +114,6 @@ let ColorAssignment['IncSearch'] = {"GUIFG": 'White', "GUIBG": pale_red}
 
 " Errors
 let ColorAssignment['Error'] = {"GUIFG": 'White', "GUIBG": pale_red, "TERM": 'Reverse'}
-let ColorAssignment['NonIndentTabError']={"GUISP": '#FFAA00', "GUI": 'undercurl', "CTERMBG": 'Red'}
 
 " To Do tags
 let ColorAssignment['Todo'] = {"GUIFG": 'Blue', "GUIBG": 'Yellow', "TERM": 'Standout'}
