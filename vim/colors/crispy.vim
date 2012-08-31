@@ -133,11 +133,6 @@ let ColorAssignment['Visual'] = {"GUIFG": 'NONE', "GUIBG": '#262D51'}
 " Comments
 " TODO - Test these out further once you get Doxygen plugin working
 let ColorAssignment['Comment'] = {"GUIFG": pale_grey, "CTERMFG": 'Grey', "TERM": 'Bold'}
-let ColorAssignment['DoxygenComment'] = {"GUIFG": pale_grey, "CTERMFG": 'Grey', "TERM": 'Bold'}
-let ColorAssignment['DoxygenKeyword'] = {"GUIFG": paler_grey, "CTERMFG": 'Grey'}
-let ColorAssignment['DoxygenLink'] = {"GUIFG": paler_grey, "CTERMFG": 'Grey'}
-let ColorAssignment['DoxygenTable'] = {"GUIFG": paler_grey, "CTERMFG": 'Green', "TERM": 'Bold'}
-let ColorAssignment['DoxygenTableLines'] = {"GUIFG": paler_grey, "CTERMFG": 'Grey'}
 
 " Strings and constants
 let ColorAssignment['Keyword'] = {"GUIFG": slate_blue}
