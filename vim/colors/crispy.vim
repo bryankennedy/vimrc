@@ -5,7 +5,7 @@
 " License:      public domain
 "
 " Inspired by these themes
-" IR_Black text mate theme - http://blog.toddwerth.com/entries/show/2
+" IR_Black Text Mate theme - http://blog.toddwerth.com/entries/show/2
 " Clouds midnight - http://fredhq.com/projects/clouds
 " Blackboard - http://www.vim.org/scripts/script.php?script_id=2280
 "
@@ -20,7 +20,7 @@ set background=dark
 " Clear all highlighting styles
 hi clear
 
-" Name theme
+" Name the theme
 let g:colors_name = "crispy"
 
 " Reset syntax highlighting
@@ -28,7 +28,7 @@ if exists("syntax_on")
    syntax reset
 endif
 
-" Standard colors
+" Define the color variables
 
 " Line highlighting
 let almost_midnight  = '#111111'
@@ -37,6 +37,8 @@ let almost_black     = '#191919'
 " Comments
 let pale_grey      = '#99a4b3'
 let paler_grey     = '#dee1e6'
+let dark_grey      = '#444444'
+let darkest_grey   = '#222222'
 
 " PHP tags, current buffer
 let pale_red       = '#FF6C60'
@@ -47,7 +49,7 @@ let pale_green     = '#A8FF60'
 let paler_green    = '#CEFFAB'
 
 let vivid_blue     = '#5D90CD'
-let slate_blue     = '#d9ecff' 
+let slate_blue     = '#d9ecff'
 let pale_blue      = '#96CBFE'
 let paler_blue     = '#B5DCFE'
 
@@ -76,7 +78,7 @@ let ColorAssignment['Normal']          = {"GUIFG": 'White',       "GUIBG":   'Bl
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Interface elements 
+" Interface elements
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Cursor
 let ColorAssignment['Cursor']          = {"GUIFG": 'Black',       "GUIBG": 'White'}
@@ -87,7 +89,9 @@ let ColorAssignment['FoldColumn']      = {"GUIFG": pale_magenta,  "GUIBG":   alm
 let ColorAssignment['Folded']          = {"GUIFG": pale_magenta,  "GUIBG":   almost_black}
 
 " Popup Menu for things like Fuzzy Finder
-let ColorAssignment['Pmenu']           = {"GUIFG": '#442206',     "GUIBG": '#ffff77',     "CTERMFG": "Black",   "CTERMBG": "Yellow"}
+let ColorAssignment['Pmenu']          = {"GUIFG": 'White', "GUIBG": dark_grey}
+let ColorAssignment['PmenuSel']       = {"GUIFG": 'Black', "GUIBG": paler_green}
+
 " Line Numbering
 let ColorAssignment['LineNr']          = {"GUIFG": pale_blue,      "GUIBG": almost_midnight}
 
@@ -99,12 +103,12 @@ let ColorAssignment['StatusLineNC']    = {"GUIFG": almost_midnight,       "GUIBG
 let ColorAssignment['VertSplit']       = {"GUIFG": almost_midnight,       "GUIBG": almost_midnight}
 
 " Signs Column
-let ColorAssignment['SignColumn']      = {"GUIBG": '#222222'}
+let ColorAssignment['SignColumn']      = {"GUIBG": darkest_grey}
 
 let ColorAssignment['Title']           = {"GUIFG": slate_blue,        "GUI": "Bold"}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Things that need highlighting 
+" Things that need highlighting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search highlighting
 let ColorAssignment['Search']          = {"GUIFG": 'White',        "GUIBG":   'Red'}
@@ -114,7 +118,7 @@ let ColorAssignment['IncSearch']       = {"GUIFG": 'White',        "GUIBG":   pa
 let ColorAssignment['Error']           = {"GUIFG": 'White',       "GUIBG":   pale_red,      "TERM":  'Reverse'}
 let ColorAssignment['NonIndentTabError']={"GUISP": '#FFAA00',     "GUI":     'undercurl',   "CTERMBG": 'Red'}
 
-" To Do tags 
+" To Do tags
 let ColorAssignment['Todo']            = {"GUIFG": 'Blue',        "GUIBG":   'Yellow',  "TERM":  'Standout'}
 
 " Special Stuff
@@ -127,7 +131,7 @@ let ColorAssignment['MatchParen']      = {"GUI":   'Underline',   "GUIFG": "Yell
 let ColorAssignment['Visual']          = {"GUIFG": 'NONE',        "GUIBG": '#262D51'}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Generic code highlighting 
+" Generic code highlighting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Comments
 " TODO - Test these out further once you get Doxygen plugin working
@@ -138,7 +142,7 @@ let ColorAssignment['DoxygenLink']     = {"GUIFG": paler_grey,    "CTERMFG": 'Gr
 let ColorAssignment['DoxygenTable']    = {"GUIFG": paler_grey,    "CTERMFG": 'Green',   "TERM":  'Bold'}
 let ColorAssignment['DoxygenTableLines']  = {"GUIFG": paler_grey, "CTERMFG": 'Grey'}
 
-" Strings and constants 
+" Strings and constants
 let ColorAssignment['Keyword']         = {"GUIFG": slate_blue}
 let ColorAssignment['PreProc']         = {"GUIFG": vivid_blue}
 let ColorAssignment['Constant']        = {"GUIFG": pale_green,     "CTERMFG": 'red',    "TERM":  'Underline'}
@@ -178,7 +182,7 @@ let ColorAssignment['Type']            = {"GUIFG": pale_red,     "TERM":    'Und
 let ColorAssignment['StorageClass']    = {"GUIFG": paler_red} " static, register, volatile, etc.
 let ColorAssignment['Structure']       = {"GUIFG": paler_red} " struct, union, enum, etc.
 
-" HTML 
+" HTML
 let ColorAssignment['htmlH1']          = {"GUIFG": slate_blue}
 let ColorAssignment['htmlH2']          = {"GUIFG": paler_blue}
 let ColorAssignment['htmlH3']          = {"GUIFG": pale_blue}
@@ -213,68 +217,68 @@ let ColorAssignment['hlLevel7']        = {"GUIFG": '#ffff44',     "CTERMFG": 'Da
 let ColorAssignment['hlLevel8']        = {"GUIFG": '#96cdcd',     "CTERMFG": 'DarkCyan'}
 let ColorAssignment['hlLevel9']        = {"GUIFG": '#698b22',     "CTERMFG": 'DarkCyan'}
 let s:Colors = {}
-let valid_cterm_Colors = 
-			\ [
-			\     'Black', 'DarkBlue', 'DarkGreen', 'DarkCyan',
-			\     'DarkRed', 'DarkMagenta', 'Brown', 'DarkYellow',
-			\     'LightGray', 'LightGrey', 'Gray', 'Grey',
-			\     'DarkGray', 'DarkGrey', 'Blue', 'LightBlue',
-			\     'Green', 'LightGreen', 'Cyan', 'LightCyan',
-			\     'Red', 'LightRed', 'Magenta', 'LightMagenta',
-			\     'Yellow', 'LightYellow', 'White',
-			\ ]
+let valid_cterm_Colors =
+      \ [
+      \     'Black', 'DarkBlue', 'DarkGreen', 'DarkCyan',
+      \     'DarkRed', 'DarkMagenta', 'Brown', 'DarkYellow',
+      \     'LightGray', 'LightGrey', 'Gray', 'Grey',
+      \     'DarkGray', 'DarkGrey', 'Blue', 'LightBlue',
+      \     'Green', 'LightGreen', 'Cyan', 'LightCyan',
+      \     'Red', 'LightRed', 'Magenta', 'LightMagenta',
+      \     'Yellow', 'LightYellow', 'White',
+      \ ]
 for key in keys(ColorAssignment)
-	let s:Colors = ColorAssignment[key]
-	if has_key(s:Colors, 'TERM')
-		let term = s:Colors['TERM']
-	else
-		let term = 'NONE'
-	endif
-	if has_key(s:Colors, 'GUI')
-		let gui = s:Colors['GUI']
-	else
-		let gui='NONE'
-	endif
-	if has_key(s:Colors, 'GUIFG')
-		let guifg = s:Colors['GUIFG']
-	else
-		let guifg='NONE'
-	endif
-	if has_key(s:Colors, 'GUIBG')
-		let guibg = s:Colors['GUIBG']
-	else
-		let guibg='NONE'
-	endif
-	if has_key(s:Colors, 'CTERM')
-		let cterm = s:Colors['CTERM']
-	else
-		let cterm=gui
-	endif
-	if has_key(s:Colors, 'CTERMFG')
-		let ctermfg = s:Colors['CTERMFG']
-	else
-		if index(valid_cterm_Colors, guifg) != -1
-			let ctermfg=guifg
-		else
-			let ctermfg='Blue'
-		endif
-	endif
-	if has_key(s:Colors, 'CTERMBG')
-		let ctermbg = s:Colors['CTERMBG']
-	else
-		if index(valid_cterm_Colors, guibg) != -1
-			let ctermbg=guibg
-		else
-			let ctermbg='NONE'
-		endif
-	endif
-	if has_key(s:Colors, 'GUISP')
-		let guisp = s:Colors['GUISP']
-	else
-		let guisp='NONE'
-	endif
+  let s:Colors = ColorAssignment[key]
+  if has_key(s:Colors, 'TERM')
+    let term = s:Colors['TERM']
+  else
+    let term = 'NONE'
+  endif
+  if has_key(s:Colors, 'GUI')
+    let gui = s:Colors['GUI']
+  else
+    let gui='NONE'
+  endif
+  if has_key(s:Colors, 'GUIFG')
+    let guifg = s:Colors['GUIFG']
+  else
+    let guifg='NONE'
+  endif
+  if has_key(s:Colors, 'GUIBG')
+    let guibg = s:Colors['GUIBG']
+  else
+    let guibg='NONE'
+  endif
+  if has_key(s:Colors, 'CTERM')
+    let cterm = s:Colors['CTERM']
+  else
+    let cterm=gui
+  endif
+  if has_key(s:Colors, 'CTERMFG')
+    let ctermfg = s:Colors['CTERMFG']
+  else
+    if index(valid_cterm_Colors, guifg) != -1
+      let ctermfg=guifg
+    else
+      let ctermfg='Blue'
+    endif
+  endif
+  if has_key(s:Colors, 'CTERMBG')
+    let ctermbg = s:Colors['CTERMBG']
+  else
+    if index(valid_cterm_Colors, guibg) != -1
+      let ctermbg=guibg
+    else
+      let ctermbg='NONE'
+    endif
+  endif
+  if has_key(s:Colors, 'GUISP')
+    let guisp = s:Colors['GUISP']
+  else
+    let guisp='NONE'
+  endif
 
-	if key =~ '^\k*$'
-		execute "hi ".key." term=".term." cterm=".cterm." gui=".gui." ctermfg=".ctermfg." guifg=".guifg." ctermbg=".ctermbg." guibg=".guibg." guisp=".guisp
-	endif
+  if key =~ '^\k*$'
+    execute "hi ".key." term=".term." cterm=".cterm." gui=".gui." ctermfg=".ctermfg." guifg=".guifg." ctermbg=".ctermbg." guibg=".guibg." guisp=".guisp
+  endif
 endfor
