@@ -217,68 +217,68 @@ let ColorAssignment['hlLevel7']        = {"GUIFG": '#ffff44',     "CTERMFG": 'Da
 let ColorAssignment['hlLevel8']        = {"GUIFG": '#96cdcd',     "CTERMFG": 'DarkCyan'}
 let ColorAssignment['hlLevel9']        = {"GUIFG": '#698b22',     "CTERMFG": 'DarkCyan'}
 let s:Colors = {}
-let valid_cterm_Colors = 
-			\ [
-			\     'Black', 'DarkBlue', 'DarkGreen', 'DarkCyan',
-			\     'DarkRed', 'DarkMagenta', 'Brown', 'DarkYellow',
-			\     'LightGray', 'LightGrey', 'Gray', 'Grey',
-			\     'DarkGray', 'DarkGrey', 'Blue', 'LightBlue',
-			\     'Green', 'LightGreen', 'Cyan', 'LightCyan',
-			\     'Red', 'LightRed', 'Magenta', 'LightMagenta',
-			\     'Yellow', 'LightYellow', 'White',
-			\ ]
+let valid_cterm_Colors =
+      \ [
+      \     'Black', 'DarkBlue', 'DarkGreen', 'DarkCyan',
+      \     'DarkRed', 'DarkMagenta', 'Brown', 'DarkYellow',
+      \     'LightGray', 'LightGrey', 'Gray', 'Grey',
+      \     'DarkGray', 'DarkGrey', 'Blue', 'LightBlue',
+      \     'Green', 'LightGreen', 'Cyan', 'LightCyan',
+      \     'Red', 'LightRed', 'Magenta', 'LightMagenta',
+      \     'Yellow', 'LightYellow', 'White',
+      \ ]
 for key in keys(ColorAssignment)
-	let s:Colors = ColorAssignment[key]
-	if has_key(s:Colors, 'TERM')
-		let term = s:Colors['TERM']
-	else
-		let term = 'NONE'
-	endif
-	if has_key(s:Colors, 'GUI')
-		let gui = s:Colors['GUI']
-	else
-		let gui='NONE'
-	endif
-	if has_key(s:Colors, 'GUIFG')
-		let guifg = s:Colors['GUIFG']
-	else
-		let guifg='NONE'
-	endif
-	if has_key(s:Colors, 'GUIBG')
-		let guibg = s:Colors['GUIBG']
-	else
-		let guibg='NONE'
-	endif
-	if has_key(s:Colors, 'CTERM')
-		let cterm = s:Colors['CTERM']
-	else
-		let cterm=gui
-	endif
-	if has_key(s:Colors, 'CTERMFG')
-		let ctermfg = s:Colors['CTERMFG']
-	else
-		if index(valid_cterm_Colors, guifg) != -1
-			let ctermfg=guifg
-		else
-			let ctermfg='Blue'
-		endif
-	endif
-	if has_key(s:Colors, 'CTERMBG')
-		let ctermbg = s:Colors['CTERMBG']
-	else
-		if index(valid_cterm_Colors, guibg) != -1
-			let ctermbg=guibg
-		else
-			let ctermbg='NONE'
-		endif
-	endif
-	if has_key(s:Colors, 'GUISP')
-		let guisp = s:Colors['GUISP']
-	else
-		let guisp='NONE'
-	endif
+  let s:Colors = ColorAssignment[key]
+  if has_key(s:Colors, 'TERM')
+    let term = s:Colors['TERM']
+  else
+    let term = 'NONE'
+  endif
+  if has_key(s:Colors, 'GUI')
+    let gui = s:Colors['GUI']
+  else
+    let gui='NONE'
+  endif
+  if has_key(s:Colors, 'GUIFG')
+    let guifg = s:Colors['GUIFG']
+  else
+    let guifg='NONE'
+  endif
+  if has_key(s:Colors, 'GUIBG')
+    let guibg = s:Colors['GUIBG']
+  else
+    let guibg='NONE'
+  endif
+  if has_key(s:Colors, 'CTERM')
+    let cterm = s:Colors['CTERM']
+  else
+    let cterm=gui
+  endif
+  if has_key(s:Colors, 'CTERMFG')
+    let ctermfg = s:Colors['CTERMFG']
+  else
+    if index(valid_cterm_Colors, guifg) != -1
+      let ctermfg=guifg
+    else
+      let ctermfg='Blue'
+    endif
+  endif
+  if has_key(s:Colors, 'CTERMBG')
+    let ctermbg = s:Colors['CTERMBG']
+  else
+    if index(valid_cterm_Colors, guibg) != -1
+      let ctermbg=guibg
+    else
+      let ctermbg='NONE'
+    endif
+  endif
+  if has_key(s:Colors, 'GUISP')
+    let guisp = s:Colors['GUISP']
+  else
+    let guisp='NONE'
+  endif
 
-	if key =~ '^\k*$'
-		execute "hi ".key." term=".term." cterm=".cterm." gui=".gui." ctermfg=".ctermfg." guifg=".guifg." ctermbg=".ctermbg." guibg=".guibg." guisp=".guisp
-	endif
+  if key =~ '^\k*$'
+    execute "hi ".key." term=".term." cterm=".cterm." gui=".gui." ctermfg=".ctermfg." guifg=".guifg." ctermbg=".ctermbg." guibg=".guibg." guisp=".guisp
+  endif
 endfor
