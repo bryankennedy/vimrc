@@ -69,7 +69,6 @@ if has('gui_running')
   " Enable a ruler at 80 chracters to encourage short lines
   if exists('+colorcolumn')
     set colorcolumn=80
-    highlight colorcolumn guibg=#111111
   endif
 
   " Helps keep the windows the right shape after splitting
