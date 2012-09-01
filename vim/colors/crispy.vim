@@ -59,6 +59,7 @@ let paler_yellow = '#FFFFCB'
 " TRUE/FALSE
 let pale_magenta = '#FF73FD'
 let paler_magenta = '#FF9CFE'
+let vivid_magenta = '#ea00e7'
 
 " ?
 let pale_cyan = '#C6C5FE'
@@ -146,13 +147,14 @@ let ColorAssignment['Number'] = {"GUIFG": pale_green}
 let ColorAssignment['Statement'] = {"GUIFG": paler_blue, "TERM": 'Bold'}
 
 " Statements are shades of magenta
-let ColorAssignment['Conditional'] = {"GUIFG": pale_magenta} " if, then, else, endif, switch, etc.
-let ColorAssignment['Repeat'] = {"GUIFG": paler_magenta} " for, do, while, etc.
+let ColorAssignment['Conditional'] = {"GUIFG": paler_magenta} " if, then, else, endif, switch, etc.
 let ColorAssignment['Label'] = {"GUIFG": paler_magenta} " case, default, etc.
-let ColorAssignment['Exception'] = {"GUIFG": paler_magenta} " try, catch, throw
+let ColorAssignment['Repeat'] = {"GUIFG": vivid_magenta} " for, do, while, etc.
+let ColorAssignment['Exception'] = {"GUIFG": vivid_magenta} " try, catch, throw
 
-" Variable names and operators ($, +, =, -, % etc)
-let ColorAssignment['Identifier'] = {"GUIFG": pale_cyan, "TERM": 'Underline'}
+" Variables
+let ColorAssignment['Identifier'] = {"GUIFG": paler_cyan}
+" Varible related symbols ($, +, =, -, % etc)
 let ColorAssignment['Operator'] = {"GUIFG": pale_cyan}
 
 " Identifiers are shades of Cyan
