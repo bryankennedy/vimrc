@@ -59,12 +59,11 @@ set backspace=indent,eol,start
 " GUI options for MacVim if enabled
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
-  " Color scheme
   colors crispy
 
   " Window size, and disable the MacVim toolbar
-  set lines=60
-  set columns=140
+  "set lines=60
+  "set columns=140
   set go-=T
 
   " Enable a ruler at 80 chracters to encourage short lines
