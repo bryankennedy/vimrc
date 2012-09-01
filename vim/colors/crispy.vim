@@ -52,6 +52,8 @@ let vivid_blue = '#5D90CD'
 let slate_blue = '#d9ecff'
 let pale_blue = '#96CBFE'
 let paler_blue = '#B5DCFE'
+let lilac_blue = '#5555AA'
+let dusk_blue = '#8888AA'
 
 let pale_yellow = '#FFFFB6'
 let paler_yellow = '#FFFFCB'
@@ -170,10 +172,10 @@ let ColorAssignment['Structure'] = {"GUIFG": paler_red} " struct, union, enum, e
 let ColorAssignment['htmlH1'] = {"GUIFG": slate_blue}
 let ColorAssignment['htmlH2'] = {"GUIFG": paler_blue}
 let ColorAssignment['htmlH3'] = {"GUIFG": pale_blue}
-let ColorAssignment['htmlH4'] = {"GUIFG": '#5555AA'}
-let ColorAssignment['htmlH5'] = {"GUIFG": '#8888AA'}
-let ColorAssignment['htmlH6'] = {"GUIFG": '#888888'}
-let ColorAssignment['htmlH6'] = {"GUIFG": '#888888'}
+let ColorAssignment['htmlH4'] = {"GUIFG": lilac_blue}
+let ColorAssignment['htmlH5'] = {"GUIFG": dusk_blue}
+let ColorAssignment['htmlH6'] = {"GUIFG": pale_grey}
+let ColorAssignment['htmlH6'] = {"GUIFG": pale_grey}
 highlight link htmlTag Type
 highlight link htmlEndTag htmlTag
 highlight link htmlTagName htmlTag
