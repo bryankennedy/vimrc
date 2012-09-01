@@ -161,16 +161,6 @@ let ColorAssignment['Operator'] = {"GUIFG": pale_cyan}
 let ColorAssignment['Function'] = {"GUIFG": paler_green, "CTERMFG": 'Green'}
 let ColorAssignment['Method'] = {"GUIFG": paler_green, "CTERMFG": 'Cyan'}
 
-let ColorAssignment['Class'] = {"GUIFG": 'Purple', "TERM": 'Underline'}
-let ColorAssignment['DefinedName'] = {"GUIFG": '#ee82ee', "TERM": 'Underline'}
-let ColorAssignment['EnumerationValue']= {"GUIFG": '#c000c0'}
-let ColorAssignment['EnumerationName'] = {"GUIFG": '#ff22ff', "TERM": 'Underline'}
-let ColorAssignment['Member'] = {"GUIFG": 'DarkGrey', "TERM": 'Underline'}
-let ColorAssignment['Union'] = {"GUIFG": 'Grey', "TERM": 'Underline'}
-let ColorAssignment['GlobalVariable'] = {"GUIFG": '#666600', "CTERMFG": 'Cyan', "TERM": 'Underline'}
-let ColorAssignment['LocalVariable'] = {"GUIFG": '#aaa14c', "CTERMFG": 'Cyan'}
-let ColorAssignment['GlobalConstant'] = {"GUIFG": '#bbbb00', "CTERMFG": 'Yellow', "TERM": 'Underline'}
-
 " Types
 let ColorAssignment['Type'] = {"GUIFG": pale_red, "TERM": 'Underline'}
 let ColorAssignment['StorageClass'] = {"GUIFG": paler_red} " static, register, volatile, etc.
