@@ -190,19 +190,6 @@ let ColorAssignment['Define'] = {"GUIFG": '#5555FF', "GUI": 'Bold'} " preprocess
 let ColorAssignment['Macro'] = {"GUIFG": '#5555FF', "GUI": 'Bold'} " same as Define
 let ColorAssignment['PreCondit'] = {"GUIFG": '#8888FF', "GUI": 'Bold'} " preprocessor #if, #else, #endif, etc.
 
-" Rainbow highlighting of nested brackets
-" TODO: Find the closest ctermfg match to the various guifg Colors
-let ColorAssignment['hlLevel0'] = {"GUIFG": 'DarkCyan', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel1'] = {"GUIFG": '#bfbf00', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel2'] = {"GUIFG": '#990033', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel3'] = {"GUIFG": '#334488', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel4'] = {"GUIFG": '#996622', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel5'] = {"GUIFG": '#ff2222', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel6'] = {"GUIFG": '#4444ff', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel7'] = {"GUIFG": '#ffff44', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel8'] = {"GUIFG": '#96cdcd', "CTERMFG": 'DarkCyan'}
-let ColorAssignment['hlLevel9'] = {"GUIFG": '#698b22', "CTERMFG": 'DarkCyan'}
-let s:Colors = {}
 let valid_cterm_Colors =
       \ [
       \     'Black', 'DarkBlue', 'DarkGreen', 'DarkCyan',
@@ -213,6 +200,7 @@ let valid_cterm_Colors =
       \     'Red', 'LightRed', 'Magenta', 'LightMagenta',
       \     'Yellow', 'LightYellow', 'White',
       \ ]
+
 for key in keys(ColorAssignment)
   let s:Colors = ColorAssignment[key]
   if has_key(s:Colors, 'TERM')
