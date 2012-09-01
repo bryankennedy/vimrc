@@ -158,8 +158,8 @@ let ColorAssignment['Identifier'] = {"GUIFG": paler_cyan}
 let ColorAssignment['Operator'] = {"GUIFG": pale_cyan}
 
 " Identifiers are shades of Cyan
-let ColorAssignment['Function'] = {"GUIFG": pale_green, "CTERMFG": 'Green'}
-let ColorAssignment['Method'] = {"GUIFG": pale_green, "CTERMFG": 'Cyan'}
+let ColorAssignment['Function'] = {"GUIFG": paler_green, "CTERMFG": 'Green'}
+let ColorAssignment['Method'] = {"GUIFG": paler_green, "CTERMFG": 'Cyan'}
 
 let ColorAssignment['Class'] = {"GUIFG": 'Purple', "TERM": 'Underline'}
 let ColorAssignment['DefinedName'] = {"GUIFG": '#ee82ee', "TERM": 'Underline'}
