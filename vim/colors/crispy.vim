@@ -61,7 +61,7 @@ let pale_magenta = '#FF73FD'
 let paler_magenta = '#FF9CFE'
 let vivid_magenta = '#ea00e7'
 
-" ?
+" Variables
 let pale_cyan = '#C6C5FE'
 let paler_cyan = '#DFDFFE'
 
