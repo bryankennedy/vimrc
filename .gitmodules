@@ -68,3 +68,4 @@
 [submodule "vim/bundle/ShowMarks"]
 	path = vim/bundle/ShowMarks
 	url = https://github.com/harleypig/ShowMarks.git
+  ignore = untracked
