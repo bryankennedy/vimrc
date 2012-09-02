@@ -45,6 +45,7 @@ let darkest_grey = '#222222'
 " PHP tags, current buffer
 let pale_red = '#FF6C60'
 let paler_red = '#FFB6B0'
+let dark_red = '#2d0300'
 
 " Strings
 let pale_green = '#A8FF60'
@@ -56,6 +57,7 @@ let pale_blue = '#96CBFE'
 let paler_blue = '#B5DCFE'
 let lilac_blue = '#5555AA'
 let dusk_blue = '#8888AA'
+let dark_glass_blue = '#12253b'
 
 let pale_yellow = '#FFFFB6'
 let paler_yellow = '#FFFFCB'
@@ -92,8 +94,14 @@ let ColorAssignment['CursorLine'] = {"GUIBG": almost_black}
 let ColorAssignment['colorcolumn'] = {"GUIBG": almost_black}
 
 " Folding
-let ColorAssignment['FoldColumn'] = {"GUIFG": pale_magenta, "GUIBG": almost_black}
-let ColorAssignment['Folded'] = {"GUIFG": pale_magenta, "GUIBG": almost_black}
+let ColorAssignment['FoldColumn'] = {"GUIFG": paler_magenta, "GUIBG": almost_black}
+let ColorAssignment['Folded'] = {"GUIFG": paler_magenta, "GUIBG": almost_black}
+
+" Diffs
+let ColorAssignment['DiffText'] = {"GUI": 'bold'}
+let ColorAssignment['DiffAdd'] = {"GUI": 'NONE', 'GUIBG': '#102e27'}
+let ColorAssignment['DiffChange'] = {"GUI": 'NONE', 'GUIBG': dark_glass_blue}
+let ColorAssignment['DiffDelete'] = {"GUI": 'NONE', 'GUIBG': dark_red, 'GUIFG': dark_red}
 
 " Popup Menu for things like Fuzzy Finder
 let ColorAssignment['Pmenu'] = {"GUIFG": 'White', "GUIBG": dark_grey}
