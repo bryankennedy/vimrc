@@ -65,3 +65,6 @@
 [submodule "vim/bundle/vim-colorschemes"]
 	path = vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vim/bundle/ShowMarks"]
+	path = vim/bundle/ShowMarks
+	url = https://github.com/harleypig/ShowMarks.git

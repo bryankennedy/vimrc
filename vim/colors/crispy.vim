@@ -32,8 +32,8 @@ endif
 
 " Background
 let almost_midnight = '#111111'
-" Line highlighting
-let black = '#000000'
+
+" Cursor line and other borders
 let almost_black = '#191919'
 
 " Comments
@@ -203,6 +203,16 @@ let ColorAssignment['Include'] = {"GUIFG": slate_blue} " preprocessor #include
 let ColorAssignment['Define'] = {"GUIFG": '#5555FF', "GUI": 'Bold'} " preprocessor #define
 let ColorAssignment['Macro'] = {"GUIFG": '#5555FF', "GUI": 'Bold'} " same as Define
 let ColorAssignment['PreCondit'] = {"GUIFG": '#8888FF', "GUI": 'Bold'} " preprocessor #if, #else, #endif, etc.
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ShowMarks
+let ColorAssignment['ShowMarksHLl'] = {"GUIBG": "Black", "GUI": "Bold"}
+let ColorAssignment['ShowMarksHLu'] = {"GUIBG": "Black", "GUI": "Bold"}
+let ColorAssignment['ShowMarksHLo'] = {"GUIBG": "Black", "GUI": "Bold"}
+let ColorAssignment['ShowMarksHLm'] = {"GUIBG": "Black", "GUI": "Bold"}
 
 let valid_cterm_Colors =
       \ [
