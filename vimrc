@@ -107,6 +107,9 @@ let g:yankring_min_element_length = 2
 let g:yankring_history_dir = '~/.vim'
 let g:yankring_history_file = '.yankring_history'
 
+" Select the most recently edited or pasted text
+nnoremap <expr> <leader>p '`[' . strpart(getregtype(), 0, 1) . '`]'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
