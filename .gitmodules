@@ -68,3 +68,6 @@
 [submodule "vim/bundle/ShowMarks"]
 	path = vim/bundle/ShowMarks
 	url = https://github.com/harleypig/ShowMarks.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
