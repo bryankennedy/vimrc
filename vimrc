@@ -85,7 +85,7 @@ if has('gui_running')
   "set noantialias
   " TODO Add some conditionals here for systems without this font.
   " TODO Figure out how you want to package this font.
-  set guifont=Panic\ Sans\ for\ Powerline:h15
+  set guifont=PanicSans:h15
 
   " Powerline configuration
   " Let's only enable this on GUI systems otherwise use the simpler
