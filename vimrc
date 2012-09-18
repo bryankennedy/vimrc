@@ -14,8 +14,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
+"call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
 filetype plugin indent on    " enable detection, plugins and indenting in one step
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,6 +116,9 @@ let g:yankring_min_element_length = 2
 " we setup in the install, and make it hidden.
 let g:yankring_history_dir = '~/.vim'
 let g:yankring_history_file = '.yankring_history'
+
+" Select the most recently edited or pasted text
+nnoremap <expr> <leader>p '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
@@ -398,18 +402,20 @@ else
 endif
 
 " ShowMarks configuration
+if has('gui_running')
 
-" Don't show naviation marks that change with any cursor movement
-" Also, only show a few of the most recent edit marks, 0,1,2
-let showmarks_include = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012'
+  " Don't show naviation marks that change with any cursor movement
+  " Also, only show a few of the most recent edit marks, 0,1,2
+  let showmarks_include = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012'
 
-" If a manual mark exists, highlight the line
-let showmarks_hlline_lower = 1
-let showmarks_hlline_upper = 1
+  " If a manual mark exists, highlight the line
+  let showmarks_hlline_lower = 1
+  let showmarks_hlline_upper = 1
 
-" Use a space to indicate non-manual marks. This helps differentiate them
-" from the the manual marks.
-let showmarks_textother = ' '
+  " Use a space to indicate non-manual marks. This helps differentiate them
+  " from the the manual marks.
+  let showmarks_textother = ' '
+endif
 
 " PyFlakes
 autocmd BufWritePost *.py call Flake8()
