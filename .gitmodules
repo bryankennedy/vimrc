@@ -69,3 +69,12 @@
 	path = vim/bundle/ShowMarks
 	url = https://github.com/harleypig/ShowMarks.git
   ignore = untracked
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-flake8"]
+	path = vim/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
