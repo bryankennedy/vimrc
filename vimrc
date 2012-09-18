@@ -82,8 +82,14 @@ if has('gui_running')
 
   " Good monospace font
   "set noantialias
-  " TODO Add some conditionals here for systems without this font
-  set guifont=Panic_Sans:h15
+  " TODO Add some conditionals here for systems without this font.
+  " TODO Figure out how you want to package this font.
+  set guifont=Panic\ Sans\ for\ Powerline:h15
+
+  " Powerline configuration
+  " Let's only enable this on GUI systems otherwise use the simpler
+  " status line defined further down the file.
+  let g:Powerline_symbols = 'fancy'
 
 endif
 
@@ -93,6 +99,9 @@ endif
 " Fix indents on paste with an ESC before p or P
 :noremap <Esc>p p'[v']=
 :noremap <Esc>P P'[v']=
+
+" Visually select your pasted text
+nnoremap gp `[v`]
 
 " YankRing settings
 " Show YankRing with leader and y
@@ -112,6 +121,8 @@ let g:yankring_history_file = '.yankring_history'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the statusline
 set laststatus=2
+
+" If Powerline isn't being used, set some statusline defaults
 
 " Status line coloring
 hi User1     ctermbg=grey      ctermfg=black     guibg=#111111   guifg=#5D90CD
@@ -399,6 +410,10 @@ let showmarks_hlline_upper = 1
 " Use a space to indicate non-manual marks. This helps differentiate them
 " from the the manual marks.
 let showmarks_textother = ' '
+
+" PyFlakes
+autocmd BufWritePost *.py call Flake8()
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
