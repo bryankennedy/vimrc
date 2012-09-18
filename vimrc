@@ -15,13 +15,13 @@
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
 call pathogen#infect()
-"call pathogen#helptags()
-"call pathogen#runtime_append_all_bundles()
-filetype plugin indent on    " enable detection, plugins and indenting in one step
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" enable detection, plugins and indenting in one step
+filetype plugin indent on
+
 syntax on                    " Color highlighting
                              " has to be called before status line directives
 set nocompatible             " Use Vim not Vi settings
@@ -31,7 +31,7 @@ if v:version >= 730
     set undofile             " Store the undo in a file
     set undodir=~/.vim/.undo,~/tmp,/tmp
 endif
-set nobackup                 " I've never once used a Vim backup...
+set nobackup                 " I've never once used a Vim backup
 set noswapfile               " or restored a file from swap.
 set directory=~/.vim/.tmp,~/tmp,/tmp
                              " But, let's put em in tmp if swap does
