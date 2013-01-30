@@ -420,6 +420,20 @@ endif
 " PyFlakes
 autocmd BufWritePost *.py call Flake8()
 
+"
+" delimitMate
+"
+" This plug-in provides automatic closing of quotes, parenthesis, brackets, etc
+"
+" Remap CTRL + Tab to jump to the right of an autimatically created delimiter
+" For example:
+"       Type          |   You get
+" ===================================
+"  (                  |   (|)
+" ––––––––––––––––––––|––––––––––––––
+"  (stringCTRL+Tab    |   (string)|
+" ––––––––––––––––––––|––––––––––––––
+inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
