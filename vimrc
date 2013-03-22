@@ -417,8 +417,9 @@ if has('gui_running')
   let showmarks_textother = ' '
 endif
 
-" PyFlakes
-autocmd BufWritePost *.py call Flake8()
+" PyFlakes - Syntax checking for Python on file save.
+" Disabled because of some performance issues.
+"autocmd BufWritePost *.py call Flake8()
 
 "
 " delimitMate
