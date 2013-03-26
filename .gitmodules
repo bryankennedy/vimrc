@@ -58,10 +58,6 @@
 	path = vim/bundle/bufexplorer
 	url = https://github.com/tednaleid/bufexplorer.git
   ignore = untracked
-[submodule "vim/bundle/netrw.vim"]
-	path = vim/bundle/netrw.vim
-	url = https://github.com/vim-scripts/netrw.vim.git
-  ignore = untracked
 [submodule "vim/bundle/vim-colorschemes"]
 	path = vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
