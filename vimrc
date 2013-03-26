@@ -380,7 +380,11 @@ endfunction
 
 map <Leader>n :call NERDTreeFindToggle()<CR>
 
-" Taglist plugin configuration
+
+"
+" Taglist
+" Source code browser
+"
 " Check for ctags on the system. If isn't there
 " avoid an annoying message by disabling the plugin
 if executable('etags')
@@ -388,12 +392,16 @@ if executable('etags')
   let tlist_php_settings = 'php;c:class;d:constant;f:function'
   let Tlist_Use_Right_Window = 1
   let Tlist_WinWidth = 35
-  map <Leader>t :TlistToggle<CR>
+  map <Leader>g :TlistToggle<CR>
 else
   let loaded_taglist = 'no'
 endif
 
-" ShowMarks configuration
+
+"
+" ShowMarks
+" Provides a visual representation of the location marks.
+"
 if has('gui_running')
 
   " Don't show naviation marks that change with any cursor movement
@@ -409,14 +417,18 @@ if has('gui_running')
   let showmarks_textother = ' '
 endif
 
-" PyFlakes - Syntax checking for Python on file save.
+
+"
+" PyFlakes
+" Syntax checking for Python on file save
+"
 " Disabled because of some performance issues.
 "autocmd BufWritePost *.py call Flake8()
 
+
 "
 " delimitMate
-"
-" This plug-in provides automatic closing of quotes, parenthesis, brackets, etc
+" Provides automatic closing of quotes, parenthesis, brackets, etc
 "
 " Remap CTRL + Tab to jump to the right of an autimatically created delimiter
 " For example:
@@ -427,6 +439,7 @@ endif
 "  (stringCTRL+Tab    |   (string)|
 " ––––––––––––––––––––|––––––––––––––
 inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
