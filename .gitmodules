@@ -86,3 +86,9 @@
 [submodule "vim/bundle/jslint.vim"]
 	path = vim/bundle/jslint.vim
 	url = https://github.com/hallettj/jslint.vim.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
