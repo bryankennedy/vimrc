@@ -287,9 +287,6 @@ map <leader>q :1,300 bd<cr>
 map <right> :bn<cr>
 map <left> :bp<cr>
 
-" Show invisibles
-nmap <leader>l :set list!<CR>
-
 " Enter new lines without entering insert mode
 map <S-Enter> O<Esc>
 map <CR> o<Esc>
