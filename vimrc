@@ -349,11 +349,14 @@ set errorformat=%m\ in\ %f\ on\ line\ %l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FuzzyFinder
+"
+" Command-T
+" Fast file navigation
+"
 " Search, starting with current buffer
-nmap <leader>f :FufFileWithCurrentBufferDir<cr>
-" Search, with a wildcard from current dir
-nmap <leader>fw :FufFile **/<cr>
+nmap <leader>t :CommandT<cr>
+let g:CommandTMaxHeight = '20'
+
 
 "
 " NERDTree
