@@ -281,9 +281,6 @@ nmap <leader>w :w!<cr>
 " TODO - don't hard code this
 map <leader>e :e! ~/.vimrc<cr>
 
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-
 " Close all the buffers
 " This is nice because it cleans everything up but leaves You
 " with a blank page for new composing.
