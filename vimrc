@@ -355,7 +355,11 @@ nmap <leader>f :FufFileWithCurrentBufferDir<cr>
 " Search, with a wildcard from current dir
 nmap <leader>fw :FufFile **/<cr>
 
-" NERDTree configuration
+"
+" NERDTree
+" Tree explorer for navigating the file system
+"
+let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize = 30
 let NERDTreeIgnore=['\.rbc$', '\~$']
 
