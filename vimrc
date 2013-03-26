@@ -298,7 +298,9 @@ map <leader>e :e! ~/.vimrc<cr>
 map <leader>bd :Bclose<cr>
 
 " Close all the buffers
-map <leader>ba :1,300 bd!<cr>
+" This is nice because it cleans everything up but leaves You
+" with a blank page for new composing.
+map <leader>q :1,300 bd<cr>
 
 " Navigate betwen buffers with arrows
 map <right> :bn<cr>
