@@ -18,25 +18,25 @@ To add new plugins, download the package, and copy its folder to the vimrc/vim/b
 A curated list of leaders and other custom shortcuts provided as part of my custom vimrc and by the enabled plugins.
 
 ## Leader...
-\c - Toggle ignorecase
-\c<space> - Comment out the current line or text selected in visual mode.
-\cm - Comment out the selection using only one surrounding comment tag
-\e - Edit this vimrc
-\g - Load taglist
-\n - Load NERDTree
-\p - Select the pasted text
-\q - Close all saved buffers
-\s - Toggle spell checking
-\t - Command-T file searcher
-\w - Write
-\y - Browse YankRing
-\z - Start a find/replace with the selected 'text'
-\<cr> - Clear search highlight
-\\w - jump to a word with easymotion
-\\t - jump to a character with easymotion
+* \c - Toggle ignorecase
+* \c<space> - Comment out the current line or text selected in visual mode.
+* \cm - Comment out the selection using only one surrounding comment tag
+* \e - Edit this vimrc
+* \g - Load taglist
+* \n - Load NERDTree
+* \p - Select the pasted text
+* \q - Close all saved buffers
+* \s - Toggle spell checking
+* \t - Command-T file searcher
+* \w - Write
+* \y - Browse YankRing
+* \z - Start a find/replace with the selected 'text'
+* \\\<cr> - Clear search highlight
+* \\\w - jump to a word with easymotion
+* \\\t - jump to a character with easymotion
 
 ## Commonly forgotten shortcuts
-csw" - Put " around a word
-cs"' - Change those " to '
-ds' - Remove those '
-VS# - Wrap a visual selection in #
+* csw" - Put " around a word
+* cs"' - Change those " to '
+* ds' - Remove those '
+* VS# - Wrap a visual selection in #
