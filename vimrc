@@ -101,10 +101,7 @@ endif
 :noremap <Esc>p p'[v']=
 :noremap <Esc>P P'[v']=
 
-" Visually select your pasted text
-nnoremap gp `[v`]
-
-" Select the most recently edited or pasted text
+" Visually select the most recently edited or pasted text
 nnoremap <expr> <leader>p '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
