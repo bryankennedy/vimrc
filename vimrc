@@ -297,6 +297,9 @@ nmap <leader>s :set spell!<CR>
 " Use the . to repeat a command for a visual selection
 vnoremap . :normal .<CR>
 
+" Shortcut to cd to the directory of the current file
+nnoremap <leader>cd :cd %:p:h<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File type specifications
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""

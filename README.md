@@ -20,6 +20,7 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 ## Leader...
 * \c - Toggle ignorecase
 * \c<space> - Comment out the current line or text selected in visual mode.
+* \cd - Change to the directory of the current file
 * \cm - Comment out the selection using only one surrounding comment tag
 * \e - Edit this vimrc
 * \g - Load taglist
