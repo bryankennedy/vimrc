@@ -32,6 +32,8 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 * \w - Write
 * \y - Browse YankRing
 * \z - Start a find/replace with the selected 'text'
+* \\\] - Jump to the next QuickFix error
+* \\\[ - Jump to the previous QuickFix error
 * \\\<cr> - Clear search highlight
 * \\\w - jump to a word with easymotion
 * \\\t - jump to a character with easymotion

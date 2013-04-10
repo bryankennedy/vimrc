@@ -300,6 +300,9 @@ vnoremap . :normal .<CR>
 " Shortcut to cd to the directory of the current file
 nnoremap <leader>cd :cd %:p:h<CR>
 
+" Shortcut to jump between quickfix errors
+map <leader>] :lnext<cr>
+map <leader>[ :lprevious<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File type specifications
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
