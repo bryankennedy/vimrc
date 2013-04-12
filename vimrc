@@ -414,6 +414,14 @@ endif
 " Disabled because of some performance issues.
 "autocmd BufWritePost *.py call Flake8()
 
+"
+" Syntastic
+" Syntax checking and error reporting
+"
+
+" Tell Syntastic to use pyflakes for testing
+let g:syntastic_python_checker = 'flake8'
+
 
 "
 " delimitMate
