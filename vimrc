@@ -333,6 +333,16 @@ set makeprg=php\ -l\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Folding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set foldmethod=expr
+set foldcolumn=2
+" Shortcut to toggle a fold open and closed
+nnoremap <space> za
+vnoremap <space> za
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
