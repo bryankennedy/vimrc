@@ -100,3 +100,6 @@
 [submodule "vim/bundle/vim-tcl"]
 	path = vim/bundle/vim-tcl
 	url = https://github.com/vim-scripts/tcl.vim--smithfield.git
+[submodule "vim/bundle/vim-json"]
+	path = vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json.git

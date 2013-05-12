@@ -305,6 +305,9 @@ map <leader>] :lnext<cr>
 map <leader>[ :lprevious<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File type specifications
+"
+" @TODO@ cleanup the filetype specifications scattered 
+" throughout this file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   " Enable file type detection
@@ -322,9 +325,20 @@ if has("autocmd")
   " Treat Apache config files as conf files
   autocmd BufNewFile,BufReadPre *.enabled,*.disabled setfiletype conf
 
+  " Treat TileMill Carto files as CSS
+  autocmd BufNewFile,BufRead *.mss setfiletype css
+
+  " Treat TileMill project files like the JSON that they are
+  autocmd BufNewFile,BufRead *.mml setfiletype json
+
+  " JSON settings
+  autocmd FileType json set foldmethod=syntax
+  autocmd FileType json setlocal conceallevel=0
+
   " Strip EOL whitespace out of specific filetypes
   " also turn tabs into two spaces
   autocmd BufWritePre *.py,*.css,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
+
 
 endif
 
@@ -337,7 +351,7 @@ set errorformat=%m\ in\ %f\ on\ line\ %l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set foldmethod=expr
-set foldcolumn=2
+set foldcolumn=5
 " Shortcut to toggle a fold open and closed
 nnoremap <space> za
 vnoremap <space> za
