@@ -43,3 +43,8 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 * cs"' - Change those " to '
 * ds' - Remove those '
 * VS# - Wrap a visual selection in #
+* za - Toggle a fold open/closed
+* zi - Turn folding on and off
+* ZM - Close all folds
+* zMzv - Close all folds, open the current line fold
+* zR - Open all folds
