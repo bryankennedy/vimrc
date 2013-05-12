@@ -91,3 +91,6 @@
 [submodule "vim/bundle/vim-python"]
 	path = vim/bundle/vim-python
 	url = https://github.com/vim-scripts/python.vim--Vasiliev.git
+[submodule "vim/bundle/vim-php"]
+	path = vim/bundle/vim-php
+	url = https://github.com/StanAngeloff/php.vim.git
