@@ -97,3 +97,6 @@
 [submodule "vim/bundle/vim-c"]
 	path = vim/bundle/vim-c
 	url = https://github.com/vim-scripts/c.vim.git
+[submodule "vim/bundle/vim-tcl"]
+	path = vim/bundle/vim-tcl
+	url = https://github.com/vim-scripts/tcl.vim--smithfield.git
