@@ -88,3 +88,6 @@
 [submodule "vim/bundle/Better-CSS-Syntax-for-Vim"]
 	path = vim/bundle/Better-CSS-Syntax-for-Vim
 	url = https://github.com/ChrisYip/Better-CSS-Syntax-for-Vim.git
+[submodule "vim/bundle/vim-python"]
+	path = vim/bundle/vim-python
+	url = https://github.com/vim-scripts/python.vim--Vasiliev.git
