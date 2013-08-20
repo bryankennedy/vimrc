@@ -76,9 +76,6 @@
 [submodule "vim/bundle/vim-javascript-syntax"]
 	path = vim/bundle/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
-[submodule "vim/bundle/jslint.vim"]
-	path = vim/bundle/jslint.vim
-	url = https://github.com/hallettj/jslint.vim.git
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
