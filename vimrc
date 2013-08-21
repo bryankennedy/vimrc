@@ -445,6 +445,7 @@ endif
 
 " Tell Syntastic to use pyflakes for testing
 let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_checker_args='--ignore=E501'
 
 
 "
