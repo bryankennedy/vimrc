@@ -100,3 +100,9 @@
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "vim/bundle/vim-notes"]
+	path = vim/bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
+[submodule "vim/bundle/vim-misc"]
+	path = vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
