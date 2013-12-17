@@ -303,6 +303,12 @@ nnoremap <leader>cd :cd %:p:h<CR>
 " Shortcut to jump between quickfix errors
 map <leader>] :lnext<cr>
 map <leader>[ :lprevious<cr>
+
+" Quicker window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File type specifications
 "
