@@ -344,8 +344,6 @@ if has("autocmd")
   " Strip EOL whitespace out of specific filetypes
   " also turn tabs into two spaces
   autocmd BufWritePre *.py,*.css,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
-
-
 endif
 
 " PHP testing
@@ -365,6 +363,13 @@ vnoremap <space> za
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Vim-Notes
+" Tool for note taking in Vim
+"
+let g:notes_directories = ['~/Dropbox/Notes']
+let g:notes_suffix = '.md'
+
 "
 " Command-T
 " Fast file navigation
