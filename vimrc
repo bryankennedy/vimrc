@@ -320,7 +320,7 @@ if has("autocmd")
   filetype on
 
   " Example conditional filetype setting
-  "autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
 
   " Treat Drupal files as PHP
   autocmd BufNewFile,BufReadPre *.php,*.inc,*.module,*.install setfiletype php
@@ -459,9 +459,12 @@ endif
 " Syntax checking and error reporting
 "
 
-" Tell Syntastic to use pyflakes for testing
+" Tell Syntastic to use pyflakes for testing Python
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_checker_args='--ignore=E501'
+
+" Tell Syntastic to use jslint for testing JS
+let g:syntastic_javascript_checkers=['jshint']
 
 
 "
