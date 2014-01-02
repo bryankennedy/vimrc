@@ -466,6 +466,8 @@ let g:syntastic_python_checker_args='--ignore=E501'
 " Tell Syntastic to use jslint for testing JS
 let g:syntastic_javascript_checkers=['jshint']
 
+let javascript_enable_domhtmlcss=1
+let b:javascript_fold=1
 
 "
 " delimitMate
