@@ -115,3 +115,6 @@
 [submodule "vim/bundle/vim-puppet"]
 	path = vim/bundle/vim-puppet
 	url = https://github.com/rodjek/vim-puppet.git
+[submodule "vim/bundle/vim-plugin-viewdoc"]
+	path = vim/bundle/vim-plugin-viewdoc
+	url = https://github.com/powerman/vim-plugin-viewdoc.git
