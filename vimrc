@@ -271,6 +271,15 @@ vmap <leader>z <Esc>:%s/<c-r>=GetVisual()<cr>/
 """""""""""""""""""""""""
 " General aliases
 """"""""""""""""""""""""""
+" Help fat fingers
+" I constantly am accidentally typing :W, :Q, :Qall because I still and
+" pressing the shift for the colon by the time I get over to the w or q.
+" This remaps the caps versions of these commands to the lowercase commands
+" that I mean to be typing.
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('Q'))
+cnoreabbrev <expr> Qall ((getcmdtype() is# ':' && getcmdline() is# 'Qall')?('qall'):('Qall'))
+
 " Fast saving
 nmap <leader>w :w!<cr>
 
