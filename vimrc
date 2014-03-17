@@ -334,8 +334,8 @@ if has("autocmd")
   " Treat Drupal files as PHP
   autocmd BufNewFile,BufReadPre *.php,*.inc,*.module,*.install setfiletype php
 
-  " Treat Drupal template files at HTML
-  autocmd BufNewFile,BufReadPre *.tpl.php setfiletype html
+  " Treat Drupal template files and Handlebard templates as HTML
+  autocmd BufNewFile,BufReadPre *.tpl.php,*.hbs setfiletype html
 
   " Treat Apache config files as conf files
   autocmd BufNewFile,BufReadPre *.enabled,*.disabled setfiletype conf
