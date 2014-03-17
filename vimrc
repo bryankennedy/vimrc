@@ -350,6 +350,9 @@ if has("autocmd")
   autocmd FileType json set foldmethod=syntax
   autocmd FileType json setlocal conceallevel=0
 
+  " Markdown settings
+  autocmd FileType md setlocal tw=80
+
   " Strip EOL whitespace out of specific filetypes
   " also turn tabs into two spaces
   autocmd BufWritePre *.py,*.css,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
