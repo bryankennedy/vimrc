@@ -118,3 +118,6 @@
 [submodule "vim/bundle/vim-plugin-viewdoc"]
 	path = vim/bundle/vim-plugin-viewdoc
 	url = https://github.com/powerman/vim-plugin-viewdoc.git
+[submodule "vim/bundle/mustache"]
+	path = vim/bundle/mustache
+	url = git://github.com/mustache/vim-mustache-handlebars.git
