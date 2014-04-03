@@ -161,8 +161,8 @@ set title                           " show title in console title bar
 set so=7                            " scroll 7 lines before the bottom
 set cmdheight=2                     " commandbar height
 set showmatch                       " show matching curly braces and such
-set iskeyword+=_,$,@,%,#            " none of these are word dividers
-"set cursorcolumn                   " highlight current cursor position
+set iskeyword+=_,$,@,%,#,.          " none of these are word dividers
+set iskeyword-=.                    " but these are word dividers
 set cursorline                      " highlight current line
 
 " Set some text defaults
@@ -336,6 +336,8 @@ if has("autocmd")
 
   " Treat Drupal template files and Handlebard templates as HTML
   autocmd BufNewFile,BufReadPre *.tpl.php,*.hbs setfiletype html
+  autocmd BufNewFile,BufReadPre *.tpl.php,*.hbs setfiletype html
+  autocmd FileType html set cursorcolumn
 
   " Treat Apache config files as conf files
   autocmd BufNewFile,BufReadPre *.enabled,*.disabled setfiletype conf
