@@ -123,7 +123,7 @@ function! SyntaxItem()
 endfunction
 set statusline+=%{SyntaxItem()}
 if has('statusline')
-  set statusline=%1*                                   " Set highlighting
+  set statusline=%1*                                    " Set highlighting
   set statusline+=\ \ \                                 " Spacing
   set statusline+=%F\                                   " File name
   set statusline+=%h%m%r%w\                             " Flags
