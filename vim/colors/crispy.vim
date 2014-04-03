@@ -92,7 +92,7 @@ let ColorAssignment['CursorLine'] = {"GUIBG": almost_black}
 let ColorAssignment['CursorColumn'] = {"GUIBG": almost_black}
 
 " 80 char vertical bar
-let ColorAssignment['colorcolumn'] = {"GUIBG": paler_magenta}
+let ColorAssignment['colorcolumn'] = {"GUIBG": almost_black}
 
 " Folding
 let ColorAssignment['FoldColumn'] = {"GUIFG": paler_magenta, "GUIBG": almost_black}
