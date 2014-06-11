@@ -127,3 +127,6 @@
 [submodule "vim/bundle/vim-project"]
 	path = vim/bundle/vim-project
 	url = https://github.com/amiorin/vim-project.git
+[submodule "vim/bundle/vim-startify"]
+	path = vim/bundle/vim-startify
+	url = https://github.com/mhinz/vim-startify.git

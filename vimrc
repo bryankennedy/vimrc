@@ -353,8 +353,10 @@ if has("autocmd")
   autocmd FileType json set foldmethod=syntax
   autocmd FileType json setlocal conceallevel=0
 
-  " Markdown settings
+  " Markdown and text settings
+  " Wrap these files to 80 char wide for easy reading.
   autocmd FileType md setlocal tw=80
+  autocmd FileType txt setlocal tw=80
 
   " Strip EOL whitespace out of specific filetypes
   " also turn tabs into two spaces
