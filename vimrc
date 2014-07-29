@@ -76,6 +76,10 @@ if has('gui_running')
   " Helps keep the windows the right shape after splitting
   set noequalalways
 
+  " Shorter key mapping for split navigation
+  " TODO This isn't working right now. Fix it.
+  " nnoremap <M-Right> <C-W><C-L>
+
   " Requires 'experimental renderer' in the MacVIm settings window
   set transp=0
 
