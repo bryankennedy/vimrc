@@ -164,7 +164,7 @@ endif
 " Line numbers
 """"""""""""""""""""""""""
 set number               " enable line numbers
-set numberwidth=5        " make the line number area wider
+set numberwidth=2        " make the line number area wider
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 set cpoptions+=n         " use the line number area for wrapped lines
 
@@ -389,7 +389,7 @@ set errorformat=%m\ in\ %f\ on\ line\ %l
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set foldmethod=expr
-set foldcolumn=5
+set foldcolumn=0
 " Shortcut to toggle a fold open and closed
 nnoremap <space> za
 vnoremap <space> za
