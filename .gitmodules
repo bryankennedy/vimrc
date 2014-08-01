@@ -133,3 +133,6 @@
 [submodule "vim/bundle/vim-spacebars"]
 	path = vim/bundle/vim-spacebars
 	url = https://github.com/Slava/vim-spacebars.git
+[submodule "vim/bundle/vim-css-color"]
+	path = vim/bundle/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
