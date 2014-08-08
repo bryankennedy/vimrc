@@ -377,7 +377,7 @@ if has("autocmd")
 
   " Strip EOL whitespace out of specific filetypes
   " also turn tabs into two spaces
-  autocmd BufWritePre *.py,*.css,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
+  autocmd BufWritePre *.py,*.css,*.mss,*.js,*.php,*.inc,*.module,*.install,*.sh,*.vim :retab | :call <SID>StripTrailingWhitespaces()
 endif
 
 " PHP testing
