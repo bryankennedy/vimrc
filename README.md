@@ -37,6 +37,7 @@ Plugins I use. What I use them for.
 * [vim-fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
 * [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
+* [nerdcommenter](https://github.com/scrooloose/nerdcommenter/) - Commenting helper.
 * [nerdtree](https://github.com/scrooloose/nerdtree/) - File tree explorer in a sidebar.
 * [vim-powerline](https://github.com/Lokaltog/vim-powerline) - Powerful status line at the footer of the Vim window
 * [vim-signature](https://github.com/kshenoy/vim-signature) - Show marks in the Vim gutter
