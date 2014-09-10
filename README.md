@@ -32,33 +32,16 @@ Plugins I use and what I use them for
 
 ## Functional plugins
 
-### Autocomplete popup
 * [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
-
-### Easy motion
 * [vim-easymotion](https://github.com/Lokaltog/vim-easymotion/) - Magically jump around the page
-
-### Fugitive
 * [vim-fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
-
-### Git gutter
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
-
-### Indent guides
 * [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
-### Powerline
 * [vim-powerline](https://github.com/Lokaltog/vim-powerline) - Powerful status line at the footer of the Vim window
-### Signature
 * [vim-signature](https://github.com/kshenoy/vim-signature) - Show marks in the Vim gutter
-
-### Snipmate
 * [vim-snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
 * [vim-snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
-
-### Surround
 * [vim-surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
-
-### Tagbar
 * [tagbar](https://github.com/majutsushi/tagbar) - Display tags in a sidebar. Improvement on taglist.
 
 ## Helpers and required libraries
