@@ -34,14 +34,15 @@ Modules I use and what I use them for
 ### Autocomplete popup
 * [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
 
+### Git gutter
+* [vim-gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
+
 ### Indent guides
 * [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
-
 ### Powerline
 * [vim-powerline](https://github.com/Lokaltog/vim-powerline) - Powerful status line at the footer of the Vim window
-
 ### Signature
-* [vim-signature](https://github.com/kshenoy/vim-signature) - Show marks in the gutter
+* [vim-signature](https://github.com/kshenoy/vim-signature) - Show marks in the Vim gutter
 
 ### Snipmate
 * [vim-snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
