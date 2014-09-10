@@ -64,7 +64,7 @@ These plugins are required by various plugins listed above.
 * [L9](http://www.vim.org/scripts/script.php?script_id=3252)
 
 ### Required by vim-snipmate
-* [tlib_viv](https://github.com/tomtom/tlib_vim.git)
+* [tlib_vim](https://github.com/tomtom/tlib_vim.git)
 * [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils.git)
 
 # Shortcuts
