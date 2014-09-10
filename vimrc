@@ -446,23 +446,11 @@ map <Leader>g :TagbarToggle<CR>
 
 
 "
-" ShowMarks
-" Provides a visual representation of the location marks.
+" Signature
 "
-if has('gui_running')
-
-  " Don't show naviation marks that change with any cursor movement
-  " Also, only show a few of the most recent edit marks, 0,1,2
-  let showmarks_include = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012'
-
-  " If a manual mark exists, highlight the line
-  let showmarks_hlline_lower = 1
-  let showmarks_hlline_upper = 1
-
-  " Use a space to indicate non-manual marks. This helps differentiate them
-  " from the the manual marks.
-  let showmarks_textother = ' '
-endif
+" Plugin to toggle, display and navigate marks
+"
+let g:SignatureEnabledAtStartup = 1
 
 
 "
