@@ -440,22 +440,6 @@ map <Leader>n :call NERDTreeFindToggle()<CR>
 
 
 "
-" Taglist
-" Source code browser
-"
-" Check for ctags on the system. If isn't there
-" avoid an annoying message by disabling the plugin
-"if executable('etags')
-  "set updatetime=1000
-  "let tlist_php_settings = 'php;c:class;d:constant;f:function'
-  "let Tlist_Use_Right_Window = 1
-  "let Tlist_WinWidth = 35
-  "map <Leader>g :TlistToggle<CR>
-"else
-  "let loaded_taglist = 'no'
-"endif
-
-"
 " Tagbar
 " Source code browser, alternative to Taglist
 map <Leader>g :TagbarToggle<CR>
@@ -488,6 +472,7 @@ endif
 " Disabled because of some performance issues.
 "autocmd BufWritePost *.py call Flake8()
 
+
 "
 " Syntastic
 " Syntax checking and error reporting
@@ -502,6 +487,7 @@ let g:syntastic_python_checker_args='--ignore=E501'
 " TODO - Why is this disabled?
 "
 "let g:syntastic_javascript_checkers=['jshint']
+
 
 "
 " Pangloss' Javascript module
