@@ -14,11 +14,11 @@
 # Usage
 To add new plugins, download the package, and copy its folder to the vimrc/vim/bundle directory. Pathogen will handle the rest.
 
-# Modules
-Modules I use and what I use them for
+# Plugins
+Plugins I use and what I use them for
 
-## Enhanced language syntax modules
-* [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS module
+## Enhanced language syntax plugins
+* [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS plugin
 * [vim-css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
 * [vim-json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
 * [vim-html5](https://github.com/othree/html5.vim/) - Best HTML5 syntax highlighting plugin
@@ -29,7 +29,7 @@ Modules I use and what I use them for
 * [vim-spacebars](https://github.com/Slava/vim-spacebars/) - Syntax for MeteorJS' handlebars template variant
 * [vim-tcl](https://github.com/vim-scripts/tcl.vim--smithfield/) - Tcl syntax for expect scripting
 
-## Functional modules
+## Functional plugins
 
 ### Autocomplete popup
 * [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
@@ -52,7 +52,7 @@ Modules I use and what I use them for
 * [vim-surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
 
 ## Helpers and required libraries
-These modules are required by various plugins listed above.
+These plugins are required by various plugins listed above.
 ### Required by vim-autocomplpop
 * [L9](http://www.vim.org/scripts/script.php?script_id=3252)
 
