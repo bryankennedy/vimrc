@@ -42,6 +42,7 @@ Plugins I use. What I use them for.
 * [vim-snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
 * [vim-snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
 * [vim-surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
+* [syntastic](https://github.com/scrooloose/syntastic/) - Syntax checking.
 * [tagbar](https://github.com/majutsushi/tagbar) - Display tags in a sidebar. Improvement on taglist.
 
 ## Helpers and required libraries
