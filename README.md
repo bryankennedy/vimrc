@@ -58,6 +58,9 @@ Plugins I use and what I use them for
 ### Surround
 * [vim-surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
 
+### Tagbar
+* [tagbar](https://github.com/majutsushi/tagbar) - Display tags in a sidebar. Improvement on taglist.
+
 ## Helpers and required libraries
 These plugins are required by various plugins listed above.
 ### Required by vim-autocomplpop
