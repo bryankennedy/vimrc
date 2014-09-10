@@ -25,12 +25,19 @@ Modules I use and what I use them for
 ### JS
 
 ## Functional modules
+
+### Autocomplete popup
+* [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
+
 ### Snipmate
 * [vim-snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
 * [vim-snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
 
-## Helpers
+## Helpers and required libraries
 These modules are required by various plugins listed above.
+### Required by vim-autocomplpop
+* [L9](http://www.vim.org/scripts/script.php?script_id=3252)
+
 ### Required by vim-snipmate
 * [tlib_viv](https://github.com/tomtom/tlib_vim.git)
 * [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils.git)
