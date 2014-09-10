@@ -33,6 +33,7 @@ Plugins I use. What I use them for.
 ## Functional plugins
 
 * [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
+* [delimitMate](https://github.com/Raimondi/delimitMate) - Quote and bracket auto-completion. Best plugin. Doesn't break undo/redo.
 * [vim-easymotion](https://github.com/Lokaltog/vim-easymotion/) - Magically jump around the page
 * [vim-fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
