@@ -34,6 +34,8 @@ Plugins I use and what I use them for
 ### Autocomplete popup
 * [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
 
+### Fugitive
+* [vim-fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
 ### Git gutter
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
 
