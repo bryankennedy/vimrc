@@ -48,6 +48,7 @@ Plugins I use. What I use them for.
 * [vim-surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
 * [syntastic](https://github.com/scrooloose/syntastic/) - Syntax checking.
 * [tagbar](https://github.com/majutsushi/tagbar) - Display tags in a sidebar. Improvement on taglist.
+* [yankstack](https://github.com/maxbrunsfeld/vim-yankstack) - Quickly cycle through paste buffer
 
 ## Helpers and required libraries
 These plugins are required by various plugins listed above.

@@ -147,3 +147,6 @@
 [submodule "vim/bundle/vim-signature"]
 	path = vim/bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature.git
+[submodule "vim/bundle/yankstack"]
+	path = vim/bundle/yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack.git

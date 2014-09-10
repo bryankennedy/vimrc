@@ -518,6 +518,11 @@ let g:yankring_min_element_length = 2
 let g:yankring_history_dir = '~/.vim'
 let g:yankring_history_file = '.yankring_history'
 
+"
+" Yankstack
+"
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 "
 " Vim-Project
