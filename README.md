@@ -20,7 +20,7 @@ Modules I use and what I use them for
 # Language formatting and highlighting
 ## CSS
 * [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax) - Syntax highlighting
-* [vim-css-color-new](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
+* [vim-css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
 
 # Shortcuts
 A curated list of leaders and other custom shortcuts provided as part of my custom vimrc and by the enabled plugins.
