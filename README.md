@@ -33,6 +33,9 @@ Modules I use and what I use them for
 ### Autocomplete popup
 * [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
 
+### Indent guides
+* [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
+
 ### Powerline
 * [vim-powerline](https://github.com/Lokaltog/vim-powerline) - Powerful status line at the footer of the Vim window
 
