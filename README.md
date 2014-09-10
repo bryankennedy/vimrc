@@ -33,6 +33,9 @@ Modules I use and what I use them for
 ### PHP
 * [vim-php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
 
+### Processing
+* [vim-processing](https://github.com/sophacles/vim-processing/) - Enhanced Processing syntax
+
 ## Functional modules
 
 ### Autocomplete popup
