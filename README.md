@@ -24,6 +24,9 @@ Modules I use and what I use them for
 
 ### JS
 
+### JSON
+* [vim-json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
+
 ## Functional modules
 
 ### Autocomplete popup
