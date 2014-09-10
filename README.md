@@ -25,6 +25,7 @@ Modules I use and what I use them for
 * [vim-php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
 * [vim-processing](https://github.com/sophacles/vim-processing/) - Enhanced Processing syntax
 * [vim-puppet](https://github.com/rodjek/vim-puppet/) - I use this to managing Boxen manifests, written in Puppet.
+* [vim-spacebars](https://github.com/Slava/vim-spacebars/) - Syntax for MeteorJS' handlebars template variant
 
 ## Functional modules
 
