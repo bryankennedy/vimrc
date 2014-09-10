@@ -434,8 +434,16 @@ map <Leader>n :call NERDTreeFindToggle()<CR>
 
 
 "
+" Indent guides
+"
+" Enable indent guides on startup
+let g:indent_guides_enable_on_vim_startup = 0
+
+
+"
 " Tagbar
 " Source code browser, alternative to Taglist
+"
 map <Leader>g :TagbarToggle<CR>
 
 
