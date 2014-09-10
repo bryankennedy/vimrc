@@ -15,7 +15,7 @@
 To add new plugins, download the package, and copy its folder to the vimrc/vim/bundle directory. Pathogen will handle the rest.
 
 # Plugins
-Plugins I use and what I use them for
+Plugins I use. What I use them for.
 
 ## Language syntax plugins
 * [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS plugin
