@@ -361,7 +361,7 @@ if has("autocmd")
   autocmd BufNewFile,BufReadPre *.enabled,*.disabled setfiletype conf
 
   " Treat TileMill Carto files as CSS
-  autocmd BufNewFile,BufRead *.mss setfiletype css
+  autocmd BufNewFile,BufRead *.mss setfiletype less
 
   " Treat TileMill project files like the JSON that they are
   autocmd BufNewFile,BufRead *.mml setfiletype json
