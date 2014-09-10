@@ -21,6 +21,7 @@ Modules I use and what I use them for
 * [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS module.
 * [vim-css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
 * [vim-json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
+* [vim-html5](https://github.com/othree/html5.vim/) - Best HTML5 syntax highlighting plugin
 * [vim-markdown](https://github.com/plasticboy/vim-markdown/) - Enhanced Markdown syntax
 * [vim-php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
 * [vim-processing](https://github.com/sophacles/vim-processing/) - Enhanced Processing syntax
