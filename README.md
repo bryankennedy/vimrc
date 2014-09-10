@@ -32,6 +32,7 @@ Plugins I use. What I use them for.
 
 ## Functional plugins
 
+* [ack](https://github.com/mileszs/ack.vim) - Ack searching in Vim
 * [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
 * [command-t](https://github.com/wincent/command-t) - Quick and intuitive tool to open files quickly.
 * [delimitMate](https://github.com/Raimondi/delimitMate) - Quote and bracket auto-completion. Best plugin. Doesn't break undo/redo.
