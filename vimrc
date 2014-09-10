@@ -397,12 +397,6 @@ vnoremap <space> za
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-" Vim-Notes
-" Tool for note taking in Vim
-"
-let g:notes_directories = ['~/Dropbox/Notes']
-let g:notes_suffix = '.md'
 
 "
 " Command-T
