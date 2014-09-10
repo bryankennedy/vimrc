@@ -27,6 +27,12 @@ Modules I use and what I use them for
 ### JSON
 * [vim-json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
 
+### Markdown
+* [vim-markdown](https://github.com/plasticboy/vim-markdown/) - Enhanced markdown syntax
+
+### PHP
+* [vim-php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
+
 ## Functional modules
 
 ### Autocomplete popup
