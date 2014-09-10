@@ -42,6 +42,9 @@ Modules I use and what I use them for
 * [vim-snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
 * [vim-snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
 
+### Surround
+* [vim-surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
+
 ## Helpers and required libraries
 These modules are required by various plugins listed above.
 ### Required by vim-autocomplpop
