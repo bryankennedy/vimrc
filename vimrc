@@ -498,9 +498,19 @@ let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_checker_args='--ignore=E501'
 
 " Tell Syntastic to use jslint for testing JS
+"
+" TODO - Why is this disabled?
+"
 "let g:syntastic_javascript_checkers=['jshint']
 
+"
+" Pangloss' Javascript module
+" https://github.com/pangloss/vim-javascript/
+"
+" Highlight HTML and CSS within JS strings
 let javascript_enable_domhtmlcss=1
+
+" Enable JS folding
 let b:javascript_fold=1
 
 "
