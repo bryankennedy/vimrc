@@ -18,16 +18,16 @@ To add new plugins, download the package, and copy its folder to the vimrc/vim/b
 Modules I use and what I use them for
 
 ## Enhanced language syntax modules
-* [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS module.
+* [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS module
 * [vim-css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
 * [vim-json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
 * [vim-html5](https://github.com/othree/html5.vim/) - Best HTML5 syntax highlighting plugin
 * [vim-markdown](https://github.com/plasticboy/vim-markdown/) - Enhanced Markdown syntax
 * [vim-php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
 * [vim-processing](https://github.com/sophacles/vim-processing/) - Enhanced Processing syntax
-* [vim-puppet](https://github.com/rodjek/vim-puppet/) - I use this to managing Boxen manifests, written in Puppet.
+* [vim-puppet](https://github.com/rodjek/vim-puppet/) - I use this to managing Boxen manifests, written in Puppet
 * [vim-spacebars](https://github.com/Slava/vim-spacebars/) - Syntax for MeteorJS' handlebars template variant
-* [vim-tcl](https://github.com/vim-scripts/tcl.vim--smithfield/) - Tcl syntax for expect scripting.
+* [vim-tcl](https://github.com/vim-scripts/tcl.vim--smithfield/) - Tcl syntax for expect scripting
 
 ## Functional modules
 
