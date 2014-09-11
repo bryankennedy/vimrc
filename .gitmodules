@@ -83,9 +83,6 @@
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/json
 	url = https://github.com/elzr/vim-json.git
-[submodule "vim/bundle/vim-misc"]
-	path = vim/bundle/vim-misc
-	url = https://github.com/xolox/vim-misc.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
