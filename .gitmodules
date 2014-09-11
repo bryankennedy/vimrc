@@ -115,7 +115,7 @@
 	url = https://github.com/groenewege/vim-less.git
 [submodule "vim/bundle/vim-css-color"]
 	path = vim/bundle/css-color
-	url = https://github.com/skammer/vim-css-color.git
+	url = https://github.com/ap/vim-css-color
 [submodule "vim/bundle/tlib_vim"]
 	path = vim/bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
