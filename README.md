@@ -51,6 +51,10 @@ These are the plugins I am currently using, with some justification and some qui
 #####[delimitMate](https://github.com/Raimondi/delimitMate) - Quote and bracket auto-completion. Best plugin. Doesn't break undo/redo.
 
 ##### [easymotion](https://github.com/Lokaltog/vim-easymotion/) - Magically jump around the page
+
+* \<leader\>\<leader\>w - Jump to a specific word
+* \<leader\>\<leader\>t - Jump to a specific character
+
 ##### [fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
 ##### [gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
 ##### [indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
@@ -94,8 +98,6 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 * \\\] - Jump to the next QuickFix error
 * \\\[ - Jump to the previous QuickFix error
 * \\\<cr> - Clear search highlight
-* \\\w - jump to a word with easymotion
-* \\\t - jump to a character with easymotion
 
 ## Commonly forgotten shortcuts
 * csw" - Put " around a word
