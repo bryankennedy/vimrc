@@ -44,8 +44,9 @@ These are the plugins I am currently using, with some justification and some qui
 ##### [autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
 
 ##### [command-t](https://github.com/wincent/command-t)  - Quick and intuitive tool to open files quickly.
-<leader>t - Search files from cwd
-<leader>b - Search files from current buffers
+
+* \<leader\>t - Search files from cwd
+* \<leader\>b - Search files from current buffers
 
 #####[delimitMate](https://github.com/Raimondi/delimitMate) - Quote and bracket auto-completion. Best plugin. Doesn't break undo/redo.
 
