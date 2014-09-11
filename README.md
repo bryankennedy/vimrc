@@ -35,8 +35,10 @@ These are the plugins I am currently using, with some justification and some qui
 
 ## Functional plugins
 
-#### [ack](https://github.com/mileszs/ack.vim) - Ack searching in Vim
-:Ack [search term]
+* [ack](https://github.com/mileszs/ack.vim) - Ack searching in Vim
+
+    :Ack [search term]
+
 [Keyboard shortcuts](https://github.com/mileszs/ack.vim#keyboard-shortcuts)
 
 * [autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
