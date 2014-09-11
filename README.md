@@ -45,25 +45,29 @@ These are the plugins I am currently using, with some justification and some qui
 
 ##### [command-t](https://github.com/wincent/command-t)  - Quick and intuitive tool to open files quickly.
 
-* \<leader\>t - Search files from cwd
-* \<leader\>b - Search files from current buffers
+* `<leader>t` - Search files from cwd
+* `<leader>b` - Search files from current buffers
 
 #####[delimitMate](https://github.com/Raimondi/delimitMate) - Quote and bracket auto-completion. Best plugin. Doesn't break undo/redo.
 
 ##### [easymotion](https://github.com/Lokaltog/vim-easymotion/) - Magically jump around the page
 
-* \<leader\>\<leader\>w - Jump to a specific word
-* \<leader\>\<leader\>t - Jump to a specific character
+* `<leader\>\<leader\>w` - Jump to a specific word
+* `<leader\>\<leader\>t` - Jump to a specific character
 
 ##### [fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
 
-* `:Gblame`
-* `:Gcommit`
-* `:Gdiff`
+* `:Gblame` - Who did what?
+* `:Gcommit` - Commit your changes
+* `:Gdiff` - See what's different from the git index
 
 ##### [gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
 ##### [indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
 ##### [nerdcommenter](https://github.com/scrooloose/nerdcommenter/) - Commenting helper.
+
+* `<leader>c<space>` -  Comment out the current line or text selected in visual mode.
+* `<leader>cm` - Comment out the selection using only one surrounding comment tag
+
 ##### [nerdtree](https://github.com/scrooloose/nerdtree/) - File tree explorer in a sidebar.
 ##### [powerline](https://github.com/Lokaltog/vim-powerline) - Powerful status line at the footer of the Vim window
 ##### [signature](https://github.com/kshenoy/vim-signature) - Show marks in the Vim gutter
@@ -88,9 +92,7 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 
 ## Leader...
 * \c - Toggle ignorecase
-* \c<space> - Comment out the current line or text selected in visual mode.
 * \cd - Change to the directory of the current file
-* \cm - Comment out the selection using only one surrounding comment tag
 * \e - Edit this vimrc
 * \g - Load taglist
 * \n - Load NERDTree
