@@ -56,6 +56,11 @@ These are the plugins I am currently using, with some justification and some qui
 * \<leader\>\<leader\>t - Jump to a specific character
 
 ##### [fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
+
+* `:Gblame`
+* `:Gcommit`
+* `:Gdiff`
+
 ##### [gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
 ##### [indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
 ##### [nerdcommenter](https://github.com/scrooloose/nerdcommenter/) - Commenting helper.
