@@ -94,7 +94,7 @@
 	url = git://github.com/mustache/vim-mustache-handlebars.git
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
-	url = git://github.com/klen/python-mode.git
+	url = https://github.com/klen/python-mode
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
