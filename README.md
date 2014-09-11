@@ -100,32 +100,30 @@ These are the plugins I am currently using, with some justification and some qui
 * `<leader>p` - Cycle backward through the paste buffer
 * `<leader>P` - Cycle forward through the paste buffer
 
+##### [yankring](https://github.com/vim-scripts/YankRing.vim) - Browse the paste buffer
+
+* `<leader>y` - Open a sidebar, showing the paste buffer
+
 ## Helpers and required libraries
 These plugins are required by various plugins listed above.
-### Required by vim-autocomplpop
-* [L9](http://www.vim.org/scripts/script.php?script_id=3252)
-
-### Required by vim-snipmate
-* [tlib_vim](https://github.com/tomtom/tlib_vim.git)
-* [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils.git)
+##### [L9](http://www.vim.org/scripts/script.php?script_id=3252) - 
+##### [tlib_vim](https://github.com/tomtom/tlib_vim.git) - Required by vim-snipmate
+##### [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils.git) - Required by vim-snipmate
 
 # Shortcuts
 A curated list of leaders and other custom shortcuts provided as part of my custom vimrc and by the enabled plugins.
 
 ## Leader...
-* \c - Toggle ignorecase
-* \cd - Change to the directory of the current file
-* \e - Edit this vimrc
-* \g - Load taglist
-* \p - Select the pasted text
-* \q - Close all saved buffers
-* \s - Toggle spell checking
-* \w - Write
-* \y - Browse YankRing
-* \z - Start a find/replace with the selected 'text'
-* \\\] - Jump to the next QuickFix error
-* \\\[ - Jump to the previous QuickFix error
-* \\\<cr> - Clear search highlight
+* `<leader>c` - Toggle ignorecase
+* `<leader>cd` - Change to the directory of the current file
+* `<leader>e` - Edit this vimrc
+* `<leader>q` - Close all saved buffers
+* `<leader>s` - Toggle spell checking
+* `<leader>w` - Write
+* `<leader>z` - Start a find/replace with the selected 'text'
+* `<leader><leader>]` - Jump to the next QuickFix error
+* `<leader><leader>\[` - Jump to the previous QuickFix error
+* `<leader><cr>` - Clear search highlight
 
 ## Commonly forgotten shortcuts
 * csw" - Put " around a word
