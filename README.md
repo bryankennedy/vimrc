@@ -17,18 +17,20 @@ To add new plugins, download the package, and copy its folder to the vimrc/vim/b
 # Plugins
 Plugins I use. What I use them for.
 
+I use [pathogen](https://github.com/tpope/vim-pathogen) to load all my plugins. I manage plugins as git submodules at `vim/bundle`. I've generally renamed plugin folders for consistency, removing `vim-` strings.
+
 ## Language syntax plugins
-* [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS plugin
-* [vim-css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
-* [vim-html5](https://github.com/othree/html5.vim/) - Best HTML5 syntax plugin
-* [vim-javascript](https://github.com/pangloss/vim-javascript/) - Best JS syntax plugin
-* [vim-json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
-* [vim-markdown](https://github.com/plasticboy/vim-markdown/) - Enhanced Markdown syntax
-* [vim-php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
-* [vim-processing](https://github.com/sophacles/vim-processing/) - Enhanced Processing syntax
-* [vim-puppet](https://github.com/rodjek/vim-puppet/) - I use this to managing Boxen manifests, written in Puppet
-* [vim-spacebars](https://github.com/Slava/vim-spacebars/) - Syntax for MeteorJS' handlebars template variant
-* [vim-tcl](https://github.com/vim-scripts/tcl.vim--smithfield/) - Tcl syntax for expect scripting
+* [css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS plugin
+* [css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
+* [html5](https://github.com/othree/html5.vim/) - Best HTML5 syntax plugin
+* [javascript](https://github.com/pangloss/vim-javascript/) - Best JS syntax plugin
+* [json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
+* [markdown](https://github.com/plasticboy/vim-markdown/) - Enhanced Markdown syntax
+* [php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
+* [processing](https://github.com/sophacles/vim-processing/) - Enhanced Processing syntax
+* [puppet](https://github.com/rodjek/vim-puppet/) - I use this to managing Boxen manifests, written in Puppet
+* [spacebars](https://github.com/Slava/vim-spacebars/) - Syntax for MeteorJS' handlebars template variant
+* [tcl](https://github.com/vim-scripts/tcl.vim--smithfield/) - Tcl syntax for expect scripting
 
 ## Functional plugins
 
@@ -36,20 +38,20 @@ Plugins I use. What I use them for.
 :Ack [search term]
 [Keyboard shortcuts](https://github.com/mileszs/ack.vim#keyboard-shortcuts)
 
-* [vim-autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
+* [autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
 * [command-t](https://github.com/wincent/command-t) - Quick and intuitive tool to open files quickly.
 * [delimitMate](https://github.com/Raimondi/delimitMate) - Quote and bracket auto-completion. Best plugin. Doesn't break undo/redo.
-* [vim-easymotion](https://github.com/Lokaltog/vim-easymotion/) - Magically jump around the page
-* [vim-fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
-* [vim-gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
-* [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
+* [easymotion](https://github.com/Lokaltog/vim-easymotion/) - Magically jump around the page
+* [fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
+* [gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
+* [indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
 * [nerdcommenter](https://github.com/scrooloose/nerdcommenter/) - Commenting helper.
 * [nerdtree](https://github.com/scrooloose/nerdtree/) - File tree explorer in a sidebar.
-* [vim-powerline](https://github.com/Lokaltog/vim-powerline) - Powerful status line at the footer of the Vim window
-* [vim-signature](https://github.com/kshenoy/vim-signature) - Show marks in the Vim gutter
-* [vim-snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
-* [vim-snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
-* [vim-surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
+* [powerline](https://github.com/Lokaltog/vim-powerline) - Powerful status line at the footer of the Vim window
+* [signature](https://github.com/kshenoy/vim-signature) - Show marks in the Vim gutter
+* [snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
+* [snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
+* [surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
 * [syntastic](https://github.com/scrooloose/syntastic/) - Syntax checking.
 * [tagbar](https://github.com/majutsushi/tagbar) - Display tags in a sidebar. Improvement on taglist.
 * [yankstack](https://github.com/maxbrunsfeld/vim-yankstack) - Quickly cycle through paste buffer
