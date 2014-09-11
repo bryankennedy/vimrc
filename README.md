@@ -79,11 +79,26 @@ These are the plugins I am currently using, with some justification and some qui
 * `'{a-z}` - Jump to a mark
 
 ##### [snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
+
+* e.g. - in insert mode type `for` and then tab to create a for block
+
 ##### [snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
+
+* There are [many snippets for all kinds of languages](https://github.com/honza/vim-snippets/tree/master/snippets)
+
 ##### [surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
+
+* This is currently behaving oddly. Troubleshoot
+
 ##### [syntastic](https://github.com/scrooloose/syntastic/) - Syntax checking.
 ##### [tagbar](https://github.com/majutsushi/tagbar) - Display tags in a sidebar. Improvement on taglist.
+
+* `<leader>b` - Open the tag sidebar
+
 ##### [yankstack](https://github.com/maxbrunsfeld/vim-yankstack) - Quickly cycle through paste buffer
+
+* `<leader>p` - Cycle backward through the paste buffer
+* `<leader>P` - Cycle forward through the paste buffer
 
 ## Helpers and required libraries
 These plugins are required by various plugins listed above.
