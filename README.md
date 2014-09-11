@@ -69,8 +69,15 @@ These are the plugins I am currently using, with some justification and some qui
 * `<leader>cm` - Comment out the selection using only one surrounding comment tag
 
 ##### [nerdtree](https://github.com/scrooloose/nerdtree/) - File tree explorer in a sidebar.
+
+* `<leader>n` - Load NERDTree
+
 ##### [powerline](https://github.com/Lokaltog/vim-powerline) - Powerful status line at the footer of the Vim window
 ##### [signature](https://github.com/kshenoy/vim-signature) - Show marks in the Vim gutter
+
+* `:ma {a-z}` - Set a mark
+* `'{a-z}` - Jump to a mark
+
 ##### [snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
 ##### [snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
 ##### [surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
@@ -95,7 +102,6 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 * \cd - Change to the directory of the current file
 * \e - Edit this vimrc
 * \g - Load taglist
-* \n - Load NERDTree
 * \p - Select the pasted text
 * \q - Close all saved buffers
 * \s - Toggle spell checking
