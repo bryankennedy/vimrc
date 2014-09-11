@@ -106,9 +106,9 @@ These are the plugins I am currently using, with some justification and some qui
 
 ## Helpers and required libraries
 These plugins are required by various plugins listed above.
-##### [L9](http://www.vim.org/scripts/script.php?script_id=3252) - 
-##### [tlib_vim](https://github.com/tomtom/tlib_vim.git) - Required by vim-snipmate
-##### [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils.git) - Required by vim-snipmate
+* [L9](http://www.vim.org/scripts/script.php?script_id=3252) - Required by autocomplpop
+* [tlib_vim](https://github.com/tomtom/tlib_vim.git) - Required by vim-snipmate
+* [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils.git) - Required by vim-snipmate
 
 # Shortcuts
 A curated list of leaders and other custom shortcuts provided as part of my custom vimrc and by the enabled plugins.
