@@ -110,9 +110,6 @@
 [submodule "vim/bundle/vim-indent-guides"]
 	path = vim/bundle/indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "vim/bundle/vimshell"]
-	path = vim/bundle/vimshell
-	url = https://github.com/Shougo/vimshell.vim.git
 [submodule "vim/bundle/vim-spacebars"]
 	path = vim/bundle/spacebars
 	url = https://github.com/Slava/vim-spacebars.git
