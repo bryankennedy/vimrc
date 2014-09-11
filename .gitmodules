@@ -101,9 +101,6 @@
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = git://github.com/klen/python-mode.git
-[submodule "vim/bundle/vim-project"]
-	path = vim/bundle/vim-project
-	url = https://github.com/amiorin/vim-project.git
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
