@@ -1,4 +1,4 @@
-# Instalation
+# Installation
 1. Clone this repo wherever you'd like to keep your vimrc files. I keep mine in a folder called `~/.dotfiles` along with a bunch of other stuff.
 
         git clone git://github.com/bryankennedy/vimrc.git ~/.dotfiles/vimrc
@@ -135,3 +135,4 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 * ZM - Close all folds
 * zMzv - Close all folds, open the current line fold
 * zR - Open all folds
+* ]s - Next misspelled word
