@@ -397,15 +397,14 @@ vnoremap <space> za
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 "
-" Command-T
+" Ctrl-P
 " Fast file navigation
+" I'm using the same mappings that I used to use for Command -T
 "
-" Search, starting with current buffer
-nmap <leader>t :CommandT<cr>
-let g:CommandTMaxHeight = '20'
-
+let g:ctrlp_map = '<leader>t'
+"let g:ctrlp_map = '<leader>b'
+nmap <leader>b :CtrlPBuffer<cr>
 
 "
 " NERDTree
