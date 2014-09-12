@@ -88,7 +88,7 @@
 	url = https://github.com/rodjek/vim-puppet.git
 [submodule "vim/bundle/mustache"]
 	path = vim/bundle/mustache
-	url = git://github.com/mustache/vim-mustache-handlebars.git
+	url = https://github.com/mustache/vim-mustache-handlebars.git
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = https://github.com/klen/python-mode
