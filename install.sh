@@ -98,7 +98,7 @@ do
 done
 
 # Create symlinks to the vimrc and vim config dir
-ln -s $INSTALL_DIR/vimrc ~/.vimrc
-ln -s $INSTALL_DIR/vim ~/.vim
+ln -s "$INSTALL_DIR/vimrc" ~/.vimrc
+ln -s "$INSTALL_DIR/vim" ~/.vim
 
 echo "Installed"
