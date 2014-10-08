@@ -472,10 +472,7 @@ let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_checker_args='--ignore=E501'
 
 " Tell Syntastic to use jslint for testing JS
-"
-" TODO - Why is this disabled?
-"
-"let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_checkers=['jshint']
 
 
 "
