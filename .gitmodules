@@ -119,12 +119,6 @@
 [submodule "vim/bundle/vim-addon-mw-utils"]
 	path = vim/bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "vim/bundle/vim-snipmate"]
-	path = vim/bundle/snipmate
-	url = https://github.com/garbas/vim-snipmate.git
-[submodule "vim/bundle/vim-snippets"]
-	path = vim/bundle/snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule "vim/bundle/vim-signature"]
 	path = vim/bundle/signature
 	url = https://github.com/kshenoy/vim-signature.git
