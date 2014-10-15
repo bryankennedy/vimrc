@@ -474,6 +474,9 @@ let g:syntastic_python_checker_args='--ignore=E501'
 " Tell Syntastic to use jslint for testing JS
 let g:syntastic_javascript_checkers=['jshint']
 
+" Tell Syntastic to use csslint for testing CSS
+let g:syntastic_css_checkers=['csslint']
+
 
 "
 " Pangloss' Javascript module
