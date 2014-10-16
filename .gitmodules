@@ -119,10 +119,6 @@
 [submodule "vim/bundle/vim-signature"]
 	path = vim/bundle/signature
 	url = https://github.com/kshenoy/vim-signature.git
-[submodule "vim/bundle/yankring"]
-	path = vim/bundle/yankring
-	url = https://github.com/vim-scripts/YankRing.vim.git
-	ignore = untracked
 [submodule "vim/bundle/yankstack"]
 	path = vim/bundle/yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git

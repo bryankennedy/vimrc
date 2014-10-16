@@ -8,6 +8,7 @@
 " http://vimcasts.org
 " http://www.vi-improved.org/vimrc.php
 " https://github.com/nvie/vimrc
+" And lots of others...
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
@@ -39,7 +40,6 @@ Plugin 'gmarik/Vundle.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functionality plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 "
 " Exchange
 "
@@ -47,26 +47,44 @@ Plugin 'gmarik/Vundle.vim'
 "
 Plugin 'tommcdo/vim-exchange'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
 " UltiSnips and YouCompleteMe
 "
 " These work together to autocomplete words and complete snippets
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 
 " UltiSnips key commands
-"
 " We can't use <tab> beucae of YouCompleteMe conflicts
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
+"
+" YankRing
+"
+Plugin 'vim-scripts/YankRing.vim'
+
+" Show YankRing with leader and y
+nnoremap <silent> <leader>y :YRShow<CR>
+" Make YankRing vertical sidebar
+let yankring_window_use_horiz=0
+let g:yankring_window_width = 40
+" Don't add single chars to YankRing buffer
+let g:yankring_min_element_length = 2
+" Put the yankring history file in the vim directory
+" we setup in the install, and make it hidden.
+let g:yankring_history_dir = '~/.vim'
+let g:yankring_history_file = '.yankring_history'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language syntax plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
 " Tcl for expect scripts
+"
 Plugin 'vim-scripts/tcl.vim--smithfield'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -561,21 +579,6 @@ let b:javascript_fold=1
 "  (stringCTRL+Tab    |   (string)|
 " ––––––––––––––––––––|––––––––––––––
 inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
-
-"
-" YankRing settings
-"
-" Show YankRing with leader and y
-nnoremap <silent> <leader>y :YRShow<CR>
-" Make YankRing vertical sidebar
-let yankring_window_use_horiz=0
-let g:yankring_window_width = 40
-" Don't add single chars to YankRing buffer
-let g:yankring_min_element_length = 2
-" Put the yankring history file in the vim directory
-" we setup in the install, and make it hidden.
-let g:yankring_history_dir = '~/.vim'
-let g:yankring_history_file = '.yankring_history'
 
 "
 " Yankstack
