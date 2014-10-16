@@ -35,23 +35,21 @@ call vundle#begin()
 
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-let g:neocomplete#enable_at_startup = 1
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Neocomplete
-"
-" Completion and snippets engine.
-"
-" This one seems bit better than the YouCompleteMe and Ultisnips
-" The YCM US combo has some problematic key combo issues.
+" UltiSnips
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+"Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
 
-Plugin 'Shougo/neocomplete'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-" See if I can use these with Neocomplete
-"Plugin 'honza/vim-snippets'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" UltiSnips config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle end
@@ -607,7 +605,6 @@ let g:startify_bookmarks = [
 let g:startify_files_number = 5
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_detection = 1
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
