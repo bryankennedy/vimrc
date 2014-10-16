@@ -91,6 +91,11 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 " Language syntax plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
+" PHP
+"
+Plugin 'StanAngeloff/php.vim'
+
+"
 " Tcl for expect scripts
 "
 Plugin 'vim-scripts/tcl.vim--smithfield'
