@@ -35,30 +35,30 @@ call vundle#begin()
 
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+let g:neocomplete#enable_at_startup = 1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ultisnips
+" Neocomplete
 "
-" Snippets engine.
+" Completion and snippets engine.
+"
+" This one seems bit better than the YouCompleteMe and Ultisnips
+" The YCM US combo has some problematic key combo issues.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Track the engine.
-Plugin 'SirVer/ultisnips'
 
-" Snippets are separated from the engine.
-" 
-" Honza's list of snippets is a great start.
-Plugin 'honza/vim-snippets'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+" See if I can use these with Neocomplete
+"Plugin 'honza/vim-snippets'
 
-" Trigger configuration.
-" Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle end
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 " Enable detection, plugins and indenting in one step
 " Required by Vundle
 filetype plugin indent on    " required
