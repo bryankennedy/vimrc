@@ -573,48 +573,6 @@ let g:yankring_history_file = '.yankring_history'
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
-"
-" Vim-Project
-"
-" Makes it easier to load multiple files within a large project.
-"
-" before call project#rc()
-"let g:project_enable_welcome = 1
-" if you want the NERDTree integration.
-"let g:project_use_nerdtree = 0
-
-"set rtp+=~/.vim/bundle/vim-project/
-"call project#rc("~/ws")
-
-"Project  '/opt/boxen/repo' , 'boxen'
-"File     '/opt/boxen/repo/manifests/site.pp' , 'site.pp'
-"File     '/opt/boxen/repo/modules/people/manifests/bryankennedy.pp' , 'bryankennedy.pp'
-
-"
-" Startify
-"
-" A start page with some useful links
-"
-let g:startify_list_order = [
-        \ ['  Projects'],
-        \ 'bookmarks',
-        \ ['  Recently opened'],
-        \ 'files',
-        \ ['  Recently changed in cwd'],
-        \ 'dir',
-        \ ['  Sessions'],
-        \ 'sessions',
-        \ ]
-
-let g:startify_bookmarks = [
-  \ '~/.vimrc',
-  \ '/opt/boxen/repo/Puppetfile',
-  \ ]
-
-let g:startify_files_number = 5
-let g:startify_change_to_vcs_root = 1
-let g:startify_session_detection = 1
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
