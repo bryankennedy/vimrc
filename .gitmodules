@@ -135,6 +135,3 @@
 [submodule "vim/bundle/ultisnips"]
 	path = vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
-[submodule "vim/bundle/utilisnips"]
-	path = vim/bundle/utilisnips
-	url = https://github.com/SirVer/ultisnips.git
