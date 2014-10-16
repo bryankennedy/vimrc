@@ -18,7 +18,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle
+" Vundle - Plugin configurations
 "
 " Vundle is a module / plugin manager. The Vundle config also
 " contains some general setup steps for Vim.
@@ -37,10 +37,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Functionality plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"
 " Exchange
 "
 " Easily swap things with `cx`
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
 Plugin 'tommcdo/vim-exchange'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,6 +62,12 @@ Plugin 'Valloric/YouCompleteMe'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language syntax plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tcl for expect scripts
+Plugin 'vim-scripts/tcl.vim--smithfield'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle end

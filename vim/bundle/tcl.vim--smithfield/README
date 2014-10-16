@@ -1,0 +1,54 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1603
+
+tcl.vim (syntax)
+
+    An updated and complete syntax coloring scheme for tcl. Uses the 12 syntax rules of tcl as a starting point.
+
+ADDITIONS/CORRECTIONS:
+    
+    Line Continues can be optionally highlighted as Warnings.
+
+    [set set set] does the right thing.
+
+    [set ^canvas [canvas create ...]] does the right thing.
+
+    For [list ...], the subsequent expression is lit like a normal command. Also for [uplevel xx ...].
+
+    The improved interaction of comments with line continuation and braces based on user feedback.
+
+
+FEATURES:
+
+    Handles a wide variety of escaped expressions correctly.
+
+    Multi-line comments following a semi-colon.
+
+    Spell checking (when spell is enabled) for strings and comments.
+
+    8.5 syntax: apply, chan, dict, lassign, lrepeat, unload, {expand} and {*} and the new math expressions, all the new words.
+
+    Added error state to line continues that have trailing spaces, these are errors in a tcl script and now they are immediately visible. (thank you Ilya).
+
+    "if {0} {}" multi-line commenting idiom.
+
+    Smart syntax folding for procs, namespaces, and several itcl constructs - only folds the outer braces
+
+    Nested parens brackets braces and quotes.
+
+    Primary commands, secondary commands, and options.
+
+    Highlights implicit expressions, such as the first group after an 'if' statement, or the second group after a 'for' statement.
+
+    Colors expressions and math keyworks; but only inside expressions.
+
+    Easily extended to include other packages. 
+
+    Current Extensions:
+        snit (vimscript #1715)
+        sqlite (vimscript #1716)
+        itcl (vimscript #1765)
+        togl (vimscript #1766)
+        critcl (vimscript #1775) 
+
+    Highlight options to adjust the level of coloring. (default is most 'colorful').
+ 

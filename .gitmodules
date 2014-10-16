@@ -71,9 +71,6 @@
 [submodule "vim/bundle/vim-php"]
 	path = vim/bundle/php
 	url = https://github.com/StanAngeloff/php.vim.git
-[submodule "vim/bundle/vim-tcl"]
-	path = vim/bundle/tcl
-	url = https://github.com/vim-scripts/tcl.vim--smithfield.git
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/json
 	url = https://github.com/elzr/vim-json.git
