@@ -1,6 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Credits
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " bryan kennedy's vimrc file
 "
 " ideas taken from these sources
@@ -9,20 +9,20 @@
 " http://www.vi-improved.org/vimrc.php
 " https://github.com/nvie/vimrc
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
 call pathogen#infect()
 call pathogen#helptags()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle
 "
 " Vundle is a module / plugin manager. The Vundle config also
 " contains some general setup steps for Vim.
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Be iMproved, required by Vundle
 set nocompatible
@@ -36,24 +36,32 @@ call vundle#begin()
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" UltiSnips
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Exchange
+"
+" Easily swap things with `cx`
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'tommcdo/vim-exchange'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" UltiSnips and YouCompleteMe
+"
+" These work together to autocomplete words and complete snippets
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-"Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" UltiSnips config
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" UltiSnips key commands
+"
+" We can't use <tab> beucae of YouCompleteMe conflicts
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle end
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -61,9 +69,9 @@ call vundle#end()            " required
 " Required by Vundle
 filetype plugin indent on    " required
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Vim settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                    " Color highlighting
                              " has to be called before status line directives
 set nocompatible             " Use Vim not Vi settings
@@ -98,9 +106,9 @@ set clipboard=unnamed
 " Allow backspace to work across lines, etc.
 set backspace=indent,eol,start
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI options for MacVim if enabled
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
   colors crispy
 
@@ -153,9 +161,9 @@ if has('gui_running')
 
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Copy/Paste
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fix indents on paste with an ESC before p or P
 :noremap <Esc>p p'[v']=
 :noremap <Esc>P P'[v']=
@@ -163,9 +171,9 @@ endif
 " Visually select the most recently edited or pasted text
 nnoremap <expr> <leader>p '`[' . strpart(getregtype(), 0, 1) . '`]'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the statusline
 set laststatus=2
 
@@ -201,17 +209,17 @@ if has('statusline')
   set statusline+=%-7.(%l,%c%V%)\ %<%P                  " Cursor position/offset
 endif
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Line numbers
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number               " enable line numbers
 set numberwidth=2        " make the line number area wider
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 set cpoptions+=n         " use the line number area for wrapped lines
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Interface
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ruler                           " show the cursor position all the time
 set scrolloff=3                     " keep 3 lines when scrolling
 set nostartofline                   " don't jump to first character when paging
@@ -236,17 +244,17 @@ set ffs=unix,dos,mac "Default file types
 " Use better tab and end of line chars.
 set listchars=tab:▸\ ,eol:¬
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tools
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set wildmode=longest:full           " Complete filenames like Bash
 set wildignore+=.git                " Ignore some file types in autocomplete
 set wildmenu                        " easier naviation of the file system
 set hid                             " undo history remainis when switching buffers
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs and indenting
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nosmartindent                   " Disable the annoying smartindent
 set tabstop=2                       " Tabstops equal two collumns
 set shiftwidth=2                    " Indent operations are also two collumns
@@ -273,9 +281,9 @@ vmap <D-]> >gv
 " TODO check if the plugin exists
 filetype plugin indent on
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set hlsearch                        " highlight searches
 set incsearch                       " do incremental searching
 set ignorecase                      " ignore case when searching
@@ -327,9 +335,9 @@ endfunction
 " Start the find and replace command across the entire file
 vmap <leader>z <Esc>:%s/<c-r>=GetVisual()<cr>/
 
-"""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General aliases
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Help fat fingers
 " I constantly am accidentally typing :W, :Q, :Qall because I still and
 " pressing the shift for the colon by the time I get over to the w or q.
@@ -377,12 +385,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File type specifications
 "
 " @TODO@ cleanup the filetype specifications scattered 
 " throughout this file
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   " Enable file type detection
   filetype on
@@ -425,9 +434,9 @@ endif
 set makeprg=php\ -l\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set foldmethod=expr
 set foldcolumn=0
@@ -435,9 +444,9 @@ set foldcolumn=0
 nnoremap <space> za
 vnoremap <space> za
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " Ctrl-P
 " Fast file navigation
@@ -606,9 +615,9 @@ let g:startify_files_number = 5
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_detection = 1
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
   let _s=@/
