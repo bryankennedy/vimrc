@@ -79,6 +79,14 @@ let g:yankring_min_element_length = 2
 let g:yankring_history_dir = '~/.vim'
 let g:yankring_history_file = '.yankring_history'
 
+"
+" Yankstack
+"
+Plugin 'maxbrunsfeld/vim-yankstack'
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language syntax plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -580,11 +588,6 @@ let b:javascript_fold=1
 " ––––––––––––––––––––|––––––––––––––
 inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
 
-"
-" Yankstack
-"
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
