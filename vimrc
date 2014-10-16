@@ -18,11 +18,54 @@ call pathogen#infect()
 call pathogen#helptags()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General
+" Vundle
+"
+" Vundle is a module / plugin manager. The Vundle config also
+" contains some general setup steps for Vim.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" enable detection, plugins and indenting in one step
-filetype plugin indent on
 
+" Be iMproved, required by Vundle
+set nocompatible
+" Required by Vunlde, while we load modules. Renabled below.
+filetype off 
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ultisnips
+"
+" Snippets engine.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine.
+" 
+" Honza's list of snippets is a great start.
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration.
+" Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+" Enable detection, plugins and indenting in one step
+" Required by Vundle
+filetype plugin indent on    " required
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General Vim settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                    " Color highlighting
                              " has to be called before status line directives
 set nocompatible             " Use Vim not Vi settings
