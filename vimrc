@@ -91,6 +91,14 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 " Language syntax plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
+" CSS
+"
+" Colorizes color statements like rgba(0, 0, 0) or #FF0000
+Plugin 'skammer/vim-css-color'
+" Syntax formatter
+Plugin 'hail2u/vim-css3-syntax'
+
+"
 " PHP
 "
 Plugin 'StanAngeloff/php.vim'
