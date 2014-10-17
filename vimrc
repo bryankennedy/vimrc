@@ -50,6 +50,20 @@ let g:ctrlp_map = '<leader>t'
 "let g:ctrlp_map = '<leader>b'
 nmap <leader>b :CtrlPBuffer<cr>
 
+" Make the ctrlp buffer a bit easier to read
+"
+" We use these functions to set the highlight temp. and then switch it back
+" to our default color
+let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
+
+function BrightHighlightOn()
+  hi CursorLine guibg=darkred
+endfunction
+
+function BrightHighlightOff()
+  hi CursorLine guibg=#191919
+endfunction
+
 "
 " delimitMate
 " Provides automatic closing of quotes, parenthesis, brackets, etc
