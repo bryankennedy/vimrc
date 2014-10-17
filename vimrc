@@ -203,9 +203,11 @@ Plugin 'majutsushi/tagbar'
 "
 " These work together to autocomplete words and complete snippets
 "
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe'
+if has('python') || has('python3')
+  Plugin 'SirVer/ultisnips'
+  Plugin 'honza/vim-snippets'
+  Plugin 'Valloric/YouCompleteMe'
+endif
 
 " UltiSnips key commands
 " We can't use <tab> beucae of YouCompleteMe conflicts
