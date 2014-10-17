@@ -19,10 +19,6 @@
 [submodule "vim/bundle/vim-html5"]
 	path = vim/bundle/html5
 	url = https://github.com/othree/html5.vim.git
-[submodule "vim/bundle/vim-autocomplpop"]
-	path = vim/bundle/autocomplpop
-	url = https://github.com/clones/vim-autocomplpop.git
-  ignore = untracked
 [submodule "vim/bundle/taglist.vim"]
 	path = vim/bundle/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
@@ -65,15 +61,6 @@
 [submodule "vim/bundle/vim-javascript-syntax"]
 	path = vim/bundle/vim-javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
-[submodule "vim/bundle/ack"]
-	path = vim/bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/vim-php"]
-	path = vim/bundle/php
-	url = https://github.com/StanAngeloff/php.vim.git
-[submodule "vim/bundle/vim-tcl"]
-	path = vim/bundle/tcl
-	url = https://github.com/vim-scripts/tcl.vim--smithfield.git
 [submodule "vim/bundle/vim-json"]
 	path = vim/bundle/json
 	url = https://github.com/elzr/vim-json.git
@@ -101,15 +88,9 @@
 [submodule "vim/bundle/vim-spacebars"]
 	path = vim/bundle/spacebars
 	url = https://github.com/Slava/vim-spacebars.git
-[submodule "vim/bundle/vim-css3-syntax"]
-	path = vim/bundle/css3-syntax
-	url = https://github.com/hail2u/vim-css3-syntax.git
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/less
 	url = https://github.com/groenewege/vim-less.git
-[submodule "vim/bundle/vim-css-color"]
-	path = vim/bundle/css-color
-	url = https://github.com/ap/vim-css-color
 [submodule "vim/bundle/tlib_vim"]
 	path = vim/bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
@@ -122,19 +103,9 @@
 [submodule "vim/bundle/vim-signature"]
 	path = vim/bundle/signature
 	url = https://github.com/kshenoy/vim-signature.git
-[submodule "vim/bundle/yankring"]
-	path = vim/bundle/yankring
-	url = https://github.com/vim-scripts/YankRing.vim.git
-	ignore = untracked
-[submodule "vim/bundle/yankstack"]
-	path = vim/bundle/yankstack
-	url = https://github.com/maxbrunsfeld/vim-yankstack.git
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "vim/bundle/ultisnips"]
 	path = vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "vim/bundle/utilisnips"]
-	path = vim/bundle/utilisnips
 	url = https://github.com/SirVer/ultisnips.git

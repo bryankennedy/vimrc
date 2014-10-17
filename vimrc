@@ -1,6 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Credits
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " bryan kennedy's vimrc file
 "
 " ideas taken from these sources
@@ -8,21 +8,313 @@
 " http://vimcasts.org
 " http://www.vi-improved.org/vimrc.php
 " https://github.com/nvie/vimrc
+" And lots of others...
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use pathogen to easily modify the runtime path to include all plugins under
 " the ~/.vim/bundle directory
 call pathogen#infect()
 call pathogen#helptags()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" enable detection, plugins and indenting in one step
-filetype plugin indent on
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle - Plugin configurations
+"
+" Vundle is a module / plugin manager. The Vundle config also
+" contains some general setup steps for Vim.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Be iMproved, required by Vundle
+set nocompatible
+" Required by Vunlde, while we load modules. Renabled below.
+filetype off 
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Functionality plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Ctrl-P
+" Fast file navigation
+" I'm using the same mappings that I used to use for Command -T
+"
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map = '<leader>t'
+"let g:ctrlp_map = '<leader>b'
+nmap <leader>b :CtrlPBuffer<cr>
+
+"
+" delimitMate
+" Provides automatic closing of quotes, parenthesis, brackets, etc
+"
+Plugin 'Raimondi/delimitMate'
+" Remap CTRL + Tab to jump to the right of an autimatically created delimiter
+" For example:
+"       Type          |   You get
+" ===================================
+"  (                  |   (|)
+" ––––––––––––––––––––|––––––––––––––
+"  (stringCTRL+Tab    |   (string)|
+" ––––––––––––––––––––|––––––––––––––
+inoremap <C-l> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
+
+"
+" EasyMotion
+"
+" Quickly jump around in a document
+"
+Plugin 'Lokaltog/vim-easymotion'
+
+"
+" Exchange
+"
+" Easily swap things with `cx`
+"
+Plugin 'tommcdo/vim-exchange'
+
+"
+" Fugitive
+"
+" Git wrapper for Vim
+"
+Plugin 'tpope/vim-fugitive'
+
+"
+" GitGutter
+"
+" Show Git status in the left margin
+Plugin 'airblade/vim-gitgutter'
+
+"
+" Indent guides
+"
+" Visual markers of indent. Off by default, since I just turn these on
+" every once in a while to debug an issue.
+Plugin 'nathanaelkane/vim-indent-guides'
+
+"
+" NERD Commenter
+"
+" Easily comment out (or in) chunks of code
+"
+Plugin 'scrooloose/nerdcommenter'
+
+"
+" NERD Tree
+"
+" Tree explorer for navigating the file system
+"
+Plugin 'scrooloose/nerdtree'
+let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinSize = 30
+let NERDTreeIgnore=['\.rbc$', '\~$']
+
+" A NERDTree toggle combined with the NERDTreeFind command
+" Credit to http://bit.ly/lPz9N4
+function! NERDTreeFindToggle()
+  if exists("t:NERDTreeBufName")
+    let s:ntree = bufwinnr(t:NERDTreeBufName)
+  else
+    let s:ntree = -1
+  endif
+  if (s:ntree != -1)
+    :NERDTreeClose
+  else
+    :NERDTreeFind
+  endif
+endfunction
+
+map <Leader>n :call NERDTreeFindToggle()<CR>
+
+"
+" Powerline
+"
+" Better status line at the bottom of the screen
+"
+" Only enable fancy on GUI systems, otherwise use the simpler status line
+" defined further down.
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+if has('gui_running')
+  let g:Powerline_symbols = 'fancy'
+endif
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+"
+" Signature
+"
+" Tool for displaying and using Vim's marks
+"
+Plugin 'kshenoy/vim-signature'
+
+"
+" Surround
+"
+" Tool for surround things with other things
+"
+Plugin 'tpope/vim-surround'
+
+"
+" Syntastic
+"
+" Syntax checking and error reporting
+"
+Plugin 'scrooloose/syntastic'
+" Tell Syntastic to use pyflakes for testing Python
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_checker_args='--ignore=E501'
+" Tell Syntastic to use jslint for testing JS
+let g:syntastic_javascript_checkers=['jshint']
+" Tell Syntastic to use csslint for testing CSS
+let g:syntastic_css_checkers=['csslint']
+
+"
+" Tagbar
+"
+" Display an outline of the code in a sidebar
+"
+Plugin 'majutsushi/tagbar'
+
+"
+" UltiSnips and YouCompleteMe
+"
+" These work together to autocomplete words and complete snippets
+"
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'Valloric/YouCompleteMe'
+
+" UltiSnips key commands
+" We can't use <tab> beucae of YouCompleteMe conflicts
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+"
+" YankRing
+"
+Plugin 'vim-scripts/YankRing.vim'
+
+" Show YankRing with leader and y
+nnoremap <silent> <leader>y :YRShow<CR>
+" Make YankRing vertical sidebar
+let yankring_window_use_horiz=0
+let g:yankring_window_width = 40
+" Don't add single chars to YankRing buffer
+let g:yankring_min_element_length = 2
+" Put the yankring history file in the vim directory
+" we setup in the install, and make it hidden.
+let g:yankring_history_dir = '~/.vim'
+let g:yankring_history_file = '.yankring_history'
+
+"
+" Yankstack
+"
+Plugin 'maxbrunsfeld/vim-yankstack'
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
+" Prevent yankstack from clobbering surround's remap of the S key
+" https://github.com/maxbrunsfeld/vim-yankstack/issues/9
+call yankstack#setup()
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Language syntax plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" CSS
+"
+" Colorizes color statements like rgba(0, 0, 0) or #FF0000
+Plugin 'skammer/vim-css-color'
+" Syntax formatter
+Plugin 'hail2u/vim-css3-syntax'
+
+"
+" HTML5
+"
+Plugin 'othree/html5.vim'
+
+"
+" Javascript
+"
+" Pangloss' Javascript module
+"
+Plugin 'pangloss/vim-javascript'
+" Highlight HTML and CSS within JS strings
+let javascript_enable_domhtmlcss=1
+" Enable JS folding
+let b:javascript_fold=1
+
+"
+" JSON
+"
+Plugin 'elzr/vim-json'
+
+"
+" LESS
+"
+Plugin 'groenewege/vim-less'
+
+"
+" Markdown
+"
+Plugin 'tpope/vim-markdown'
+
+"
+" Mustache templates
+"
+" Default mustache and also Meteor's handlebars variant, spacebars
+"
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'Slava/vim-spacebars'
+
+"
+" PHP
+"
+Plugin 'StanAngeloff/php.vim'
+
+"
+" Processing
+"
+Plugin 'sophacles/vim-processing'
+
+"
+" Puppet
+"
+Plugin 'rodjek/vim-puppet'
+
+"
+" Python
+"
+Plugin 'klen/python-mode'
+
+"
+" Tcl for expect scripts
+"
+Plugin 'vim-scripts/tcl.vim--smithfield'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle end
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+" Enable detection, plugins and indenting in one step
+" Required by Vundle
+filetype plugin indent on    " required
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General Vim settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                    " Color highlighting
                              " has to be called before status line directives
 set nocompatible             " Use Vim not Vi settings
@@ -57,9 +349,9 @@ set clipboard=unnamed
 " Allow backspace to work across lines, etc.
 set backspace=indent,eol,start
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI options for MacVim if enabled
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
   colors crispy
 
@@ -90,12 +382,10 @@ if has('gui_running')
   "set noantialias
   " TODO Add some conditionals here for systems without this font.
   " TODO Figure out how you want to package this font.
-  set guifont=PanicSans:h13
-
-  " Powerline configuration
-  " Let's only enable this on GUI systems otherwise use the simpler
-  " status line defined further down the file.
-  let g:Powerline_symbols = 'fancy'
+  " Patched version of Panic Sans. See:
+  " http://apw-bash-settings.readthedocs.org/en/latest/fontpatching.html
+  " for font patching info.
+  set guifont=Panic\ Sans\ for\ Powerline:h13
 
   " Tabs
   " Access specific Vim tabs with numbers
@@ -112,9 +402,9 @@ if has('gui_running')
 
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Copy/Paste
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fix indents on paste with an ESC before p or P
 :noremap <Esc>p p'[v']=
 :noremap <Esc>P P'[v']=
@@ -122,9 +412,9 @@ endif
 " Visually select the most recently edited or pasted text
 nnoremap <expr> <leader>p '`[' . strpart(getregtype(), 0, 1) . '`]'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the statusline
 set laststatus=2
 
@@ -160,17 +450,17 @@ if has('statusline')
   set statusline+=%-7.(%l,%c%V%)\ %<%P                  " Cursor position/offset
 endif
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Line numbers
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number               " enable line numbers
 set numberwidth=2        " make the line number area wider
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 set cpoptions+=n         " use the line number area for wrapped lines
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Interface
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ruler                           " show the cursor position all the time
 set scrolloff=3                     " keep 3 lines when scrolling
 set nostartofline                   " don't jump to first character when paging
@@ -195,17 +485,17 @@ set ffs=unix,dos,mac "Default file types
 " Use better tab and end of line chars.
 set listchars=tab:▸\ ,eol:¬
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tools
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set wildmode=longest:full           " Complete filenames like Bash
 set wildignore+=.git                " Ignore some file types in autocomplete
 set wildmenu                        " easier naviation of the file system
 set hid                             " undo history remainis when switching buffers
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tabs and indenting
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nosmartindent                   " Disable the annoying smartindent
 set tabstop=2                       " Tabstops equal two collumns
 set shiftwidth=2                    " Indent operations are also two collumns
@@ -232,9 +522,9 @@ vmap <D-]> >gv
 " TODO check if the plugin exists
 filetype plugin indent on
 
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set hlsearch                        " highlight searches
 set incsearch                       " do incremental searching
 set ignorecase                      " ignore case when searching
@@ -286,9 +576,9 @@ endfunction
 " Start the find and replace command across the entire file
 vmap <leader>z <Esc>:%s/<c-r>=GetVisual()<cr>/
 
-"""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General aliases
-""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Help fat fingers
 " I constantly am accidentally typing :W, :Q, :Qall because I still and
 " pressing the shift for the colon by the time I get over to the w or q.
@@ -336,12 +626,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File type specifications
 "
 " @TODO@ cleanup the filetype specifications scattered 
 " throughout this file
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   " Enable file type detection
   filetype on
@@ -384,9 +675,9 @@ endif
 set makeprg=php\ -l\ %
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set foldmethod=expr
 set foldcolumn=0
@@ -394,42 +685,11 @@ set foldcolumn=0
 nnoremap <space> za
 vnoremap <space> za
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-" Ctrl-P
-" Fast file navigation
-" I'm using the same mappings that I used to use for Command -T
-"
-let g:ctrlp_map = '<leader>t'
-"let g:ctrlp_map = '<leader>b'
-nmap <leader>b :CtrlPBuffer<cr>
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " NERDTree
-" Tree explorer for navigating the file system
-"
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeWinSize = 30
-let NERDTreeIgnore=['\.rbc$', '\~$']
-
-" A NERDTree toggle combined with the NERDTreeFind command
-" Credit to http://bit.ly/lPz9N4
-function! NERDTreeFindToggle()
-  if exists("t:NERDTreeBufName")
-    let s:ntree = bufwinnr(t:NERDTreeBufName)
-  else
-    let s:ntree = -1
-  endif
-  if (s:ntree != -1)
-    :NERDTreeClose
-  else
-    :NERDTreeFind
-  endif
-endfunction
-
-map <Leader>n :call NERDTreeFindToggle()<CR>
 
 
 "
@@ -462,113 +722,10 @@ let g:SignatureEnabledAtStartup = 1
 "autocmd BufWritePost *.py call Flake8()
 
 
-"
-" Syntastic
-" Syntax checking and error reporting
-"
 
-" Tell Syntastic to use pyflakes for testing Python
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_checker_args='--ignore=E501'
-
-" Tell Syntastic to use jslint for testing JS
-let g:syntastic_javascript_checkers=['jshint']
-
-" Tell Syntastic to use csslint for testing CSS
-let g:syntastic_css_checkers=['csslint']
-
-
-"
-" Pangloss' Javascript module
-" https://github.com/pangloss/vim-javascript/
-"
-" Highlight HTML and CSS within JS strings
-let javascript_enable_domhtmlcss=1
-
-" Enable JS folding
-let b:javascript_fold=1
-
-"
-" delimitMate
-" Provides automatic closing of quotes, parenthesis, brackets, etc
-"
-" Remap CTRL + Tab to jump to the right of an autimatically created delimiter
-" For example:
-"       Type          |   You get
-" ===================================
-"  (                  |   (|)
-" ––––––––––––––––––––|––––––––––––––
-"  (stringCTRL+Tab    |   (string)|
-" ––––––––––––––––––––|––––––––––––––
-inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
-
-"
-" YankRing settings
-"
-" Show YankRing with leader and y
-nnoremap <silent> <leader>y :YRShow<CR>
-" Make YankRing vertical sidebar
-let yankring_window_use_horiz=0
-let g:yankring_window_width = 40
-" Don't add single chars to YankRing buffer
-let g:yankring_min_element_length = 2
-" Put the yankring history file in the vim directory
-" we setup in the install, and make it hidden.
-let g:yankring_history_dir = '~/.vim'
-let g:yankring_history_file = '.yankring_history'
-
-"
-" Yankstack
-"
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
-
-"
-" Vim-Project
-"
-" Makes it easier to load multiple files within a large project.
-"
-" before call project#rc()
-"let g:project_enable_welcome = 1
-" if you want the NERDTree integration.
-"let g:project_use_nerdtree = 0
-
-"set rtp+=~/.vim/bundle/vim-project/
-"call project#rc("~/ws")
-
-"Project  '/opt/boxen/repo' , 'boxen'
-"File     '/opt/boxen/repo/manifests/site.pp' , 'site.pp'
-"File     '/opt/boxen/repo/modules/people/manifests/bryankennedy.pp' , 'bryankennedy.pp'
-
-"
-" Startify
-"
-" A start page with some useful links
-"
-let g:startify_list_order = [
-        \ ['  Projects'],
-        \ 'bookmarks',
-        \ ['  Recently opened'],
-        \ 'files',
-        \ ['  Recently changed in cwd'],
-        \ 'dir',
-        \ ['  Sessions'],
-        \ 'sessions',
-        \ ]
-
-let g:startify_bookmarks = [
-  \ '~/.vimrc',
-  \ '/opt/boxen/repo/Puppetfile',
-  \ ]
-
-let g:startify_files_number = 5
-let g:startify_change_to_vcs_root = 1
-let g:startify_session_detection = 1
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove trailing whitespace on save
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
   let _s=@/
