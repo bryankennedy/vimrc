@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Credits
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " bryan kennedy's vimrc file
@@ -41,11 +41,148 @@ Plugin 'gmarik/Vundle.vim'
 " Functionality plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
+" Ctrl-P
+" Fast file navigation
+" I'm using the same mappings that I used to use for Command -T
+"
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map = '<leader>t'
+"let g:ctrlp_map = '<leader>b'
+nmap <leader>b :CtrlPBuffer<cr>
+
+"
+" delimitMate
+" Provides automatic closing of quotes, parenthesis, brackets, etc
+"
+Plugin 'Raimondi/delimitMate'
+" Remap CTRL + Tab to jump to the right of an autimatically created delimiter
+" For example:
+"       Type          |   You get
+" ===================================
+"  (                  |   (|)
+" ––––––––––––––––––––|––––––––––––––
+"  (stringCTRL+Tab    |   (string)|
+" ––––––––––––––––––––|––––––––––––––
+inoremap <C-l> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
+
+"
+" EasyMotion
+"
+" Quickly jump around in a document
+"
+Plugin 'Lokaltog/vim-easymotion'
+
+"
 " Exchange
 "
 " Easily swap things with `cx`
 "
 Plugin 'tommcdo/vim-exchange'
+
+"
+" Fugitive
+"
+" Git wrapper for Vim
+"
+Plugin 'tpope/vim-fugitive'
+
+"
+" GitGutter
+"
+" Show Git status in the left margin
+Plugin 'airblade/vim-gitgutter'
+
+"
+" Indent guides
+"
+" Visual markers of indent. Off by default, since I just turn these on
+" every once in a while to debug an issue.
+Plugin 'nathanaelkane/vim-indent-guides'
+
+"
+" NERD Commenter
+"
+" Easily comment out (or in) chunks of code
+"
+Plugin 'scrooloose/nerdcommenter'
+
+"
+" NERD Tree
+"
+" Tree explorer for navigating the file system
+"
+Plugin 'scrooloose/nerdtree'
+let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinSize = 30
+let NERDTreeIgnore=['\.rbc$', '\~$']
+
+" A NERDTree toggle combined with the NERDTreeFind command
+" Credit to http://bit.ly/lPz9N4
+function! NERDTreeFindToggle()
+  if exists("t:NERDTreeBufName")
+    let s:ntree = bufwinnr(t:NERDTreeBufName)
+  else
+    let s:ntree = -1
+  endif
+  if (s:ntree != -1)
+    :NERDTreeClose
+  else
+    :NERDTreeFind
+  endif
+endfunction
+
+map <Leader>n :call NERDTreeFindToggle()<CR>
+
+"
+" Powerline
+"
+" Better status line at the bottom of the screen
+"
+" Only enable fancy on GUI systems, otherwise use the simpler status line
+" defined further down.
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+if has('gui_running')
+  let g:Powerline_symbols = 'fancy'
+endif
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+"
+" Signature
+"
+" Tool for displaying and using Vim's marks
+"
+Plugin 'kshenoy/vim-signature'
+
+"
+" Surround
+"
+" Tool for surround things with other things
+"
+Plugin 'tpope/vim-surround'
+
+"
+" Syntastic
+"
+" Syntax checking and error reporting
+"
+Plugin 'scrooloose/syntastic'
+" Tell Syntastic to use pyflakes for testing Python
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_checker_args='--ignore=E501'
+" Tell Syntastic to use jslint for testing JS
+let g:syntastic_javascript_checkers=['jshint']
+" Tell Syntastic to use csslint for testing CSS
+let g:syntastic_css_checkers=['csslint']
+
+"
+" Tagbar
+"
+" Display an outline of the code in a sidebar
+"
+Plugin 'majutsushi/tagbar'
 
 "
 " UltiSnips and YouCompleteMe
@@ -85,6 +222,9 @@ let g:yankring_history_file = '.yankring_history'
 Plugin 'maxbrunsfeld/vim-yankstack'
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
+" Prevent yankstack from clobbering surround's remap of the S key
+" https://github.com/maxbrunsfeld/vim-yankstack/issues/9
+call yankstack#setup()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,9 +239,63 @@ Plugin 'skammer/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 
 "
+" HTML5
+"
+Plugin 'othree/html5.vim'
+
+"
+" Javascript
+"
+" Pangloss' Javascript module
+"
+Plugin 'pangloss/vim-javascript'
+" Highlight HTML and CSS within JS strings
+let javascript_enable_domhtmlcss=1
+" Enable JS folding
+let b:javascript_fold=1
+
+"
+" JSON
+"
+Plugin 'elzr/vim-json'
+
+"
+" LESS
+"
+Plugin 'groenewege/vim-less'
+
+"
+" Markdown
+"
+Plugin 'tpope/vim-markdown'
+
+"
+" Mustache templates
+"
+" Default mustache and also Meteor's handlebars variant, spacebars
+"
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'Slava/vim-spacebars'
+
+"
 " PHP
 "
 Plugin 'StanAngeloff/php.vim'
+
+"
+" Processing
+"
+Plugin 'sophacles/vim-processing'
+
+"
+" Puppet
+"
+Plugin 'rodjek/vim-puppet'
+
+"
+" Python
+"
+Plugin 'klen/python-mode'
 
 "
 " Tcl for expect scripts
@@ -188,12 +382,10 @@ if has('gui_running')
   "set noantialias
   " TODO Add some conditionals here for systems without this font.
   " TODO Figure out how you want to package this font.
-  set guifont=PanicSans:h13
-
-  " Powerline configuration
-  " Let's only enable this on GUI systems otherwise use the simpler
-  " status line defined further down the file.
-  let g:Powerline_symbols = 'fancy'
+  " Patched version of Panic Sans. See:
+  " http://apw-bash-settings.readthedocs.org/en/latest/fontpatching.html
+  " for font patching info.
+  set guifont=Panic\ Sans\ for\ Powerline:h13
 
   " Tabs
   " Access specific Vim tabs with numbers
@@ -497,38 +689,7 @@ vnoremap <space> za
 " Plugin configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-" Ctrl-P
-" Fast file navigation
-" I'm using the same mappings that I used to use for Command -T
-"
-let g:ctrlp_map = '<leader>t'
-"let g:ctrlp_map = '<leader>b'
-nmap <leader>b :CtrlPBuffer<cr>
-
-"
 " NERDTree
-" Tree explorer for navigating the file system
-"
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeWinSize = 30
-let NERDTreeIgnore=['\.rbc$', '\~$']
-
-" A NERDTree toggle combined with the NERDTreeFind command
-" Credit to http://bit.ly/lPz9N4
-function! NERDTreeFindToggle()
-  if exists("t:NERDTreeBufName")
-    let s:ntree = bufwinnr(t:NERDTreeBufName)
-  else
-    let s:ntree = -1
-  endif
-  if (s:ntree != -1)
-    :NERDTreeClose
-  else
-    :NERDTreeFind
-  endif
-endfunction
-
-map <Leader>n :call NERDTreeFindToggle()<CR>
 
 
 "
@@ -560,46 +721,6 @@ let g:SignatureEnabledAtStartup = 1
 " Disabled because of some performance issues.
 "autocmd BufWritePost *.py call Flake8()
 
-
-"
-" Syntastic
-" Syntax checking and error reporting
-"
-
-" Tell Syntastic to use pyflakes for testing Python
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_checker_args='--ignore=E501'
-
-" Tell Syntastic to use jslint for testing JS
-let g:syntastic_javascript_checkers=['jshint']
-
-" Tell Syntastic to use csslint for testing CSS
-let g:syntastic_css_checkers=['csslint']
-
-
-"
-" Pangloss' Javascript module
-" https://github.com/pangloss/vim-javascript/
-"
-" Highlight HTML and CSS within JS strings
-let javascript_enable_domhtmlcss=1
-
-" Enable JS folding
-let b:javascript_fold=1
-
-"
-" delimitMate
-" Provides automatic closing of quotes, parenthesis, brackets, etc
-"
-" Remap CTRL + Tab to jump to the right of an autimatically created delimiter
-" For example:
-"       Type          |   You get
-" ===================================
-"  (                  |   (|)
-" ––––––––––––––––––––|––––––––––––––
-"  (stringCTRL+Tab    |   (string)|
-" ––––––––––––––––––––|––––––––––––––
-inoremap <C-Tab> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
