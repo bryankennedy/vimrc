@@ -199,6 +199,12 @@ let g:syntastic_css_checkers=['csslint']
 Plugin 'majutsushi/tagbar'
 
 "
+" Make a line a selectable text object, without line breaks
+"
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-line'
+
+"
 " UltiSnips and YouCompleteMe
 "
 " These work together to autocomplete words and complete snippets
