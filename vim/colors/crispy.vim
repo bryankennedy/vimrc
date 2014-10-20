@@ -40,7 +40,7 @@ let almost_black = '#191919'
 let pale_grey = '#99a4b3'
 let paler_grey = '#dee1e6'
 let dark_grey = '#444444'
-let darkest_grey = '#222222'
+let darkest_grey = '#333333'
 
 " PHP tags, current buffer
 let pale_red = '#FF6C60'
@@ -81,7 +81,6 @@ let ColorAssignment = {}
 " Basic text
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let ColorAssignment['Normal'] = {"GUIFG": 'White', "GUIBG": almost_midnight}
-"let ColorAssignment['Background'] = {"GUIFG": 'White', "GUIBG": 'Black'}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Interface elements
@@ -99,10 +98,20 @@ let ColorAssignment['FoldColumn'] = {"GUIFG": paler_magenta, "GUIBG": almost_bla
 let ColorAssignment['Folded'] = {"GUIFG": paler_magenta, "GUIBG": almost_black}
 
 " Diffs
-let ColorAssignment['DiffText'] = {"GUI": 'bold'}
-let ColorAssignment['DiffAdd'] = {"GUI": 'NONE', 'GUIBG': '#102e27'}
-let ColorAssignment['DiffChange'] = {"GUI": 'NONE', 'GUIBG': dark_glass_blue}
-let ColorAssignment['DiffDelete'] = {"GUI": 'NONE', 'GUIBG': dark_red, 'GUIFG': dark_red}
+
+" New code
+" Subtle background highlight, with pale green text
+let ColorAssignment['DiffAdd'] =     {"GUI": 'NONE', 'GUIBG': almost_black, 'GUIFG': '#a6dba0'}
+" Deleted code
+" Subtle background highlight, with bright red text
+let ColorAssignment['DiffDelete'] =  {"GUI": 'NONE', 'GUIBG': almost_black, 'GUIFG': 'Red'}
+" Changes
+" DiffChange is the park of the changed line that is the same in both files.
+" For this we keep the background the same, and grey out the text.
+let ColorAssignment['DiffChange'] =  {"GUI": 'NONE', 'GUIBG': almost_midnight, 'GUIFG': darkest_grey}
+" DiffText is the part of the line that's different. We give it a dark black
+" background so that the normal code highlighting shines through.
+let ColorAssignment['DiffText'] =    {"GUI": 'NONE', 'GUIBG': '#000000'}
 
 " Popup Menu for things like Fuzzy Finder
 let ColorAssignment['Pmenu'] = {"GUIFG": 'White', "GUIBG": dark_grey}
