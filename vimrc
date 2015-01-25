@@ -190,6 +190,9 @@ let g:syntastic_python_checker_args='--ignore=E501'
 let g:syntastic_javascript_checkers=['jshint']
 " Tell Syntastic to use csslint for testing CSS
 let g:syntastic_css_checkers=['csslint']
+" Syntastic errors to the Vim error list.
+" This lets you jump between then with lnext and lprev.
+let g:syntastic_always_populate_loc_list = 1
 
 "
 " Tagbar
