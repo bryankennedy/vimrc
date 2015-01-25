@@ -208,6 +208,14 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-line'
 
 "
+" Google Translate
+"
+" Translate words and blocks of text with Google Translate straight from Vim
+"
+Plugin 'bryankennedy/vim-translator'
+let g:goog_user_conf = { 'langpair': 'en|es', 'v_key': 'T' }
+
+"
 " UltiSnips and YouCompleteMe
 "
 " These work together to autocomplete words and complete snippets
