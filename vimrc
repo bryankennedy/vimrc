@@ -225,6 +225,9 @@ if has('python') || has('python3')
   Plugin 'honza/vim-snippets'
   Plugin 'Valloric/YouCompleteMe'
 endif
+" Tell YouCompleteMe to complete from strings and comments as well.
+" This is how I'm used to autocomplete working.
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 " UltiSnips key commands
 " We can't use <tab> beucae of YouCompleteMe conflicts
