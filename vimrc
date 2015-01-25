@@ -104,7 +104,9 @@ Plugin 'tpope/vim-fugitive'
 " GitGutter
 "
 " Show Git status in the left margin
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'airblade/vim-gitgutter'
+"let g:gitgutter_realtime = 0
+"let g:gitgutter_eager = 0
 
 "
 " Indent guides
@@ -262,6 +264,17 @@ nmap <leader>P <Plug>yankstack_substitute_newer_paste
 " https://github.com/maxbrunsfeld/vim-yankstack/issues/9
 call yankstack#setup()
 
+"
+" You Complete Me
+"
+" Autocomplete pop ups
+
+" Disable completion in HTML
+"
+" For some reason this is very slow.
+let g:ycm_filetype_specific_completion_to_disable = {
+      \ 'html': 1
+      \}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language syntax plugins
@@ -270,14 +283,14 @@ call yankstack#setup()
 " CSS
 "
 " Colorizes color statements like rgba(0, 0, 0) or #FF0000
-Plugin 'skammer/vim-css-color'
+"Plugin 'skammer/vim-css-color'
 " Syntax formatter
 Plugin 'hail2u/vim-css3-syntax'
 
 "
 " HTML5
 "
-Plugin 'othree/html5.vim'
+"Plugin 'othree/html5.vim'
 
 "
 " Javascript
