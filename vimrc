@@ -109,6 +109,11 @@ Plugin 'tpope/vim-fugitive'
 "let g:gitgutter_eager = 0
 
 "
+" How Much
+"
+Plugin 'sk1418/HowMuch'
+
+"
 " Indent guides
 "
 " Visual markers of indent. Off by default, since I just turn these on
