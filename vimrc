@@ -269,12 +269,11 @@ call yankstack#setup()
 "
 " Autocomplete pop ups
 
-" Disable completion in HTML
+" Disable completion in an exmpale language: HTML
 "
-" For some reason this is very slow.
-let g:ycm_filetype_specific_completion_to_disable = {
-      \ 'html': 1
-      \}
+"let g:ycm_filetype_specific_completion_to_disable = {
+      "\ 'html': 1
+      "\}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language syntax plugins
