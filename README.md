@@ -12,13 +12,7 @@
         ./install.sh ~/.dotfiles/vimrc
 
 # Plugins
-I use [pathogen](https://github.com/tpope/vim-pathogen) to load plugins. I manage plugins as git submodules at `vim/bundle`. I've generally renamed plugin folders for consistency, removing `vim-` strings.
-
-## Add a new plugin
-
-    $ git submodule add http://example.com/vim-plugin.git vim/bundle/plugin
-
-These are the plugins I am currently using, with some justification and some quick tips on how I most commonly use them.
+These are the plugins I am currently using, with some justification and some quick tips on how I most commonly use them. This list isn't entirely complete.
 
 ## Language syntax plugins
 * [css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS plugin
