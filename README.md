@@ -111,7 +111,6 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 * `<leader>c` - Toggle ignorecase
 * `<leader>cd` - Change to the directory of the current file
 * `<leader>e` - Edit this vimrc
-* `<leader>q` - Close all saved buffers
 * `<leader>s` - Toggle spell checking
 * `<leader>w` - Write
 * `<leader>z` - Start a find/replace with the selected 'text'

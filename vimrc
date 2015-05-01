@@ -648,11 +648,6 @@ nmap <leader>w :w!<cr>
 " TODO - don't hard code this
 map <leader>e :e! ~/.vimrc<cr>
 
-" Close all the buffers
-" This is nice because it cleans everything up but leaves You
-" with a blank page for new composing.
-map <leader>q :1,300 bd<cr>
-
 " Navigate betwen buffers with arrows
 map <right> :bn<cr>
 map <left> :bp<cr>
