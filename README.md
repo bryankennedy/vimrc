@@ -49,6 +49,10 @@ These are the plugins I am currently using, with some justification and some qui
 * `<leader\>\<leader\>w` - Jump to a specific word
 * `<leader\>\<leader\>t` - Jump to a specific character
 
+##### [expand-region](http://github.com/terryma/vim-expand-region) - Expand selection regions smartly.
+
+* vvv - replaces a bunch of vit, viw, vi', vi" operations.
+
 ##### [fugitive](https://github.com/tpope/vim-fugitive/) - Git wrapper. I don't use this enough.
 
 * `:Gblame` - Who did what?
