@@ -319,7 +319,7 @@ Plugin 'ap/vim-css-color'
 "
 " HTML5
 "
-"Plugin 'othree/html5.vim'
+Plugin 'mattn/emmet-vim'
 
 "
 " Javascript
