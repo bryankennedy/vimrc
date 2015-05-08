@@ -710,6 +710,9 @@ if has("autocmd")
   " Enable file type detection
   filetype on
 
+  " Allow crontab -e to work on OSX
+  autocmd filetype crontab setlocal nobackup nowritebackup
+
   " Example conditional filetype setting
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4
 
