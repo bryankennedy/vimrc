@@ -94,6 +94,15 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tommcdo/vim-exchange'
 
 "
+" Expand selection
+"
+" Use vv and vvv to expand visual sections
+"
+Plugin 'terryma/vim-expand-region'
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+"
 " Fugitive
 "
 " Git wrapper for Vim
