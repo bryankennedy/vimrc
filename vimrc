@@ -312,9 +312,9 @@ call yankstack#setup()
 " CSS
 "
 " Colorizes color statements like rgba(0, 0, 0) or #FF0000
-"Plugin 'skammer/vim-css-color'
-" Syntax formatter
-Plugin 'hail2u/vim-css3-syntax'
+" Use ap's fork here instead of the main repo, because it is MUCH faster.
+" the original vim color file created some serious load problems.
+Plugin 'ap/vim-css-color'
 
 "
 " HTML5
