@@ -202,10 +202,26 @@ Plugin 'scrooloose/syntastic'
 " Tell Syntastic to use pyflakes for testing Python
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_checker_args='--ignore=E501'
-" Tell Syntastic to use jshint for testing JS
 let g:syntastic_javascript_checkers=['jshint']
+
+" JS Syntax checking switch with <leader>x
+" We do this since jshint and jscs don't seem to want to display their values
+" at the same time. This way we can switch back and forth between the two.
+" Most of the time we don't want to be doing style checking anyways.
+map <leader>x :call StyleToggle()<cr>
+function! StyleToggle()
+  if (g:syntastic_javascript_checkers == ['jshint'])
+    :let g:syntastic_javascript_checkers=['jscs']
+  else
+    :let g:syntastic_javascript_checkers=['jshint']
+  endif
+endfunction
+
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
 " Tell Syntastic to use csslint for testing CSS
 let g:syntastic_css_checkers=['csslint']
+
 " Syntastic errors to the Vim error list.
 " This lets you jump between then with lnext and lprev.
 let g:syntastic_always_populate_loc_list = 1
