@@ -329,8 +329,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 " Highlight HTML and CSS within JS strings
 let javascript_enable_domhtmlcss=1
-" Enable JS folding
-let b:javascript_fold=1
 
 "
 " JSON
@@ -736,7 +734,6 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.mml setfiletype json
 
   " JSON settings
-  autocmd FileType json set foldmethod=syntax
   autocmd FileType json setlocal conceallevel=0
 
   " Markdown and text settings
@@ -756,19 +753,15 @@ set errorformat=%m\ in\ %f\ on\ line\ %l
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set foldmethod=expr
-set foldcolumn=0
-" Shortcut to toggle a fold open and closed
+" Disable folding
+set nofoldenable 
+" Use spacebar to toggle a fold open and closed
 nnoremap <space> za
 vnoremap <space> za
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-" NERDTree
-
 
 "
 " Indent guides
