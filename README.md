@@ -18,7 +18,7 @@ These are the plugins I am currently using, with some justification and some qui
 * [css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
 * [javascript](https://github.com/pangloss/vim-javascript/) - Best JS syntax plugin
 * [json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
-* [markdown](https://github.com/plasticboy/vim-markdown/) - Enhanced Markdown syntax
+* [markdown](https://github.com/tpope/vim-markdown/) - Force .md files to open as Markdown
 * [php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
 * [processing](https://github.com/sophacles/vim-processing/) - Enhanced Processing syntax
 * [puppet](https://github.com/rodjek/vim-puppet/) - I use this to managing Boxen manifests, written in Puppet
