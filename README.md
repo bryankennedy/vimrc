@@ -51,8 +51,10 @@ Once you have a file highlighted, use CTRL + v to open it in a vertical split, a
 * `:Gcommit` - Commit your changes
 * `:Gdiff` - See what's different from the git index
 
-##### [gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
 ##### [indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
+
+Disabled by default. Enable with `:IndentGuidesEnable`
+
 ##### [nerdcommenter](https://github.com/scrooloose/nerdcommenter/) - Commenting helper.
 
 * `<leader>c<space>` -  Comment out the current line or text selected in visual mode.
@@ -77,22 +79,21 @@ Once you have a file highlighted, use CTRL + v to open it in a vertical split, a
 * There are [many snippets for all kinds of languages](https://github.com/honza/vim-snippets/tree/master/snippets)
 
 ##### [surround](https://github.com/tpope/vim-surround/) - Tim Pope's essential plugin for surrounding things with things
-
-* This is currently behaving oddly. Troubleshoot
-
 ##### [syntastic](https://github.com/scrooloose/syntastic/) - Syntax checking.
 ##### [tagbar](https://github.com/majutsushi/tagbar) - Display tags in a sidebar. Improvement on taglist.
 
-* `<leader>b` - Open the tag sidebar
-
-##### [yankstack](https://github.com/maxbrunsfeld/vim-yankstack) - Quickly cycle through paste buffer
-
-* `<leader>p` - Cycle backward through the paste buffer
-* `<leader>P` - Cycle forward through the paste buffer
+* `<leader>g` - Open the tag sidebar
 
 ##### [yankring](https://github.com/vim-scripts/YankRing.vim) - Browse the paste buffer
 
 * `<leader>y` - Open a sidebar, showing the paste buffer
+
+### Disabled
+
+##### [gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
+I'd love to be able to use this again, but it causes some very slow load times, so I've removed it.
+
+
 
 ## Helpers and required libraries
 These plugins are required by various plugins listed above.
@@ -125,3 +126,9 @@ A curated list of leaders and other custom shortcuts provided as part of my cust
 * zMzv - Close all folds, open the current line fold
 * zR - Open all folds
 * ]s - Next misspelled word
+
+## Snippets
+
+### Javascript
+cn > CTRL + j = console('')
+con > CTRL + j = console('var', var)
