@@ -15,9 +15,7 @@
 These are the plugins I am currently using, with some justification and some quick tips on how I most commonly use them. This list isn't entirely complete.
 
 ## Language syntax plugins
-* [css3-syntax](https://github.com/hail2u/vim-css3-syntax) - After looking at several alternatives, I think this is the best CSS plugin
 * [css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
-* [html5](https://github.com/othree/html5.vim/) - Best HTML5 syntax plugin
 * [javascript](https://github.com/pangloss/vim-javascript/) - Best JS syntax plugin
 * [json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
 * [markdown](https://github.com/plasticboy/vim-markdown/) - Enhanced Markdown syntax
