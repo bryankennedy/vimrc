@@ -295,16 +295,6 @@ let g:yankring_history_dir = '~/.vim'
 let g:yankring_history_file = '.yankring_history'
 
 "
-" Yankstack
-"
-Plugin 'maxbrunsfeld/vim-yankstack'
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
-" Prevent yankstack from clobbering surround's remap of the S key
-" https://github.com/maxbrunsfeld/vim-yankstack/issues/9
-call yankstack#setup()
-
-"
 " You Complete Me
 "
 " Autocomplete pop ups
