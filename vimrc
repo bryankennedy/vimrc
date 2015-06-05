@@ -265,7 +265,7 @@ let g:goog_user_conf = { 'langpair': 'en|es', 'v_key': 'T' }
 if has('python') || has('python3')
   Plugin 'SirVer/ultisnips'
   Plugin 'honza/vim-snippets'
-  "Plugin 'Valloric/YouCompleteMe'
+  Plugin 'Valloric/YouCompleteMe'
 endif
 " Tell YouCompleteMe to complete from strings and comments as well.
 " This is how I'm used to autocomplete working.
