@@ -601,6 +601,10 @@ autocmd Filetype python setlocal ts=4 sts=4 sw=4
 " Use 3 spaces for AutoIt scripts
 autocmd Filetype autoit setlocal ts=3 sts=3 sw=3
 
+" Use 2 spaces for Javascript and HTML
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+
 " Shortcuts for indenting without loosing visual selection
 nmap <D-[> <<
 nmap <D-]> >>
@@ -723,9 +727,6 @@ if has("autocmd")
 
   " Allow crontab -e to work on OSX
   autocmd filetype crontab setlocal nobackup nowritebackup
-
-  " Example conditional filetype setting
-  autocmd FileType javascript setlocal ts=4 sts=4 sw=4
 
   " Treat Drupal files as PHP
   autocmd BufNewFile,BufReadPre *.php,*.inc,*.module,*.install setfiletype php
