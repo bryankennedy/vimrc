@@ -13,16 +13,22 @@
 
 # Plugins
 These are the plugins I am currently using, with some justification and some quick tips on how I most commonly use them. This list isn't entirely complete.
+## Package manager
+I'm using [Vundle](https://github.com/gmarik/Vundle.vim) to install and manage all of these plugins
 
 ## Language syntax plugins
 * [css-color](https://github.com/ap/vim-css-color/) - Colorize hex colors and color words in CSS
+* [less](https://github.com/groenewege/vim-less) - LESS highlighter
+* [emmet](https://github.com/mattn/emmet-vim) - HTML5 authoring helper
 * [javascript](https://github.com/pangloss/vim-javascript/) - Best JS syntax plugin
 * [json](https://github.com/elzr/vim-json) - JSON highlighting with keyword/value color differences
 * [markdown](https://github.com/tpope/vim-markdown/) - Force .md files to open as Markdown
 * [php](https://github.com/StanAngeloff/php.vim) - Enhanced PHP syntax
+* [python](https://github.com/klen/python-mode) - Best Python helpers
 * [processing](https://github.com/sophacles/vim-processing/) - Enhanced Processing syntax
 * [puppet](https://github.com/rodjek/vim-puppet/) - I use this to managing Boxen manifests, written in Puppet
 * [spacebars](https://github.com/Slava/vim-spacebars/) - Syntax for MeteorJS' handlebars template variant
+* [mustache](https://github.com/mustache/vim-mustache-handlebars) - Mustache templates highliting
 * [tcl](https://github.com/vim-scripts/tcl.vim--smithfield/) - Tcl syntax for expect scripting
 
 ## Functional plugins
@@ -36,10 +42,16 @@ Once you have a file highlighted, use CTRL + v to open it in a vertical split, a
 
 #####[delimitMate](https://github.com/Raimondi/delimitMate) - Quote and bracket auto-completion. Best plugin. Doesn't break undo/redo.
 
+#####[diminactive](https://github.com/blueyed/vim-diminactive) - Dim splits when they aren't being used. Makes it easier for find active cursor.
+
 ##### [easymotion](https://github.com/Lokaltog/vim-easymotion/) - Magically jump around the page
 
 * `<leader\>\<leader\>w` - Jump to a specific word
 * `<leader\>\<leader\>t` - Jump to a specific character
+
+##### [exchange](https://github.com/Lokaltog/vim-easymotion/) - Quickly swap chunks of text.
+
+* "To exchange two words, place your cursor on the first word and type `cxiw`. Then move to the second word and type `cxiw` again."
 
 ##### [expand-region](http://github.com/terryma/vim-expand-region) - Expand selection regions smartly.
 
@@ -50,6 +62,9 @@ Once you have a file highlighted, use CTRL + v to open it in a vertical split, a
 * `:Gblame` - Who did what?
 * `:Gcommit` - Commit your changes
 * `:Gdiff` - See what's different from the git index
+
+##### [HowMuch](https://github.com/sk1418/HowMuch) - Vim calculator.
+* Select figures to calculate, `<leader>?=` or `<leader>?r`. `=`, will add the result after the selection. `r` will replace the selection with the result.
 
 ##### [indent-guides](https://github.com/nathanaelkane/vim-indent-guides/) - Visually highlight indentation levels
 
@@ -70,11 +85,7 @@ Disabled by default. Enable with `:IndentGuidesEnable`
 * `:ma {a-z}` - Set a mark
 * `'{a-z}` - Jump to a mark
 
-##### [snipmate](https://github.com/garbas/vim-snipmate) - Write snippets of code quicker
-
-* e.g. - in insert mode type `for` and then tab to create a for block
-
-##### [snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for snipmate
+##### [snippets](https://github.com/honza/vim-snippets.git) - Some useful snippets of code for ultisnips. This is the library of code, not the actual snippets manager.
 
 * There are [many snippets for all kinds of languages](https://github.com/honza/vim-snippets/tree/master/snippets)
 
@@ -84,22 +95,22 @@ Disabled by default. Enable with `:IndentGuidesEnable`
 
 * `<leader>g` - Open the tag sidebar
 
+##### [translator](https://github.com/bryankennedy/vim-translator) - Translate selected text using Google Translate. Useful for lorem ipsum with dual languages.
+
+##### [ultisnips](https://github.com/SirVer/ultisnips) - Best snippets manager.
+
+* Ctrl + j to expand snippet after you select it from the YouCompleteMe dropdown
+
 ##### [yankring](https://github.com/vim-scripts/YankRing.vim) - Browse the paste buffer
 
 * `<leader>y` - Open a sidebar, showing the paste buffer
+
+##### [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Code completion.
 
 ### Disabled
 
 ##### [gitgutter](https://github.com/airblade/vim-gitgutter/) - Highlight Git changes in the Vim gutter
 I'd love to be able to use this again, but it causes some very slow load times, so I've removed it.
-
-
-
-## Helpers and required libraries
-These plugins are required by various plugins listed above.
-* [L9](http://www.vim.org/scripts/script.php?script_id=3252) - Required by autocomplpop
-* [tlib_vim](https://github.com/tomtom/tlib_vim.git) - Required by vim-snipmate
-* [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils.git) - Required by vim-snipmate
 
 # Shortcuts
 A curated list of leaders and other custom shortcuts provided as part of my custom vimrc and by the enabled plugins.
