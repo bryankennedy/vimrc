@@ -27,18 +27,12 @@ These are the plugins I am currently using, with some justification and some qui
 
 ## Functional plugins
 
-##### [ack](https://github.com/mileszs/ack.vim) - Ack searching in Vim
-
-    :Ack [search term]
-
-[Ack keyboard shortcuts](https://github.com/mileszs/ack.vim#keyboard-shortcuts)
-
-##### [autocomplpop](http://www.vim.org/scripts/script.php?script_id=1879) - Popup window for selecting autocomplete options.
-
-##### [command-t](https://github.com/wincent/command-t)  - Quick and intuitive tool to open files quickly.
+##### [command-p](https://github.com/kien/ctrlp.vim)  - Quick and intuitive tool to open files quickly.
 
 * `<leader>t` - Search files from cwd
 * `<leader>b` - Search files from current buffers
+
+Once you have a file highlighted, use CTRL + v to open it in a vertical split, and use CTRL + s to open it in a horizontal split.
 
 #####[delimitMate](https://github.com/Raimondi/delimitMate) - Quote and bracket auto-completion. Best plugin. Doesn't break undo/redo.
 
