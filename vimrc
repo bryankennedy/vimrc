@@ -80,6 +80,16 @@ Plugin 'Raimondi/delimitMate'
 inoremap <C-l> <C-R>=delimitMate#JumpAny("\<C-Tab>")<CR>
 
 "
+" Dim Inactive
+"
+" Dim the splits that I am not currently on. Makes it easier to see which one
+" currently has the cursor.
+"
+Plugin 'blueyed/vim-diminactive'
+let g:diminactive_use_colorcolumn = 1
+let g:diminactive_use_syntax = 1
+
+"
 " EasyMotion
 "
 " Quickly jump around in a document
@@ -432,6 +442,7 @@ set backspace=indent,eol,start
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
   colors crispy
+   :hi ColorColumn ctermbg=0 guifg =#646464 guibg=#131313
 
   " Window size, and disable the MacVim toolbar
   "set lines=60
